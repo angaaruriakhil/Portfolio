@@ -1,0 +1,27 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  color: white; 
+  font-family: "Red Hat Display"; 
+}
+
+
+
+@import "./assets/styles/__typography.scss"; 
+
+nav { 
+  display: flex; 
+  justify-content: space-between;
+  font-family: "Consolas";
+  font-size: 40px;
+  &__listmaster {
+    list-style-type: none; 
+  }
+
+  
+}
+
+body {
+  background-image: url(./assets/images/background-space-pic.jfif);
+}
