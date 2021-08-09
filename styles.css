@@ -13,16 +13,36 @@
   font-style: normal;
   font-display: swap;
 }
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   font-family: "Consolas";
   font-size: 40px;
 }
-nav__listmaster {
+.nav__logo-img {
+  width: 200px;
+  height: 200px;
+}
+.nav__list-items {
   list-style-type: none;
+  column-gap: 20px;
+  margin-right: 100px;
 }
 
 body {
   background-image: url(./assets/images/background-space-pic.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.landing__landing__welcome-message {
+  height: 60vh;
+  width: 80vh;
+  border: 0.5px solid grey;
 }
