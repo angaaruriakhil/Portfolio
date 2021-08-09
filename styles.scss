@@ -27,7 +27,9 @@
     margin-right: 100px;  
   }
 
-  
+  &__list-items-number {
+    color: #64FFDA; 
+  }
 }
 
 body {
@@ -41,10 +43,37 @@ body {
   justify-content: center; 
   align-items: center; 
   height: 100vh; 
-  &__landing__welcome-message {
-    height: 60vh; 
-    width: 80vh; 
-    border: 0.5px solid grey; 
-
+  &__message {
+    height: 60vh;
+    width: auto;   
+    border: 0.5px solid grey;
+    font-size: 70px;
+    border-radius: 25px; 
+    font-family: "Consolas";
+    display: inline-grid; 
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
   }
+}
+
+#p1 {
+  grid-column-start: 1;
+  grid-column-gap: 0; 
+}
+
+#p2 {
+  grid-column-start: 2;
+  grid-row-start: 2;  
+}
+
+#p3 {
+  grid-column-start: 2;
+  grid-row-start: 3;  
+}
+
+#p4 {
+  grid-column-start: 2;
+  grid-row-start: 4;  
 }
