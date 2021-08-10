@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: white;
-}
-
 @font-face {
   font-family: "Consolas";
   src: url(".assets/fonts/Consolas.woff2") format("woff2"), url(".assets/fonts/Consolas.woff") format("woff");
@@ -12,8 +5,99 @@
   font-style: normal;
   font-display: swap;
 }
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes down-from-above {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 25px);
+  }
+  100% {
+    transform: translate(0px, 50px);
+  }
+}
+@keyframes slightly-raise {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, -5px);
+  }
+}
+@keyframes slightly-enlarge {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+  }
+}
+@keyframes bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+  25%, 55%, 75%, 87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.nav__list-items:hover {
+  animation-name: slightly-raise;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
 .rest-of-page {
-  background-color: linear-gradient(#647AAF, #092659);
+  background: linear-gradient(#647AAF, #092659);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nav {
@@ -58,13 +142,9 @@
 }
 .socials__line {
   width: 100px;
-  height: 800px;
+  height: 100px;
   background: white;
 }
-.socials__img {
-  background-color: white;
-}
-
 .landing {
   display: flex;
   justify-content: center;
@@ -100,18 +180,34 @@
   grid-column-start: 2;
   grid-row-start: 2;
   color: #29b6f6;
+  animation-name: slightly-enlarge;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
 }
 
 #landing__message__line-3 {
   grid-column-start: 2;
   grid-row-start: 3;
   color: #9CCC65;
+  animation-name: slightly-enlarge;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
 }
 
 #landing__message__line-4 {
   grid-column-start: 2;
   grid-row-start: 4;
   color: #EF5350;
+  animation-name: bounce;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
 #landing__message__line-5 {
@@ -126,19 +222,13 @@
 
 #span1 {
   color: #29b6f6;
+  display: inline-block;
+  animation-name: slightly-enlarge;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 #span2 {
   animation-name: fade-out;
   animation-duration: 1.5s;

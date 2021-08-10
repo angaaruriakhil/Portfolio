@@ -1,0 +1,76 @@
+@keyframes fade-out {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes down-from-above {
+  0% {transform: translate(0px, 0px);}
+  50% {transform: translate(0px, 25px);}
+  100% {transform: translate(0px, 50px);}
+}
+
+@keyframes slightly-raise {
+  0% {transform: translate(0px, 0px);}
+  100% {transform: translate(0px, -5px);}
+}
+
+@keyframes slightly-enlarge {
+  0% {transform: scale(1,1);}
+  100% {transform: scale(1.1,1.1);}
+}
+
+@keyframes bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.nav__list-items:hover { 
+  animation-name: slightly-raise;
+  animation-duration: 0.5s; 
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  cursor: pointer;   
+}
+

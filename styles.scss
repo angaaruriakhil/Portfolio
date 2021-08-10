@@ -1,15 +1,21 @@
+
+@import "./assets/styles/__typography"; 
+@import "./assets/styles/__animations"; 
+
 * {
   margin: 0; 
   padding: 0; 
-  box-sizing: border-box; 
-  color: white; 
-  // font-family: "Red Hat Display"; 
+  // box-sizing: border-box; 
+  color: $primary-color; 
 }
 
-@import "./assets/styles/__typography.scss"; 
 
 .rest-of-page {
-  background-color: linear-gradient(#647AAF, #092659);
+  background: linear-gradient(#647AAF, #092659);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat; 
+  background-size: cover; 
 }
 .nav { 
   display: flex; 
@@ -57,11 +63,10 @@
   // justify-content: flex-end; 
   &__line {
     width: 100px; 
-    height: 800px;
+    height: 100px;
     background: white;
   }   
   &__img {
-    background-color: white;
   }
 }  
 
@@ -99,19 +104,35 @@
 #landing__message__line-2 {
   grid-column-start: 2;
   grid-row-start: 2;
-  color: #29b6f6;   
+  color: #29b6f6;
+  animation-name: slightly-enlarge;  
+  animation-timing-function: linear;
+  animation-duration: 1s; 
+  animation-iteration-count: 1; 
+  animation-delay: 1s;   
 }
 
 #landing__message__line-3 {
   grid-column-start: 2;
   grid-row-start: 3;
-  color: #9CCC65   
+  color: #9CCC65;
+  animation-name: slightly-enlarge;  
+  animation-timing-function: linear;
+  animation-duration: 1s; 
+  animation-iteration-count: 1; 
+  animation-delay: 2s;    
 }
 
 #landing__message__line-4 {
   grid-column-start: 2;
   grid-row-start: 4;
-  color: #EF5350;   
+  color: #EF5350; 
+  animation-name: bounce;  
+  animation-timing-function: linear;
+  animation-duration: 1s; 
+  animation-iteration-count: 1; 
+  animation-delay: 3s;
+  animation-fill-mode: forwards;   
 }
 
 #landing__message__line-5 {
@@ -125,13 +146,12 @@
 }
 
 #span1 {
-  color: #29b6f6; 
-}
-
-@keyframes fade-out {
-  0% {opacity: 1;}
-  50% {opacity: 0;}
-  100% {opacity: 1;}
+  color: #29b6f6;
+  display: inline-block; 
+  animation-name: slightly-enlarge;  
+  animation-timing-function: linear;
+  animation-duration: 1s; 
+  animation-iteration-count: 1;
 }
 
 #span2 {
@@ -140,3 +160,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+
+
