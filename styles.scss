@@ -8,7 +8,9 @@
   // box-sizing: border-box; 
   color: $primary-color; 
 }
-
+a {
+  text-decoration: none; 
+}
 
 .rest-of-page {
   background: linear-gradient(#647AAF, #092659);
@@ -105,7 +107,7 @@
   grid-column-start: 2;
   grid-row-start: 2;
   color: #29b6f6;
-  animation-name: slightly-enlarge;  
+  animation-name: bounce;  
   animation-timing-function: linear;
   animation-duration: 1s; 
   animation-iteration-count: 1; 
@@ -116,7 +118,7 @@
   grid-column-start: 2;
   grid-row-start: 3;
   color: #9CCC65;
-  animation-name: slightly-enlarge;  
+  animation-name: bounce;  
   animation-timing-function: linear;
   animation-duration: 1s; 
   animation-iteration-count: 1; 
@@ -148,7 +150,7 @@
 #span1 {
   color: #29b6f6;
   display: inline-block; 
-  animation-name: slightly-enlarge;  
+  animation-name: bounce;  
   animation-timing-function: linear;
   animation-duration: 1s; 
   animation-iteration-count: 1;

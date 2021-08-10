@@ -15,16 +15,16 @@
     <nav class="nav"> 
       <img class = "nav__logo-img" src = "./assets/images/new2.png"> 
       <ul class = "nav__list-master">
-        <li class="nav__list-items"> <span class = "nav__list-items-number">01</span>.Welcome </li>
-        <li class="nav__list-items"> <span class = "nav__list-items-number">02</span>.About </li>
-        <li class="nav__list-items"> <span class = "nav__list-items-number">03</span>.Projects</li>
-        <li class="nav__list-items"> <span class = "nav__list-items-number">04</span>.Contact</li>
+        <a href = "#landing"> <li class="nav__list-items"> <span class = "nav__list-items-number">01</span>.Welcome </li> </a>
+        <a href="#about"> <li class="nav__list-items"> <span class = "nav__list-items-number">02</span>.About </li> </a>
+        <a href="#projects"><li class="nav__list-items"> <span class = "nav__list-items-number">03</span>.Projects</li> </a>
+        <a href="#contact"> <li class="nav__list-items"> <span class = "nav__list-items-number">04</span>.Contact</li> </a> 
       </ul>
     </nav>
 
   
   </section>
-  <section class="landing">
+  <section class="landing" id="landing">
     <div class="landing__message"> 
       <p id = "landing__message__line-1" class = "landing__message__line"> let <span id = "span1"> welcome </span> = { </p>
       <p id = "landing__message__line-2" class = "landing__message__line"> Name: "Angaar Uriakhil", </p>
@@ -35,9 +35,8 @@
     </div>
   </section>
 
-  <section class="about rest-of-page"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur consequatur ad voluptatem aliquid eaque iure nostrum numquam, quia dicta porro nisi delectus reiciendis illum earum doloremque dolore beatae amet optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aliquam doloribus eveniet, natus nesciunt quisquam cupiditate, voluptate inventore, accusantium ab officiis pariatur atque quae. Repellendus incidunt ut magni. Id, commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea quisquam dolore earum dolores atque? Aliquam vero, ducimus ipsam voluptatem culpa quo dolor sunt nesciunt facere vitae exercitationem ipsum laudantium? </section>
-  <section class="projects rest-of-page"> Some more text 
-
+  <section class="about rest-of-page" id="about"> Lorem ipsum dolor sit amet </section>
+  <section class="projects rest-of-page" id="projects"> Some more text 
     <div class="socials">
       <div class=socials__line> </div> 
       <a href = https://uk.linkedin.com/in/angaar-uriakhil-1723a71b4 target="_blank"> <img class = socials__img src = "./assets/images/linkedin-brands.svg"> </a>
@@ -46,7 +45,7 @@
     </div> 
 
   </section>
-  <section class="contact rest-of-page"> Some more text</section> 
+  <section class="contact rest-of-page" id = "contact"> Some more text</section> 
 </body>
 <script> 
 function IDontKnowYet () {
