@@ -98,12 +98,12 @@ a {
   text-decoration: none;
 }
 
-body {
+html {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
-.landing, .about, .projects, .classes {
+.landing, .about, .projects, .contact {
   scroll-snap-align: start;
 }
 
@@ -261,11 +261,80 @@ body {
 .about {
   height: 100vh;
   border-bottom: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Red Hat Display";
+}
+.about__article {
+  display: flex;
+  justify-content: space-between;
+  width: 65vw;
+  height: 40vh;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+.about__article__header {
+  margin-left: 10px;
+  font-size: 50px;
+}
+.about__article__profile-pic {
+  border: 5px solid black;
+  border-radius: 15px;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.about__article__info {
+  font-size: 24px;
+  margin-left: 10px;
+  height: 100%;
+}
+.about__article__info__highlight {
+  color: #64ffda;
+  font-weight: bold;
+}
+.about__tech-stack {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.about__tech-stack__header {
+  font-size: 40px;
+  text-decoration: overline;
+  text-decoration: underline;
+}
+.about__tech-stack__icons {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: repeat(3, auto);
+  height: 50vh;
+  width: 65vw;
+  font-size: 50px;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  border: 2px solid white;
+  max-height: 100%;
+}
+
+#_nology, #chemosphere, #university-of-surrey {
+  text-decoration: blink;
+  color: #FF6489;
+}
+
+#_nology:hover, #chemosphere:hover, #university-of-surrey:hover {
+  opacity: 50%;
+  text-decoration: underline;
+}
+
+#_nology:visited, #chemosphere:visited, #university-of-surrey:visited {
+  color: lightskyblue;
 }
 
 .projects {
+  width: 100vw;
   height: 100vh;
-  border-bottom: 2px solid white;
 }
 
 .contact {
@@ -302,11 +371,13 @@ body {
   font-weight: bold;
   background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   overflow: hidden;
+  margin-bottom: 300px;
 }
 .contact__button:hover {
   opacity: 70%;
+  cursor: pointer;
 }
 
-.fa-envelope {
+.fa-envelope, .fa-handshake {
   color: black;
 }
