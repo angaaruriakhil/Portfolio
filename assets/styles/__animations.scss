@@ -66,12 +66,22 @@
   }
 }
 
-.nav__list-items:hover { 
-  animation-name: slightly-raise;
-  animation-duration: 0.5s; 
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  cursor: pointer; 
-  text-decoration: none;   
+@keyframes rainbowBorder {
+  0% {;}
+  50% {box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0,0,0,0);}
+  100% {box-shadow: none;}
 }
+
+@keyframes spinningDisc {
+  0% {;}
+  25% {transform: rotate(90deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
+  
+}
+
+
+
+
 
