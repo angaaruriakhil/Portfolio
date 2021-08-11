@@ -146,13 +146,6 @@ html {
   border-radius: 50%;
   overflow: hidden;
 }
-.nav__logo-img:hover {
-  animation-name: spinningDisc;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0, 0, 0, 0);
-}
 .nav__list-master {
   display: flex;
   justify-content: flex-end;
@@ -293,6 +286,7 @@ html {
   font-size: 50px;
 }
 .about__article__profile-pic {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   border: 5px solid transparent;
   border-radius: 15px;
@@ -320,7 +314,7 @@ html {
   font-size: 40px;
   border-bottom: 2px solid white;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .about__tech-stack__icons {
   display: grid;
@@ -337,6 +331,7 @@ html {
 }
 .about__tech-stack__icons:hover {
   box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0, 0, 0, 0);
+  transform: scale(1.2, 1.2);
 }
 
 #_nology, #chemosphere, #university-of-surrey {
@@ -392,11 +387,23 @@ html {
   font-weight: bold;
   background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   overflow: hidden;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 .contact__button:hover {
   opacity: 70%;
   cursor: pointer;
+}
+.contact__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__footer__info {
+  font-size: 15px;
+  color: white;
+  font-family: "Consolas";
+  text-decoration: overline;
+  margin-bottom: -60px;
 }
 
 .fa-envelope, .fa-handshake, .hi-icon {
