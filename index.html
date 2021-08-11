@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/c1c2da4e28.js" crossorigin="anonymous"></script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 <body>
   <section class="fixed_elements">
@@ -34,19 +36,35 @@
       <p id="landing__message__line-6" class="landing__message__line">><span id=span2>_</span> </p>
     </div>
   </section>
-
-  <section class="about rest-of-page" id="about"> Lorem ipsum dolor sit amet </section>
-  <section class="projects rest-of-page" id="projects"> Some more text 
-    <div class="socials">
-      <div class=socials__line> </div> 
-      <a href = https://uk.linkedin.com/in/angaar-uriakhil-1723a71b4 target="_blank"> <img class = socials__img src = "./assets/images/linkedin-brands.svg"> </a>
-      <a href = https://www.researchgate.net/profile/Mohammad_Uriakhil target="_blank"> <img class = socials__img src = "./assets/images/researchgate-brands.svg"> </a>
-      <a href = https://github.com/angaar96 target="_blank"> <img class = socials__img src = "./assets/images/github-brands.svg"> </a>  
+  <main class = "rest-of-page"> 
+  <section class="about" id="about"> Lorem ipsum dolor sit amet </section>
+  <section class="projects" id="projects"> 
+    
+    <div class="socials"> 
+      <a href = https://uk.linkedin.com/in/angaar-uriakhil-1723a71b4 target="_blank" class = socials__links> <i class="fab fa-linkedin"></i> </a>
+      <a href = https://www.researchgate.net/profile/Mohammad_Uriakhil target="_blank" class = socials__links> <i class="fab fa-researchgate"> </i> </a>
+      <a href = https://github.com/angaar96 target="_blank" class = socials__links> <i class="fab fa-github"></i> </a>
+      <div class=socials__line> </div>
     </div> 
+    
 
   </section>
-  <section class="contact rest-of-page" id = "contact"> Some more text</section> 
-</body>
+  <section class="contact" id = "contact"> 
+    <p class="contact__header"> Call me maybe.  <i class="fas fa-envelope"></i> </p>
+    <p class="contact__message"> I’m always looking for exciting and challenging opportunities.<br>
+      If you think I can bring value to your company, please, do not hesitate to send me a message. </p>
+    
+
+    <a class="button" href="mailto:angar1996@gmail.com"><button class="contact__button"> Send an e-mail </button></a>
+    <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="angaar-uriakhil-1723a71b4" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/angaar-uriakhil-1723a71b4?trk=profile-badge"></a></div> -->
+
+   </section> 
+  </main>
+  </body>
+
+
+
+
 <script> 
 function IDontKnowYet () {
   let welcome = document.getElementById("span1").innerText;

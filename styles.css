@@ -84,11 +84,13 @@
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   cursor: pointer;
+  text-decoration: none;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   color: white;
 }
 
@@ -96,10 +98,18 @@ a {
   text-decoration: none;
 }
 
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.landing, .about, .projects, .classes {
+  scroll-snap-align: start;
+}
+
 .rest-of-page {
   background: linear-gradient(#647AAF, #092659);
   width: 100vw;
-  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -134,21 +144,28 @@ a {
   font-size: 40px;
   list-style-type: none;
   margin-right: 20px;
+  font-weight: normal;
 }
 .nav__list-items-number {
   color: #64FFDA;
 }
 
 .socials {
-  width: 100px;
-  height: 100px;
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .socials__line {
-  width: 100px;
-  height: 100px;
+  width: 5px;
+  height: 150px;
   background: white;
+  margin-top: 10px;
 }
+.socials__links {
+  font-size: 50px;
+}
+
 .landing {
   display: flex;
   justify-content: center;
@@ -158,6 +175,7 @@ a {
   background-image: url(./assets/images/background-space-pic.jfif);
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 2px solid white;
 }
 .landing__message {
   background: linear-gradient(rgba(120, 149, 198, 0.15), rgba(14, 21, 48, 0.15));
@@ -238,4 +256,57 @@ a {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.about {
+  height: 100vh;
+  border-bottom: 2px solid white;
+}
+
+.projects {
+  height: 100vh;
+  border-bottom: 2px solid white;
+}
+
+.contact {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid white;
+  color: white;
+}
+.contact__message, .contact__header, .contact__button {
+  font-family: "Red Hat Display";
+}
+.contact__header {
+  font-size: 50px;
+  text-align: left;
+  align-self: flex-start;
+  margin-left: 200px;
+  font-weight: bold;
+}
+.contact__message {
+  font-size: 40px;
+  width: 60vw;
+}
+.contact__button {
+  font-size: 30px;
+  height: auto;
+  width: auto;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+  background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
+  overflow: hidden;
+}
+.contact__button:hover {
+  opacity: 70%;
+}
+
+.fa-envelope {
+  color: black;
 }

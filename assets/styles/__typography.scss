@@ -1,8 +1,4 @@
 
-$primary-font: "Red Hat Display"; 
-$primary-color: white; 
-$secondary-color: #64FFDA; 
-
 @font-face {
   font-family: 'Consolas';
   src: url('.assets/fonts/Consolas.woff2') format('woff2'),
@@ -11,3 +7,9 @@ $secondary-color: #64FFDA;
   font-style: normal;
   font-display: swap;
 }
+
+
+$primary-font: "Red Hat Display"; 
+$secondary-font: "Consolas";
+$primary-color: white; 
+$secondary-color: #64FFDA; 
