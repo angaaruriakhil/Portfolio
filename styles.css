@@ -78,15 +78,28 @@
     transform: translateY(0px);
   }
 }
-.nav__list-items:hover {
-  animation-name: slightly-raise;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  cursor: pointer;
-  text-decoration: none;
+@keyframes rainbowBorder {
+  50% {
+    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: none;
+  }
 }
-
+@keyframes spinningDisc {
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -133,6 +146,13 @@ html {
   border-radius: 50%;
   overflow: hidden;
 }
+.nav__logo-img:hover {
+  animation-name: spinningDisc;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0, 0, 0, 0);
+}
 .nav__list-master {
   display: flex;
   justify-content: flex-end;
@@ -141,10 +161,18 @@ html {
   align-self: flex-start;
 }
 .nav__list-items {
-  font-size: 40px;
+  font-size: 30px;
   list-style-type: none;
   margin-right: 20px;
   font-weight: normal;
+}
+.nav__list-items:hover {
+  animation-name: slightly-raise;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  text-decoration: none;
 }
 .nav__list-items-number {
   color: #64FFDA;
@@ -192,6 +220,11 @@ html {
   row-gap: 0;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   padding-top: 20px;
+  animation-name: rainbowBorder;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 4s;
 }
 
 #landing__message__line-1 {
@@ -202,34 +235,18 @@ html {
   grid-column-start: 2;
   grid-row-start: 2;
   color: #29b6f6;
-  animation-name: bounce;
-  animation-timing-function: linear;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-delay: 1s;
 }
 
 #landing__message__line-3 {
   grid-column-start: 2;
   grid-row-start: 3;
   color: #9CCC65;
-  animation-name: bounce;
-  animation-timing-function: linear;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-delay: 2s;
 }
 
 #landing__message__line-4 {
   grid-column-start: 2;
   grid-row-start: 4;
   color: #EF5350;
-  animation-name: bounce;
-  animation-timing-function: linear;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
 }
 
 #landing__message__line-5 {
@@ -245,10 +262,6 @@ html {
 #span1 {
   color: #29b6f6;
   display: inline-block;
-  animation-name: bounce;
-  animation-timing-function: linear;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
 }
 
 #span2 {
@@ -263,29 +276,30 @@ html {
   border-bottom: 2px solid white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-family: "Red Hat Display";
 }
 .about__article {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 65vw;
   height: 40vh;
-  align-items: flex-start;
-  margin-top: 60px;
+  align-items: center;
+  margin-bottom: 100px;
 }
 .about__article__header {
   margin-left: 10px;
   font-size: 50px;
 }
 .about__article__profile-pic {
-  border: 5px solid black;
+  background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
+  border: 5px solid transparent;
   border-radius: 15px;
-  min-height: 0;
-  max-width: 100%;
-  max-height: 100%;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+.about__article__profile-pic:hover {
+  transform: scale(1.2, 1.2);
 }
 .about__article__info {
   font-size: 24px;
@@ -297,25 +311,32 @@ html {
   font-weight: bold;
 }
 .about__tech-stack {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 5px;
 }
 .about__tech-stack__header {
   font-size: 40px;
-  text-decoration: overline;
-  text-decoration: underline;
+  border-bottom: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 .about__tech-stack__icons {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: repeat(3, auto);
-  height: 50vh;
+  height: 20vh;
   width: 65vw;
-  font-size: 50px;
-  grid-row-gap: 0;
-  grid-column-gap: 0;
-  border: 2px solid white;
+  font-size: 25px;
+  border-radius: 15px;
   max-height: 100%;
+  padding-top: 30px;
+  justify-content: space-around;
+  text-align: center;
+}
+.about__tech-stack__icons:hover {
+  box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0, 0, 0, 0);
 }
 
 #_nology, #chemosphere, #university-of-surrey {
@@ -378,6 +399,12 @@ html {
   cursor: pointer;
 }
 
-.fa-envelope, .fa-handshake {
+.fa-envelope, .fa-handshake, .hi-icon {
   color: black;
+}
+
+.hi-icon {
+  height: 40px;
+  width: 40px;
+  margin-left: 5px;
 }

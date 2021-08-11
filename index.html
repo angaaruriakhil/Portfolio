@@ -7,10 +7,19 @@
   <link rel="stylesheet" href="styles.css"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
   <title>Document</title>
   <script src="https://kit.fontawesome.com/c1c2da4e28.js" crossorigin="anonymous"></script>
   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <section class="fixed_elements">
@@ -23,15 +32,14 @@
         <a href="#contact"> <li class="nav__list-items"> <span class = "nav__list-items-number">04</span>.Contact</li> </a> 
       </ul>
     </nav>
-
   
   </section>
   <section class="landing" id="landing">
-    <div class="landing__message"> 
-      <p id = "landing__message__line-1" class = "landing__message__line"> let <span id = "span1"> welcome </span> = { </p>
-      <p id = "landing__message__line-2" class = "landing__message__line"> Name: "Angaar Uriakhil", </p>
-      <p id = "landing__message__line-3" class = "landing__message__line"> Occupation: "Web Developer", </p>
-      <p id = "landing__message__line-4" class = "landing__message__line"> Datatype: "Portfolio"</p>
+    <div class="landing__message" data-aos="flip-left" data-aos-duration: 3s> 
+      <p id = "landing__message__line-1" class = "landing__message__line"> let <span id = "span1" class = "animate__animated animate__tada"> welcome </span> = { </p>
+      <p id = "landing__message__line-2" class = "landing__message__line animate__animated animate__backInDown animate__delay-1s" > Name: "Angaar Uriakhil", </p>
+      <p id = "landing__message__line-3" class = "landing__message__line animate__animated animate__backInDown animate__delay-2s"> Occupation: "Web Developer", </p>
+      <p id = "landing__message__line-4" class = "landing__message__line animate__animated animate__backInDown animate__delay-3s"> Datatype: "Portfolio"</p>
       <p id="landing__message__line-5" class="landing__message__line"> } </p>
       <p id="landing__message__line-6" class="landing__message__line">><span id=span2>_</span> </p>
     </div>
@@ -40,31 +48,33 @@
     <section class="about" id="about">
       <article class="about__article">
         <div> 
-          <h1 class="about__article__header"> Hi. <br> Let's work together. <i class="fas fa-handshake"></i> </h1>
+          <h1 class="about__article__header"> Hi. <img src = "./assets/images/hello.svg" class="hi-icon"> <br> Let's work together. <i class="fas fa-handshake"></i> </h1>
           <p class = "about__article__info"> <br> My name is Angaar and I am a <span class="about__article__info__highlight"> London based </span> web developer. <br>
           I have a passion for creating <span class="about__article__info__highlight"> dazzling, responsive websites and apps.</span><br> 
           To realise my dream, I have taken a 12-week web developer course with <a class="about__article__info__highlight" id="_nology" href = https://nology.io/technology-consultant-programme/ target = "_blank">_nology.</a> <br> 
           I am also an alumni of the <a class="about__article__info__highlight" id=university-of-surrey href="https://www.surrey.ac.uk/undergraduate/chemical-engineering" target="_blank">University of Surrey </a>, where I was awarded <span class="about__article__info__highlight">  first class honours </span> in my Chemical Engineering MEng degree and published my master’s thesis in the journal <a class="about__article__info__highlight" href = "https://www.sciencedirect.com/science/article/abs/pii/S0045653521014971?via%3Dihub" target = "_blank" id=chemosphere> Chemosphere. </a> </p>
-        </div> 
+        </div>
+         
         <img src="./assets/images/profile-pic.jfif" class = "about__article__profile-pic">
+        
       </article>
 
       <div class="about__tech-stack"> 
         <h1 class="about__tech-stack__header"> <i class="fas fa-layer-group"></i>
           Tech Stack <i class="fas fa-layer-group"></i> </h1>
         <div class ="about__tech-stack__icons"> 
-          <i class="fab fa-github"></i>
-          <i class="fab fa-git"></i>
-          <i class="fab fa-node"></i>
-          <i class="fab fa-python"></i>
-          <i class="fab fa-java"></i>
-          <i class="fab fa-npm"></i>
-          <i class="fab fa-react"></i>
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-js-square"></i>
-          <i class="fab fa-sass"></i>
-          <i class="fab fa-bootstrap"></i>
-          <i class="fab fa-css3"></i>
+          <p> <i class="fab fa-github"></i> Github </p>
+          <p> <i class="fab fa-git"></i> Git </p>
+          <p> <i class="fab fa-bootstrap"></i> Bootstrap </p>
+          <p> <i class="fab fa-npm"></i> npm </p>
+          <p> <i class="fab fa-node"></i> Node.js </p>
+          <p> <i class="fab fa-react"></i> React </p>
+          <p> <i class="fab fa-python"></i> Python 3 </p>
+          <p> <i class="fab fa-java"></i> Java </p>
+          <p> <i class="fab <p> fa-js-square"></i> JavaScript (ES6+) </p>
+          <p> <i class="fab fa-html5"></i> HTML 5 </p>
+          <p> <i class="fab fa-css3"></i> CSS 3 </p>
+          <p> <i class="fab fa-sass"></i> Sass </p>
         </div>
       </div>
   
@@ -98,7 +108,10 @@
 
 
 <script> 
-function IDontKnowYet () {
+AOS.init();
+
+
+function Placeholder () {
   let welcome = document.getElementById("span1").innerText;
   welcome_array = [];
   for (let i=0; i<welcome.length; i++) {
@@ -106,7 +119,13 @@ function IDontKnowYet () {
     };
   console.log(welcome_array);
   } 
-window.onload = IDontKnowYet; 
+window.onload = IDontKnowYet;
+
+
+function scrollBar() {
+  document.getElementById()
+  }
+
 
 </script> 
 </html>
