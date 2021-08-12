@@ -260,9 +260,10 @@ html {
     font-weight: bold;
     display: flex; 
     justify-content: flex-start; 
-    width: 70vw; 
+    width: 70vw;
+    align-items: center;  
   }
-  &__card-1__subheader {
+  &__subheader {
     color: $secondary-color;      
   } 
   &__card-1 {
@@ -442,28 +443,9 @@ html {
     margin-top: 30px;
     text-align: center;  
   }
-
-
-  .projects { 
-  }
   .projects__card-1__header {
-    font-size: 30px;
     justify-content: center; 
-
   }
-  .projects__card-1 {
-    width: 90vw; 
-  }
-  .projects__card-1__text, .projects__card-2-text { 
-  }
-  .projects__card-1__img, .projects__card-2__img {
- 
-  }
-  .projects__card-2 {
-    width: 90vw;
-  }
-
-
 
   .contact__card__header {
     font-size: 40px;
@@ -505,31 +487,23 @@ html {
   grid-template-rows: auto auto auto auto;
   font-size: 15px;  
   }
-
-  
-  .projects {  
+  .projects__card-1 { 
+    width: 90vw;  
   }
   .projects__card-1__header {
-    font-size: 20px;  
+    font-size: 30px; 
   }
-  .projects__card-1 {
-    width: 90vw; 
-  }
-  .projects__card-1__text, .projects__card-2-text { 
-  }
-  .projects__card-1__img, .projects__card-2__img {
- 
-  }
-  .projects__card-2 {
-     
+  .projects__subheader {
+    font-size: 20px;
+    width: 90vw;  
   }
 
   .contact__card__header {
-    font-size: 30px; 
+    font-size: 40px; 
     align-self: center; 
   }
   .contact__card__message {
-    font-size: 20px; 
+    font-size: 30px; 
   }
 }
 
@@ -540,29 +514,9 @@ html {
   .nav__list-items {
     font-size: 15px; 
   }
-  .landing__message {
-    font-size: 20px;
-    width: 90vw; 
-  }
 
-  
-  .projects {
-    justify-content: center;
-    align-items: center;  
-  }
   .projects__card-1__header {
-    font-size: 10px;  
-  }
-  .projects__card-1 {
-    width: 90vw; 
-  }
-  .projects__card-1__text, .projects__card-2-text { 
-  }
-  .projects__card-1__img, .projects__card-2__img {
- 
-  }
-  .projects__card-2 {
-     
+    font-size: 25px; 
   }
 
   .contact__card__header {
@@ -575,10 +529,10 @@ html {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .projects__card-1__img:hover {
     cursor: pointer;
-    transform: scale(2.5,2.5) translate(-100px, 100px);
+    transform: scale(2.5,2.5) translate(-120px, 50px);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   }
   
