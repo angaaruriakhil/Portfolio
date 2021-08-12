@@ -103,7 +103,7 @@ html {
   &__message {
     background: linear-gradient(rgba(120, 149, 198, 0.15), rgba(14, 21, 48, 0.15));  
     height: auto;
-    width: auto;   
+    width: 70vw;   
     border: 1px solid rgba(103, 128, 159, 0.15);
     font-size: 50px;
     border-radius: 25px; 
@@ -182,13 +182,12 @@ html {
   &__article {
     display: flex; 
     justify-content: center; 
-    width: 65vw;
+    width: 70vw;
     height: 40vh; 
     align-items: center;
     margin-bottom: 100px;   
   }
-  &__article__header {
-    margin-left: 10px; 
+  &__article__header { 
     font-size: 50px;  
   }
   &__article__profile-pic {
@@ -203,7 +202,6 @@ html {
   }
   &__article__info {
     font-size: 24px;
-    margin-left: 10px;
     height: 100%;  
   &__highlight {
     color: #64ffda;
@@ -266,18 +264,12 @@ html {
   font-family: $primary-font;
   &__header {
     align-self: flex-start;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     // margin-bottom: 50px;   
   }
   &__subheader {
     color: $secondary-color;      
-  } 
-  &__subheader__icons {
-    display: flex; 
-    justify-content: space-between;
-    font-size: 100px; 
-    align-items: center; 
   } 
   &__card-1 {
     display: flex; 
@@ -299,17 +291,13 @@ html {
     margin-top: 10px; 
     background-color: $tertiary-color;  
   }
-  &____card-1__text__info__icons {
-    display: flex; 
-    justify-content: space-between; 
-    border: 10px solid white; 
-  }
   &__card-1__img {
     overflow: hidden;
     max-width: 100%; 
-    max-height: 100%;
-    border: 5px solid black; 
-    border-radius: 15px;  
+    max-height: 100%; 
+    border-radius: 15px;
+    background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
+    border: 5px solid transparent;      
   }
   &__card-1__img:hover { 
     cursor: pointer;
@@ -321,7 +309,7 @@ html {
     justify-content: space-around; 
     height: 30vh;
     width: 70vw;  
-    align-items: center;  
+    align-items: flex-start;  
   } 
   &__card-2__text {
     display: flex;
@@ -340,38 +328,51 @@ html {
     overflow: hidden;
     max-width: 100%;
     max-height: 100%;
-    border: 5px solid black; 
+    overflow: hidden;
+    max-width: 100%; 
+    max-height: 100%; 
     border-radius: 15px;
-    opacity: 100%; 
-    background-color: tertiary-color;   
+    background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
+    border: 5px solid transparent; 
   }
-
+  &__card-2__img:hover { 
+    cursor: pointer;
+    transform: scale(2.5,2.5) translate(100px, -100px);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
 }
 
 .contact {
-  height: 100vh; 
+  height: 100vh;
+  border-bottom: 2px solid white; 
   display: flex; 
-  justify-content: space-around;
-  flex-direction: column;  
-  align-items: center; 
-  text-align: center;
-  border-bottom: 2px solid white;
+  flex-direction: column; 
+  justify-content: space-around; 
+  align-items: center;  
+  font-family: $primary-font;
   color: $primary-color; 
-  &__message, &__header, &__button  {
+  &__card {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    align-items: center; 
+    height: 70vh;
+    width: 70vw;   
+  } 
+  &__card__message, &__card__header, &__card__button  {
     font-family: $primary-font; 
   }
-  &__header {
-    font-size: 50px;
-    text-align: left; 
-    align-self: flex-start; 
-    margin-left: 200px; 
-    font-weight: bold; 
+  &__card__header {
+    font-size: 50px;  
+    font-weight: bold;
+    align-self: flex-start;
+    margin-bottom: 50px;  
   }
-  &__message {
+  &__card__message {
     font-size: 40px;
-    width: 70vw;  
+    text-align: center; 
   }
-  &__button {
+  &__card__button {
     font-size: 30px;  
     height: auto; 
     width: auto; 
@@ -383,16 +384,16 @@ html {
     overflow: hidden;
     margin-bottom: 100px;  
   }
-  &__button:hover {
+  &__card__button:hover {
     opacity: 70%;
     cursor: pointer;
   }
-  &__footer {
+  &__card__footer {
     display: flex; 
     justify-content: center; 
     align-items: center;  
   } 
-  &__footer__info {
+  &__card__footer__info {
     font-size: 15px;
     color: $primary-color; 
     font-family: $secondary-font; 

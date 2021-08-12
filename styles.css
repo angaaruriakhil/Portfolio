@@ -201,7 +201,7 @@ html {
 .landing__message {
   background: linear-gradient(rgba(120, 149, 198, 0.15), rgba(14, 21, 48, 0.15));
   height: auto;
-  width: auto;
+  width: 70vw;
   border: 1px solid rgba(103, 128, 159, 0.15);
   font-size: 50px;
   border-radius: 25px;
@@ -276,13 +276,12 @@ html {
 .about__article {
   display: flex;
   justify-content: center;
-  width: 65vw;
+  width: 70vw;
   height: 40vh;
   align-items: center;
   margin-bottom: 100px;
 }
 .about__article__header {
-  margin-left: 10px;
   font-size: 50px;
 }
 .about__article__profile-pic {
@@ -297,7 +296,6 @@ html {
 }
 .about__article__info {
   font-size: 24px;
-  margin-left: 10px;
   height: 100%;
 }
 .about__article__info__highlight {
@@ -359,17 +357,11 @@ html {
 }
 .projects__header {
   align-self: flex-start;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
 }
 .projects__subheader {
   color: #64FFDA;
-}
-.projects__subheader__icons {
-  display: flex;
-  justify-content: space-between;
-  font-size: 100px;
-  align-items: center;
 }
 .projects__card-1 {
   display: flex;
@@ -391,17 +383,13 @@ html {
   margin-top: 10px;
   background-color: #0B1039;
 }
-.projects____card-1__text__info__icons {
-  display: flex;
-  justify-content: space-between;
-  border: 10px solid white;
-}
 .projects__card-1__img {
   overflow: hidden;
   max-width: 100%;
   max-height: 100%;
-  border: 5px solid black;
   border-radius: 15px;
+  background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
+  border: 5px solid transparent;
 }
 .projects__card-1__img:hover {
   cursor: pointer;
@@ -413,7 +401,7 @@ html {
   justify-content: space-around;
   height: 30vh;
   width: 70vw;
-  align-items: center;
+  align-items: flex-start;
 }
 .projects__card-2__text {
   display: flex;
@@ -432,37 +420,51 @@ html {
   overflow: hidden;
   max-width: 100%;
   max-height: 100%;
-  border: 5px solid black;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 15px;
-  opacity: 100%;
-  background-color: tertiary-color;
+  background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
+  border: 5px solid transparent;
+}
+.projects__card-2__img:hover {
+  cursor: pointer;
+  transform: scale(2.5, 2.5) translate(100px, -100px);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .contact {
   height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   border-bottom: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Red Hat Display";
   color: white;
 }
-.contact__message, .contact__header, .contact__button {
-  font-family: "Red Hat Display";
-}
-.contact__header {
-  font-size: 50px;
-  text-align: left;
-  align-self: flex-start;
-  margin-left: 200px;
-  font-weight: bold;
-}
-.contact__message {
-  font-size: 40px;
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
   width: 70vw;
 }
-.contact__button {
+.contact__card__message, .contact__card__header, .contact__card__button {
+  font-family: "Red Hat Display";
+}
+.contact__card__header {
+  font-size: 50px;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-bottom: 50px;
+}
+.contact__card__message {
+  font-size: 40px;
+  text-align: center;
+}
+.contact__card__button {
   font-size: 30px;
   height: auto;
   width: auto;
@@ -474,16 +476,16 @@ html {
   overflow: hidden;
   margin-bottom: 100px;
 }
-.contact__button:hover {
+.contact__card__button:hover {
   opacity: 70%;
   cursor: pointer;
 }
-.contact__footer {
+.contact__card__footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.contact__footer__info {
+.contact__card__footer__info {
   font-size: 15px;
   color: white;
   font-family: "Consolas";
