@@ -150,8 +150,8 @@ html {
   display: flex;
   justify-content: flex-end;
   column-gap: 10px;
-  flex-wrap: wrap;
   align-self: flex-start;
+  flex-wrap: wrap;
 }
 .nav__list-items {
   font-size: 30px;
@@ -501,4 +501,88 @@ html {
   height: 40px;
   width: 40px;
   margin-left: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav__logo-img {
+    visibility: hidden;
+  }
+
+  .landing__message {
+    font-size: 30px;
+  }
+
+  .about__article__header {
+    font-size: 30px;
+  }
+
+  .about__article__info {
+    font-size: 20px;
+  }
+
+  .hi-icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav__logo-img {
+    visibility: hidden;
+  }
+
+  .nav__list-items {
+    font-size: 20px;
+  }
+
+  .landing__message {
+    font-size: 20px;
+    width: 80vw;
+  }
+
+  .about__article__header {
+    font-size: 20px;
+  }
+
+  .about__article__info {
+    font-size: 15px;
+  }
+
+  .hi-icon {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav {
+    max-height: 10vh;
+  }
+
+  .nav__logo-img {
+    visibility: hidden;
+  }
+
+  .nav__list-items {
+    font-size: 20px;
+  }
+
+  .landing__message {
+    font-size: 10px;
+    width: 90vw;
+  }
+
+  .about__article__header {
+    font-size: 10px;
+  }
+
+  .about__article__info {
+    font-size: 5px;
+  }
+
+  .hi-icon {
+    height: 10px;
+    width: 10px;
+    margin-left: 5px;
+  }
 }
