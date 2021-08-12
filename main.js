@@ -18,8 +18,6 @@ function Placeholder () {
   window.onload = IDontKnowYet;
   } 
 
-
-
 function scrollBar() {
   document.getElementById();
   }
