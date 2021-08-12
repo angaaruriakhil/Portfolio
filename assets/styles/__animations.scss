@@ -12,7 +12,8 @@
 
 @keyframes slightly-raise {
   0% {transform: translate(0px, 0px);}
-  100% {transform: translate(0px, -5px);}
+  100% {transform: translate(0px, -5px);
+        color: #64FFDA;}
 }
 
 @keyframes slightly-enlarge {
