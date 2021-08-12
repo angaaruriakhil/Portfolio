@@ -19,6 +19,7 @@ html {
 .landing, .about, .projects, .contact {
   scroll-snap-align: start; 
 }
+// Everything that isn't the landing page.
 
 .rest-of-page {
   background: linear-gradient(#647AAF, #092659);
@@ -26,6 +27,8 @@ html {
   background-repeat: no-repeat; 
   background-size: cover; 
 }
+
+// Navbar
 
 .nav { 
   display: flex; 
@@ -66,13 +69,14 @@ html {
     animation-fill-mode: forwards;
     cursor: pointer; 
     text-decoration: none;
-
   }
 
   &__list-items-number {
     color: #64FFDA; 
   }
 }
+
+// Socials bar
 
 .socials {     
   display: flex; 
@@ -90,9 +94,13 @@ html {
   }  
 }  
 
+// Landing page 
+
+
 .landing {
   display: flex; 
-  justify-content: center; 
+  flex-direction: column; 
+  justify-content: space-around; 
   align-items: center; 
   height: 100vh;
   width: 100vw; 
@@ -106,6 +114,7 @@ html {
     width: 70vw;   
     border: 1px solid rgba(103, 128, 159, 0.15);
     font-size: 50px;
+    margin-top: 200px; 
     border-radius: 25px; 
     font-family: $secondary-font;
     display: grid; 
@@ -121,7 +130,19 @@ html {
     animation-iteration-count: infinite;
     animation-delay: 4s;     
   }
+  &__chevron {
+    font-size: 80px; 
+    justify-self: center; 
+  }
+  &__chevron:hover {
+    animation-name: heartBeat;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; 
+    animation-duration: 2s; 
+    }
 }
+
+// These next few lines place our landing message on the grid exactly as needed. 
 
 #landing__message__line-1 {
   grid-column-start: 1;
@@ -155,17 +176,21 @@ html {
   grid-row-start: 6; 
 }
 
-#span1 {
+#landing__message__line__span1 {
   color: #29b6f6;
   display: inline-block; 
 }
 
-#span2 {
+#landing__message__line__span2 {
   animation-name: fade-out; 
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+// About Page 
+
+
 .about {
   height: 100vh; 
   border-bottom: 2px solid white; 
@@ -246,6 +271,8 @@ html {
 #_nology:visited, #chemosphere:visited, #university-of-surrey:visited {
   color: lightskyblue;  
 }
+
+// Projects Page 
 
 .projects { 
   height: 100vh;
@@ -329,9 +356,11 @@ html {
   
 }
 
+// Contact Page 
+
 .contact {
   height: 100vh;
-  border-bottom: 2px solid white; 
+  border-bottom: 2px solid $primary-color; 
   display: flex; 
   flex-direction: column; 
   justify-content: space-around; 
@@ -389,6 +418,8 @@ html {
   }    
 }
 
+// Misc Icon Styling 
+
 .fa-envelope, .fa-handshake, .fa-tools, .hi-icon,  {
   color: black; 
 }
@@ -398,6 +429,9 @@ html {
   width: 40px; 
   margin-left: 5px;    
 }
+
+// Media Queries for Responsiveness
+
 
 @media screen and (max-width: 1200px) {
   .landing__message {
@@ -528,6 +562,8 @@ html {
     margin-bottom: 10px; 
   }
 }
+
+// Media Queries to disable image hover and scale at smaller sizes (image is unreadable at low scale) 
 
 @media (min-width: 1200px) {
   .projects__card-1__img:hover {
