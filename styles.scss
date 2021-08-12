@@ -5,7 +5,7 @@
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
-  color: $primary-color; 
+  color: $primary-color;  
 }
 
 a {
@@ -256,9 +256,96 @@ html {
   color: lightskyblue;  
 }
 
-.projects {
-  width: 100vw; 
-  height: 100vh; 
+.projects { 
+  height: 100vh;
+  border-bottom: 2px solid white; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-around; 
+  align-items: center;  
+  font-family: $primary-font;
+  &__header {
+    align-self: flex-start;
+    font-size: 40px;
+    font-weight: bold;
+    // margin-bottom: 50px;   
+  }
+  &__subheader {
+    color: $secondary-color;      
+  } 
+  &__subheader__icons {
+    display: flex; 
+    justify-content: space-between;
+    font-size: 100px; 
+    align-items: center; 
+  } 
+  &__card-1 {
+    display: flex; 
+    justify-content: space-around; 
+    height: 30vh;
+    width: 70vw;  
+    align-items: center; 
+  } 
+  &__card-1__text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 40%;   
+  } 
+  &__card-1__text__info {
+    border: 2px solid #64ffda;
+    border-radius: 15px; 
+    padding: 10px; 
+    margin-top: 10px; 
+    background-color: $tertiary-color;  
+  }
+  &____card-1__text__info__icons {
+    display: flex; 
+    justify-content: space-between; 
+    border: 10px solid white; 
+  }
+  &__card-1__img {
+    overflow: hidden;
+    max-width: 100%; 
+    max-height: 100%;
+    border: 5px solid black; 
+    border-radius: 15px;  
+  }
+  &__card-1__img:hover { 
+    cursor: pointer;
+    transform: scale(2.5,2.5) translate(-100px, 100px);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+  &__card-2 {
+    display: flex; 
+    justify-content: space-around; 
+    height: 30vh;
+    width: 70vw;  
+    align-items: center;  
+  } 
+  &__card-2__text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 40%;   
+  } 
+  &__card-2__text__info {
+    border: 2px solid #64ffda;
+    border-radius: 15px; 
+    padding: 10px; 
+    margin-top: 10px; 
+    background-color: $tertiary-color;  
+  }
+  &__card-2__img {
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    border: 5px solid black; 
+    border-radius: 15px;
+    opacity: 100%; 
+    background-color: tertiary-color;   
+  }
+
 }
 
 .contact {
@@ -269,7 +356,7 @@ html {
   align-items: center; 
   text-align: center;
   border-bottom: 2px solid white;
-  color: $primary-color;
+  color: $primary-color; 
   &__message, &__header, &__button  {
     font-family: $primary-font; 
   }
@@ -282,7 +369,7 @@ html {
   }
   &__message {
     font-size: 40px;
-    width: 60vw;  
+    width: 70vw;  
   }
   &__button {
     font-size: 30px;  
@@ -314,7 +401,7 @@ html {
   }    
 }
 
-.fa-envelope, .fa-handshake, .hi-icon {
+.fa-envelope, .fa-handshake, .fa-tools, .hi-icon,  {
   color: black; 
 }
 
