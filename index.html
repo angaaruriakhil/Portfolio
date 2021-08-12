@@ -23,8 +23,7 @@
 </head>
 <body>
   <section class="fixed_elements">
-    <nav class="nav"> 
-      <a href="#landing"> <img class = "nav__logo-img animate__animated animate__rotateIn animate__delay-4s" src = "./assets/images/personal-logo.png"> </a> 
+    <nav class="nav">  
       <ul class = "nav__list-master">
         <a href = "#landing"> <li class="nav__list-items"> <span class = "nav__list-items-number">01</span>.Welcome </li> </a>
         <a href="#about"> <li class="nav__list-items"> <span class = "nav__list-items-number">02</span>.About </li> </a>
@@ -32,6 +31,7 @@
         <a href="#contact"> <li class="nav__list-items"> <span class = "nav__list-items-number">04</span>.Contact</li> </a> 
       </ul>
     </nav>
+    <a href="#landing"> <img class = "nav__logo-img animate__animated animate__rotateIn animate__delay-4s" src = "./assets/images/personal-logo.png"> </a>
   
   </section>
   <section class="landing" id="landing">
@@ -47,7 +47,7 @@
   <main class = "rest-of-page"> 
     <section class="about" id="about">
       <article class="about__article">
-        <div> 
+        <div class="about__article__container"> 
           <h1 class="about__article__header"> Hi. <img src = "./assets/images/hello.svg" class="hi-icon animate__animated animate__swing animate__infinite animate__slower" alt = "hello icon"> <br> Let's work together. <i class="fas fa-handshake animate__animated animate__headShake animate__infinite animate__slower"></i> </h1>
           <p class = "about__article__info"> <br> My name is Angaar and I am a <span class="about__article__info__highlight"> London based </span> web developer. <br>
           I have a passion for creating <span class="about__article__info__highlight"> dazzling, responsive websites and apps.</span><br> 
@@ -82,10 +82,10 @@
 
 
   <section class="projects" id="projects"> 
+    <h1 class="projects__card-1__header"> Some things I've built. <i class="fas fa-tools"></i> </h1>
     <article class="projects__card-1">
       <div class="projects__card-1__text">
-        <h1 class="projects__header"> Some things I've built. <i class="fas fa-tools"></i> </h1> 
-        <h2 class = "projects__subheader"> <br> Featured Project <i class="fab fa-python"></i> <br> 
+        <h2 class = "projects__card-1__subheader"> <br> Featured Project <i class="fab fa-python"></i> <br> 
         Chemical Engineering Toolkit <a href = "https://github.com/angaar96/Simple-Chemistry-App" target = "_blank"> <i class="fab fa-github-square projects__subheader__icon"></i> </a>
         </h2>
         <p class = "projects__card-1__text__info"> 
