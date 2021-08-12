@@ -361,8 +361,9 @@ html {
   display: flex;
   justify-content: flex-start;
   width: 70vw;
+  align-items: center;
 }
-.projects__card-1__subheader {
+.projects__subheader {
   color: #64FFDA;
 }
 .projects__card-1 {
@@ -550,16 +551,7 @@ html {
   }
 
   .projects__card-1__header {
-    font-size: 30px;
     justify-content: center;
-  }
-
-  .projects__card-1 {
-    width: 90vw;
-  }
-
-  .projects__card-2 {
-    width: 90vw;
   }
 
   .contact__card__header {
@@ -609,21 +601,26 @@ html {
     font-size: 15px;
   }
 
-  .projects__card-1__header {
-    font-size: 20px;
-  }
-
   .projects__card-1 {
     width: 90vw;
   }
 
-  .contact__card__header {
+  .projects__card-1__header {
     font-size: 30px;
+  }
+
+  .projects__subheader {
+    font-size: 20px;
+    width: 90vw;
+  }
+
+  .contact__card__header {
+    font-size: 40px;
     align-self: center;
   }
 
   .contact__card__message {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -635,22 +632,8 @@ html {
     font-size: 15px;
   }
 
-  .landing__message {
-    font-size: 20px;
-    width: 90vw;
-  }
-
-  .projects {
-    justify-content: center;
-    align-items: center;
-  }
-
   .projects__card-1__header {
-    font-size: 10px;
-  }
-
-  .projects__card-1 {
-    width: 90vw;
+    font-size: 25px;
   }
 
   .contact__card__header {
@@ -663,10 +646,10 @@ html {
     margin-bottom: 10px;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .projects__card-1__img:hover {
     cursor: pointer;
-    transform: scale(2.5, 2.5) translate(-100px, 100px);
+    transform: scale(2.5, 2.5) translate(-120px, 50px);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
 
