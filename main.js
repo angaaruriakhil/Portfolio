@@ -7,16 +7,13 @@ function dateInFooter() {
   footerInfo.innerHTML = `Developed and maintained by Angaar Uriakhil, ${new Date().getFullYear()}.`;
 };
 
+function spinLogoToTop() {
+  document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__rotateIn";
+}
 
-function Placeholder () {
-  let welcome = document.getElementById("span1").innerText;
-  welcome_array = [];
-  for (let i=0; i<welcome.length; i++) {
-    welcome_array.push(welcome[i])
-    };
-  console.log(welcome_array);
-  window.onload = IDontKnowYet;
-  } 
+document.getElementById("fixed_elements__logo-img").addEventListener("click", spinLogoToTop);
+
+
 
 /* This section uses intersection observer to produce the scroll bar. I adapted this solution on stackoverflow for my needs: https://stackoverflow.com/questions/66336096/single-intersection-observer-for-multiple-entries */
 
