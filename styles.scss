@@ -28,6 +28,18 @@ html {
   background-size: cover; 
 }
 
+.fixed_elements__logo-img {  
+  background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
+  border: 10px solid transparent; 
+  padding-top: 15px; 
+  padding-bottom: 20px;  
+  margin-left: 10px;
+  margin-top: 10px;   
+  border-radius: 50%;
+  overflow: hidden; 
+  position: fixed;   
+}
+
 // Navbar
 
 .nav { 
@@ -38,17 +50,6 @@ html {
   position: fixed; 
   width: 100%; 
   height: 20vh;       
-  &__logo-img {  
-    background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
-    border: 10px solid transparent; 
-    padding-top: 15px; 
-    padding-bottom: 20px;  
-    margin-left: 10px;
-    margin-top: 10px;   
-    border-radius: 50%;
-    overflow: hidden; 
-    position: fixed;   
-  }
   &__list-master {
     display: flex; 
     justify-content: flex-end; 
@@ -495,7 +496,7 @@ html {
   .nav {
     justify-content: center; 
   }
-  .nav__logo-img {
+  .fixed_elements__logo-img  {
     visibility: hidden; 
   }
   .nav__list-items {
@@ -542,7 +543,7 @@ html {
 }
 
 @media screen and (max-width: 500px) {
-  .nav__logo-img {
+  .fixed_elements__logo-img  {
     visibility: hidden; 
   }
   .nav__list-items {
