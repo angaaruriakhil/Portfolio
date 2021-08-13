@@ -19,6 +19,7 @@ html {
 .landing, .about, .projects, .contact {
   scroll-snap-align: start; 
 }
+
 // Everything that isn't the landing page.
 
 .rest-of-page {
@@ -27,6 +28,34 @@ html {
   background-repeat: no-repeat; 
   background-size: cover; 
 }
+// Fixed Elements
+
+// Fixed Element - Socials 
+
+ .fixed_elements__socials {
+  position: fixed;
+  top: 540px;
+  left: 50px; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  &__line {
+    width: 5px; 
+    height: 150px;
+    background: white;
+    margin-top: 10px; 
+  } 
+  &__links {
+    font-size: 50px;
+    margin-top: 10px;  
+  }
+  &__links:hover {
+    transform: scale(1.5,1.5);
+    color: #64FFDA; 
+  }    
+}
+
+// Fixed Element - Logo 
 
 .fixed_elements__logo-img {  
   background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
@@ -40,7 +69,7 @@ html {
   position: fixed;   
 }
 
-// Navbar
+// Fixed Element - Navbar
 
 .nav { 
   display: flex; 
@@ -77,25 +106,7 @@ html {
   }
 }
 
-// Socials bar
-
-.socials {     
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;  
-  &__line {
-    width: 5px; 
-    height: 150px;
-    background: white;
-    margin-top: 10px;  
-  } 
-  &__links {
-    font-size: 50px; 
-  }  
-}  
-
-// Landing page 
+// Landing Section 
 
 
 .landing {
@@ -132,8 +143,9 @@ html {
     animation-delay: 4s;     
   }
   &__chevron {
-    font-size: 80px; 
-    justify-self: center; 
+    font-size: 120px; 
+    justify-self: flex-end; 
+
   }
   &__chevron:hover {
     animation-name: heartBeat;
@@ -141,6 +153,24 @@ html {
     animation-fill-mode: forwards; 
     animation-duration: 2s; 
     }
+  &__photo-credit {
+    font-family: $primary-font; 
+    align-self: flex-end;
+    margin-right: 50px; 
+    padding: 10px;
+    font-weight: bold;
+    background: linear-gradient(rgba(5, 60, 127, 0.15), rgba(8, 34, 83, 0.15));
+    border-radius: 10px;   
+  }
+  &__photo-credit:hover {
+    color: $secondary-color;
+    text-decoration: underline;
+    cursor: pointer; 
+    transform: scale(1.2,1.2);   
+  }
+  &__photo-credit__links {
+    color: $secondary-color; 
+  }
 }
 
 // These next few lines place our landing message on the grid exactly as needed. 
@@ -189,7 +219,7 @@ html {
   animation-timing-function: linear;
 }
 
-// About Page 
+// About Section 
 
 
 .about {
@@ -259,6 +289,9 @@ html {
     transform: scale(1.2, 1.2);
   }
 }
+
+// Miscellaneous styling for section
+
 #_nology, #chemosphere, #university-of-surrey {
   text-decoration: blink;
   color: #FF6489;   
@@ -273,7 +306,7 @@ html {
   color: lightskyblue;  
 }
 
-// Projects Page 
+// Projects Section 
 
 .projects { 
   height: 100vh;
@@ -357,7 +390,7 @@ html {
   
 }
 
-// Contact Page 
+// Contact Section 
 
 .contact {
   height: 100vh;
@@ -408,14 +441,23 @@ html {
   &__card__footer {
     display: flex; 
     justify-content: center; 
-    align-items: center;  
+    align-items: center; 
+    text-decoration: overline;  
   } 
   &__card__footer__info {
-    font-size: 15px;
+    font-size: 20px;
     color: $primary-color; 
     font-family: $secondary-font; 
-    text-decoration: overline;
-    margin-bottom: -60px;  
+  }  
+  &__card__footer__socials {
+    font-size: 19px; 
+    color: $primary-color;
+    border-top: 2px solid white;  
+  }
+  &__card__footer__socials__links:hover {
+    color: $secondary-color;
+    transform: scale(1.5,1.5);
+
   }    
 }
 
@@ -540,6 +582,14 @@ html {
   .contact__card__message {
     font-size: 30px; 
   }
+  .fixed_elements__socials {
+    visibility: hidden;     
+  }
+
+  .landing__photo-credit {
+    align-self: center;
+    margin-right: 0px;     
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -562,9 +612,27 @@ html {
     font-size: 30px; 
     margin-bottom: 10px; 
   }
+  .fixed_elements__socials {
+    visibility: hidden;     
+  }
+  .contact__card__footer {
+    flex-direction: column;
+    text-align: center;    
+  }
+  .contact__card__footer__socials {
+    border-top: none;
+    font-size: 15px;    
+  }
+  .contact__card__footer__info {
+    font-size: 15px;
+  }
+  .contact__card__footer__socials__links {
+    font-size: 40px;     
+  }
+
 }
 
-// Media Queries to disable image hover and scale at smaller sizes (image is unreadable at low scale) 
+// Media Queries to disable image hover and scale at smaller sizes (Image for toolkit is unreadable at low scale) 
 
 @media (min-width: 1200px) {
   .projects__card-1__img:hover {

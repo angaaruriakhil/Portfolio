@@ -128,6 +128,29 @@ html {
   background-size: cover;
 }
 
+.fixed_elements__socials {
+  position: fixed;
+  top: 540px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fixed_elements__socials__line {
+  width: 5px;
+  height: 150px;
+  background: white;
+  margin-top: 10px;
+}
+.fixed_elements__socials__links {
+  font-size: 50px;
+  margin-top: 10px;
+}
+.fixed_elements__socials__links:hover {
+  transform: scale(1.5, 1.5);
+  color: #64FFDA;
+}
+
 .fixed_elements__logo-img {
   background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   border: 10px solid transparent;
@@ -173,22 +196,6 @@ html {
   color: #64FFDA;
 }
 
-.socials {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.socials__line {
-  width: 5px;
-  height: 150px;
-  background: white;
-  margin-top: 10px;
-}
-.socials__links {
-  font-size: 50px;
-}
-
 .landing {
   display: flex;
   flex-direction: column;
@@ -224,14 +231,32 @@ html {
   animation-delay: 4s;
 }
 .landing__chevron {
-  font-size: 80px;
-  justify-self: center;
+  font-size: 120px;
+  justify-self: flex-end;
 }
 .landing__chevron:hover {
   animation-name: heartBeat;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-duration: 2s;
+}
+.landing__photo-credit {
+  font-family: "Red Hat Display";
+  align-self: flex-end;
+  margin-right: 50px;
+  padding: 10px;
+  font-weight: bold;
+  background: linear-gradient(rgba(5, 60, 127, 0.15), rgba(8, 34, 83, 0.15));
+  border-radius: 10px;
+}
+.landing__photo-credit:hover {
+  color: #64FFDA;
+  text-decoration: underline;
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+.landing__photo-credit__links {
+  color: #64FFDA;
 }
 
 #landing__message__line-1 {
@@ -492,13 +517,21 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: overline;
 }
 .contact__card__footer__info {
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   font-family: "Consolas";
-  text-decoration: overline;
-  margin-bottom: -60px;
+}
+.contact__card__footer__socials {
+  font-size: 19px;
+  color: white;
+  border-top: 2px solid white;
+}
+.contact__card__footer__socials__links:hover {
+  color: #64FFDA;
+  transform: scale(1.5, 1.5);
 }
 
 .fa-envelope, .fa-handshake, .fa-tools, .hi-icon {
@@ -636,6 +669,15 @@ html {
   .contact__card__message {
     font-size: 30px;
   }
+
+  .fixed_elements__socials {
+    visibility: hidden;
+  }
+
+  .landing__photo-credit {
+    align-self: center;
+    margin-right: 0px;
+  }
 }
 @media screen and (max-width: 500px) {
   .fixed_elements__logo-img {
@@ -658,6 +700,28 @@ html {
   .contact__card__message {
     font-size: 30px;
     margin-bottom: 10px;
+  }
+
+  .fixed_elements__socials {
+    visibility: hidden;
+  }
+
+  .contact__card__footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact__card__footer__socials {
+    border-top: none;
+    font-size: 15px;
+  }
+
+  .contact__card__footer__info {
+    font-size: 15px;
+  }
+
+  .contact__card__footer__socials__links {
+    font-size: 40px;
   }
 }
 @media (min-width: 1200px) {
