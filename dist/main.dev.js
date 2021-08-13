@@ -5,7 +5,7 @@ dateInFooter();
 
 function dateInFooter() {
   var footerInfo = document.getElementById("footer-info");
-  footerInfo.innerHTML = "Developed and maintained by Angaar Uriakhil, ".concat(new Date().getFullYear(), ".");
+  footerInfo.innerHTML = "Developed and maintained by Angaar Uriakhil, ".concat(new Date().getFullYear(), ". ");
 }
 
 ;
