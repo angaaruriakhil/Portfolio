@@ -43,8 +43,9 @@ function revert(el) {
 
 function pageAnimation(el) {
   if (el.id == "projects") {
-    document.getElementById("projects__card-1").className += " animate__animated animate__lightSpeedInRight";
-    document.getElementById("projects__card-2").className += " animate__animated animate__lightSpeedInLeft";
+    document.getElementById("projects__card-1__header").className += " animate__animated animate__slideInDown animate__duration-1s";
+    document.getElementById("projects__card-1").className += " animate__animated animate__lightSpeedInRight animate__delay-0.5s";
+    document.getElementById("projects__card-2").className += " animate__animated animate__lightSpeedInLeft animate__delay-0.5s";
   }
 
   if (el.id == "about") {
@@ -53,12 +54,15 @@ function pageAnimation(el) {
     document.getElementById("hi-icon").className += " animate__animated animate__slower animate__swing animate__delay-1s";
     document.getElementById("fa-handshake").className += " animate__animated animate__headShake animate__slower animate__delay-3s";
     document.getElementById("fa-layer-group-1").className += " animate__animated animate__heartBeat animate__delay-4s";
-    document.getElementById("fa-layer-group-2").className += " animate__animated animate__heartBeat animate__delay-4s";
+    document.getElementById("fa-layer-group-2").className += " animate__animated animate__heartBeat animate__delay-4s animate__duration-3s";
+    document.getElementById("about__tech-stack__icons").style.animation = "rainbowBorder 2s 4s linear";
+    document.getElementById("about__article__profile-pic").style.animation = "rainbowBorder 2s 4s linear";
   }
 
   if (el.id == "contact") {
-    document.getElementById("contact__card__message").className += " animate__animated animate__zoomInDown";
-    document.getElementById("button").className += " animate__animated animate__delay-2s animate__flipInX";
+    document.getElementById("contact__card__header").className += " animate__animated animate__slideInDown animate__duration-0.5s";
+    document.getElementById("contact__card__message").className += " animate__animated animate__zoomInDown animate__delay-0.5s";
+    document.getElementById("button").className += " animate__animated animate__delay-1s animate__flipInX";
   }
 }
 
