@@ -19,79 +19,31 @@ function Placeholder () {
   } 
 
 /* This function uses intersection observer to produce the scroll bar. Read more here. https://usefulangle.com/post/118/javascript-intersection-observer */
-// function scrollBarLanding () {
-//   document.getElementById("landing-link").style.textDecoration = "none";
-//   document.getElementById("about-link").style.textDecoration = "none";
-//   document.getElementById("projects-link").style.textDecoration = "none";
-//   document.getElementById("contact-link").style.textDecoration = "none";
-//   var observer = new IntersectionObserver(function(entries) {
-//     if(entries[0].isIntersecting === true)
-//     document.getElementById("landing-link").style.textDecoration = "underline";
-//     document.getElementById("landing-link").style.textDecorationColor = "#64FFDA";
-//     document.getElementById("landing-link").style.textUnderlineOffset = "10px"; 
-//   }, { threshold: [0] });
+let observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      modify(entry.target);
+    } else {
+      revert(entry.target);
+    }
+  })
+}, {
+  threshold: 0.5
+})
 
-//   observer.observe(document.querySelector("#landing"));
-//   observer.unobserve(document.querySelector("#about"));
-//   observer.unobserve(document.querySelector("#projects"));
-//   observer.unobserve(document.querySelector("#contact"));
-// }
+function modify(el) {
+  document.querySelector(`#${el.id}-link`).style.textDecoration = 'underline';
+  document.querySelector(`#${el.id}-link`).style.textDecorationColor = '#64FFDA';
+  document.querySelector(`#${el.id}-link`).style.textUnderlineOffset = "10px";
+}
 
-// function scrollBarAbout () {
-//   document.getElementById("landing-link").style.textDecoration = "none";
-//   document.getElementById("about-link").style.textDecoration = "none";
-//   document.getElementById("projects-link").style.textDecoration = "none";
-//   document.getElementById("contact-link").style.textDecoration = "none";
-//   var observer = new IntersectionObserver(function(entries) {
-//     if(entries[0].isIntersecting === true)
-//     document.getElementById("about-link").style.textDecoration = "underline";
-//     document.getElementById("about-link").style.textDecorationColor = "#64FFDA";
-//     document.getElementById("about-link").style.textUnderlineOffset = "10px"; 
-//   }, { threshold: [0] });
-  
-//   observer.unobserve(document.querySelector("#landing"));
-//   observer.observe(document.querySelector("#about"));
-//   observer.unobserve(document.querySelector("#projects"));
-//   observer.unobserve(document.querySelector("#contact"));
-// }
+function revert(el) {
+  document.querySelector(`#${el.id}-link`).style.textDecoration = 'none';
+  document.querySelector(`#${el.id}-link`).style.textDecorationColor = 'none';
+}
 
-// function scrollBarProjects () {
-//   document.getElementById("landing-link").style.textDecoration = "none";
-//   document.getElementById("about-link").style.textDecoration = "none";
-//   document.getElementById("projects-link").style.textDecoration = "none";
-//   document.getElementById("contact-link").style.textDecoration = "none";
-//   var observer = new IntersectionObserver(function(entries) {
-//     if(entries[0].isIntersecting === true)
-//     document.getElementById("projects-link").style.textDecoration = "underline";
-//     document.getElementById("projects-link").style.textDecorationColor = "#64FFDA";
-//     document.getElementById("projects-link").style.textUnderlineOffset = "10px"; 
-//   }, { threshold: [0] });
-  
-//   observer.unobserve(document.querySelector("#landing"));
-//   observer.unobserve(document.querySelector("#about"));
-//   observer.observe(document.querySelector("#projects"));
-//   observer.unobserve(document.querySelector("#contact"));
-// }
 
-// function scrollBarContact () {
-//   document.getElementById("landing-link").style.textDecoration = "none";
-//   document.getElementById("about-link").style.textDecoration = "none";
-//   document.getElementById("projects-link").style.textDecoration = "none";
-//   document.getElementById("contact-link").style.textDecoration = "none";
-//   var observer = new IntersectionObserver(function(entries) {
-//     if(entries[0].isIntersecting === true)
-//     document.getElementById("contact-link").style.textDecoration = "underline";
-//     document.getElementById("contact-link").style.textDecorationColor = "#64FFDA";
-//     document.getElementById("contact-link").style.textUnderlineOffset = "10px"; 
-//   }, { threshold: [0] });
-  
-//   observer.unobserve(document.querySelector("#landing"));
-//   observer.unobserve(document.querySelector("#about"));
-//   observer.unobserve(document.querySelector("#projects"));
-//   observer.observe(document.querySelector("#contact"));
-// }
-
-// scrollBarLanding();
-// scrollBarAbout();
-// scrollBarProjects(); 
-// scrollBarContact();  
+observer.observe(document.querySelector('#landing'));
+observer.observe(document.querySelector('#about'));
+observer.observe(document.querySelector('#projects'));
+observer.observe(document.querySelector('#contact'));
