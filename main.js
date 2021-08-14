@@ -8,10 +8,21 @@ function dateInFooter() {
 };
 
 function spinLogoToTop() {
-  document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__rotateIn";
+  document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__rotateIn animate__delay-1s";
 }
 
+function flipInButton() {
+  document.getElementById("contact__card__button").className = "contact__card__button animate__animated animate__flipInY animate__faster";
+}
+
+function logoHoverFeedback() {
+  document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__pulse animate__slow";
+}
 document.getElementById("fixed_elements__logo-img").addEventListener("click", spinLogoToTop);
+
+document.getElementById("fixed_elements__logo-img").addEventListener("mouseover", logoHoverFeedback);
+
+document.getElementById("contact__card__button").addEventListener("click", flipInButton);
 
 
 /* This section uses intersection observer to produce the scroll bar. I adapted this solution on stackoverflow for my needs: https://stackoverflow.com/questions/66336096/single-intersection-observer-for-multiple-entries */
@@ -55,7 +66,6 @@ function pageAnimation(el) {
     document.getElementById("fa-layer-group-1").className += " animate__animated animate__heartBeat animate__delay-4s";
     document.getElementById("fa-layer-group-2").className += " animate__animated animate__heartBeat animate__delay-4s animate__duration-3s";
     document.getElementById("about__tech-stack__icons").style.animation = "rainbowBorder 2s 4s linear";
-    document.getElementById("about__article__profile-pic").style.animation = "rainbowBorder 2s 4s linear";
   }
 
   if (el.id == "contact") {
@@ -70,3 +80,7 @@ observer.observe(document.querySelector('#landing'));
 observer.observe(document.querySelector('#about'));
 observer.observe(document.querySelector('#projects'));
 observer.observe(document.querySelector('#contact'));
+
+particlesJS.load('particles-js', 'particles.js-master/particles.json', function() {
+   console.log('callback - particles.js config loaded');
+ });
