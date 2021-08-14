@@ -111,7 +111,11 @@ html {
 
 // Landing Section 
 
-
+#particles-js-landing {
+  position: absolute; 
+  width: 100vw;
+  height: 100vh; 
+}
 .landing {
   display: flex; 
   flex-direction: column; 
@@ -124,6 +128,7 @@ html {
   background-size: cover; 
   border-bottom: 2px solid white;  
   &__message {
+    z-index: 2; 
     background: linear-gradient(rgba(120, 149, 198, 0.15), rgba(14, 21, 48, 0.15));  
     height: auto;
     width: 70vw;   
@@ -147,7 +152,8 @@ html {
   }
   &__chevron {
     font-size: 120px; 
-    justify-self: flex-end; 
+    justify-self: flex-end;
+    z-index: 2;  
 
   }
   &__chevron:hover {
@@ -163,7 +169,8 @@ html {
     padding: 10px;
     font-weight: bold;
     background: linear-gradient(rgba(5, 60, 127, 0.15), rgba(8, 34, 83, 0.15));
-    border-radius: 10px;   
+    border-radius: 10px; 
+    z-index: 2;   
   }
   &__photo-credit:hover {
     color: $secondary-color;
@@ -223,7 +230,7 @@ html {
 }
 
 // About Section 
-#particles-js { 
+#particles-js-about { 
   position: absolute;
   width: 100vw; 
   height: 100vh;   
@@ -315,8 +322,14 @@ html {
 }
 
 // Projects Section 
+#particles-js-projects { 
+  position: absolute;
+  width: 100vw; 
+  height: 100vh;   
+}
 
-.projects { 
+.projects {
+  position: relative;  
   height: 100vh;
   border-bottom: 2px solid white; 
   display: flex; 
@@ -400,8 +413,15 @@ html {
 
 // Contact Section 
 
+#particles-js-contact { 
+  position: absolute;
+  width: 100vw; 
+  height: 100vh; 
+}
+
 .contact {
   height: 100vh;
+  position: relative;
   border-bottom: 2px solid $primary-color; 
   display: flex; 
   flex-direction: column; 
@@ -450,7 +470,8 @@ html {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    text-decoration: overline;  
+    text-decoration: overline;
+    z-index: 5;   
   } 
   &__card__footer__info {
     font-size: 20px;
