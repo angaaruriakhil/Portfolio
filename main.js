@@ -81,6 +81,24 @@ observer.observe(document.querySelector('#about'));
 observer.observe(document.querySelector('#projects'));
 observer.observe(document.querySelector('#contact'));
 
-particlesJS.load('particles-js', 'particles.js-master/particles.json', function() {
+function mainContentParticles() {
+  particlesJS.load('particles-js-about', 'particles.js-master/particles.json', function() {
    console.log('callback - particles.js config loaded');
  });
+  particlesJS.load('particles-js-projects', 'particles.js-master/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+  particlesJS.load('particles-js-contact', 'particles.js-master/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+}
+
+mainContentParticles(); 
+
+function landingParticles() {
+  particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+}
+
+setTimeout(landingParticles, 4000);
