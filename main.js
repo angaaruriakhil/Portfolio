@@ -8,7 +8,7 @@ function dateInFooter() {
 };
 
 function spinLogoToTop() {
-  document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__rotateIn animate__delay-1s";
+  document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__rotateIn";
 }
 
 function flipInButton() {
@@ -16,7 +16,7 @@ function flipInButton() {
 }
 
 function logoHoverFeedback() {
-  document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__pulse animate__slow";
+  document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__pulse animate__faster";
 }
 document.getElementById("fixed_elements__logo-img").addEventListener("click", spinLogoToTop);
 
@@ -93,7 +93,7 @@ function mainContentParticles() {
 });
 }
 
-mainContentParticles(); 
+mainContentParticles();  
 
 function landingParticles() {
   particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function() {
@@ -101,4 +101,39 @@ function landingParticles() {
   });
 }
 
+// Delay landingParticles deployment until other intro animations are performed.
+
 setTimeout(landingParticles, 4000);
+
+function toggleHamburgerMenu() {
+  let hamburgerMenu = document.getElementById("fixed_elements__hamburger-menu");
+  let navBar = document.getElementById("nav__list-master");
+  if (navBar.style.display == "none") {
+    navBar.style.display = "flex";
+  } else {
+    navBar.style.display = "none";
+  } 
+  }
+  function hamburgerMenuAnimation() {
+    hamburgerMenu = document.getElementById("fixed_elements__hamburger-menu");
+    navBar = document.getElementById("nav__list-master");
+    if (hamburgerMenu.style.transform == "rotate(0deg)") {
+      hamburgerMenu.style.color = "#64FFDA";
+      hamburgerMenu.style.transform = "rotate(-90deg)"
+
+    } else {
+      hamburgerMenu.style.transform = "rotate(0deg)"
+      hamburgerMenu.style.color = "white";
+    } 
+    }
+
+
+document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", toggleHamburgerMenu, false)
+document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", hamburgerMenuAnimation, false)
+
+
+
+
+
+
+
