@@ -71,6 +71,18 @@ html {
   z-index: 20;    
 }
 
+// Fixed Element - Hamburger Menu
+
+.fixed_elements__hamburger-menu {
+  visibility: hidden;
+  margin: 0; 
+  padding: 0;
+  position: fixed;  
+  font-size: 50px; 
+  left: 10px;
+  z-index: 10;   
+}
+
 // Fixed Element - Navbar
 
 .nav { 
@@ -79,8 +91,7 @@ html {
   align-items: center; 
   font-family: $secondary-font;
   position: fixed; 
-  width: 100%; 
-  height: 20vh; 
+  width: 100%;  
   z-index: 3;       
   &__list-master {
     display: flex; 
@@ -236,8 +247,7 @@ html {
   height: 100vh;   
 }
 
-.about {
-  position: relative; 
+.about { 
   height: 100vh; 
   border-bottom: 2px solid white; 
   display: flex; 
@@ -278,7 +288,7 @@ html {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    padding-bottom: 5px;  
+    padding-bottom: 5px;   
   }
   &__tech-stack__header {
     font-size: 40px;
@@ -297,7 +307,7 @@ html {
     max-height: 100%; 
     padding-top: 30px;
     justify-content: space-around;
-    text-align: center;
+    text-align: center; 
   }
   &__tech-stack__icons:hover {
     box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0,0,0,0);
@@ -319,6 +329,10 @@ html {
 
 #_nology:visited, #chemosphere:visited, #university-of-surrey:visited {
   color: lightskyblue;  
+
+#particles-js-tech-stack {
+  position: absolute;
+}
 }
 
 // Projects Section 
@@ -363,7 +377,7 @@ html {
     width: 40%;    
   } 
   &__card-1__text__info {
-    border: 2px solid #64ffda;
+    border: 2px solid $secondary-color;
     border-radius: 15px; 
     padding: 10px; 
     margin-top: 10px; 
@@ -391,7 +405,7 @@ html {
     width: 40%;   
   } 
   &__card-2__text__info {
-    border: 2px solid #64ffda;
+    border: 2px solid $secondary-color;
     border-radius: 15px; 
     padding: 10px; 
     margin-top: 10px; 
@@ -564,14 +578,43 @@ html {
 }
 
 @media screen and (max-width: 800px) {
-  .nav {
-    justify-content: center; 
-  }
   .fixed_elements__logo-img  {
     visibility: hidden; 
   }
+
+  .fixed_elements__hamburger-menu {
+    visibility: visible;  
+    margin: 0; 
+    padding: 0;
+    position: fixed;  
+    font-size: 50px; 
+    transform: rotate(0deg); 
+  }
+  .fixed_elements__hamburger-menu:hover {
+    transform: scale(1.1,1.1);
+    color: $secondary-color;   
+  }
+
+  .nav {
+    justify-content: flex-start; 
+  }
+  .nav__list-master {
+    flex-direction: column; 
+    visibility: visible; 
+    align-items: flex-start; 
+    justify-content: flex-start;  
+    display: none; 
+    margin-top: 55px;  
+    height: 250px;   
+    border: 2px solid white; 
+    border-radius: 5px; 
+    background: $tertiary-color; 
+  }
+
   .nav__list-items {
-    font-size: 20px;  
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-left: 5px;    
   }
   .landing__message {
     font-size: 20px;
@@ -622,12 +665,11 @@ html {
 }
 
 @media screen and (max-width: 500px) {
+
   .fixed_elements__logo-img  {
     visibility: hidden; 
   }
-  .nav__list-items {
-    font-size: 15px; 
-  }
+
 
   .projects__card-1__header {
     font-size: 25px; 
