@@ -20,6 +20,8 @@ html {
   scroll-snap-align: start; 
 }
 
+
+
 // Everything that isn't the landing page.
 
 .rest-of-page {
@@ -34,7 +36,7 @@ html {
 
  .fixed_elements__socials {
   position: fixed;
-  top: 540px;
+  top: 470px;
   left: 50px; 
   display: flex; 
   flex-direction: column;
@@ -385,8 +387,8 @@ html {
   }
   &__card-1__img {
     overflow: hidden;
-    max-width: 100%; 
-    max-height: 100%; 
+    width: 520px; 
+    height: 300px; 
     border-radius: 15px;
     background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
     border: 5px solid transparent;      
@@ -412,17 +414,13 @@ html {
     background-color: $tertiary-color;  
   }
   &__card-2__img {
-    overflow: hidden;
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-    max-width: 100%; 
-    max-height: 100%; 
+    width: 520px; 
+    height: 300px; 
+    overflow: hidden; 
     border-radius: 15px;
     background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
     border: 5px solid transparent; 
   }
-  
 }
 
 // Contact Section 
@@ -506,7 +504,7 @@ html {
 
 // Misc Icon Styling 
 
-.fa-envelope, .fa-handshake, .fa-tools, .hi-icon,  {
+.fa-envelope, .fa-handshake, .fa-tools, .hi-icon  {
   color: black; 
 }
 
@@ -563,9 +561,6 @@ html {
     margin-top: 30px;
     text-align: center;  
   }
-  .projects__card-1__header {
-    justify-content: center; 
-  }
 
   .contact__card__header {
     font-size: 40px;
@@ -574,7 +569,16 @@ html {
   .contact__card__message {
     font-size: 30px; 
   }
-  
+  .projects__card-1__header {
+    justify-content: center; 
+  }
+  .projects__card-2__img, .projects__card-1__img {
+    width: 350px; 
+    height: 200px;  
+  }
+  .projects__card-2, .projects__card-1 {
+    width: 90vw;  
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -587,8 +591,8 @@ html {
     margin: 0; 
     padding: 0;
     position: fixed;  
-    font-size: 50px; 
-    transform: rotate(0deg); 
+    font-size: 50px;
+    transform: rotate(0deg);  
   }
   .fixed_elements__hamburger-menu:hover {
     transform: scale(1.1,1.1);
@@ -636,15 +640,19 @@ html {
   grid-template-rows: auto auto auto auto;
   font-size: 15px;  
   }
-  .projects__card-1 { 
+  .projects__card-1, .projects__card-2 {
     width: 90vw;  
   }
   .projects__card-1__header {
     font-size: 30px; 
   }
   .projects__subheader {
-    font-size: 20px;
+    font-size: 15px;
     width: 90vw;  
+  }
+  .projects__card-2__img, .projects__card-1__img {
+    width: 200px; 
+    height: 100px;  
   }
 
   .contact__card__header {
@@ -668,11 +676,6 @@ html {
 
   .fixed_elements__logo-img  {
     visibility: hidden; 
-  }
-
-
-  .projects__card-1__header {
-    font-size: 25px; 
   }
 
   .contact__card__header {
@@ -717,4 +720,14 @@ html {
     transform: scale(2.5,2.5) translate(100px, -100px);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   }
+}
+
+// Classes for use with JS toggles 
+
+.hide_navbar {
+  display: flex;
+}
+.rotate_hamburger {
+  transform: rotate(-90deg);
+  color: $secondary-color;
 }

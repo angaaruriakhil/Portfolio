@@ -106,30 +106,18 @@ function landingParticles() {
 setTimeout(landingParticles, 4000);
 
 function toggleHamburgerMenu() {
-  let hamburgerMenu = document.getElementById("fixed_elements__hamburger-menu");
   let navBar = document.getElementById("nav__list-master");
-  if (navBar.style.display == "none") {
-    navBar.style.display = "flex";
-  } else {
-    navBar.style.display = "none";
-  } 
+  navBar.classList.toggle("hide_navbar");
+}
+
+function hamburgerMenuAnimation() {
+  hamburgerMenu = document.getElementById("fixed_elements__hamburger-menu");
+ hamburgerMenu.classList.toggle("rotate_hamburger");
   }
-  function hamburgerMenuAnimation() {
-    hamburgerMenu = document.getElementById("fixed_elements__hamburger-menu");
-    navBar = document.getElementById("nav__list-master");
-    if (hamburgerMenu.style.transform == "rotate(0deg)") {
-      hamburgerMenu.style.color = "#64FFDA";
-      hamburgerMenu.style.transform = "rotate(-90deg)"
-
-    } else {
-      hamburgerMenu.style.transform = "rotate(0deg)"
-      hamburgerMenu.style.color = "white";
-    } 
-    }
 
 
-document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", toggleHamburgerMenu, false)
-document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", hamburgerMenuAnimation, false)
+document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", toggleHamburgerMenu)
+document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", hamburgerMenuAnimation)
 
 
 

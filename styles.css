@@ -130,7 +130,7 @@ html {
 
 .fixed_elements__socials {
   position: fixed;
-  top: 540px;
+  top: 470px;
   left: 50px;
   display: flex;
   flex-direction: column;
@@ -465,8 +465,8 @@ html {
 }
 .projects__card-1__img {
   overflow: hidden;
-  max-width: 100%;
-  max-height: 100%;
+  width: 520px;
+  height: 300px;
   border-radius: 15px;
   background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   border: 5px solid transparent;
@@ -492,12 +492,9 @@ html {
   background-color: #0B1039;
 }
 .projects__card-2__img {
+  width: 520px;
+  height: 300px;
   overflow: hidden;
-  max-width: 100%;
-  max-height: 100%;
-  overflow: hidden;
-  max-width: 100%;
-  max-height: 100%;
   border-radius: 15px;
   background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   border: 5px solid transparent;
@@ -642,10 +639,6 @@ html {
     text-align: center;
   }
 
-  .projects__card-1__header {
-    justify-content: center;
-  }
-
   .contact__card__header {
     font-size: 40px;
     align-self: center;
@@ -653,6 +646,19 @@ html {
 
   .contact__card__message {
     font-size: 30px;
+  }
+
+  .projects__card-1__header {
+    justify-content: center;
+  }
+
+  .projects__card-2__img, .projects__card-1__img {
+    width: 350px;
+    height: 200px;
+  }
+
+  .projects__card-2, .projects__card-1 {
+    width: 90vw;
   }
 }
 @media screen and (max-width: 800px) {
@@ -722,7 +728,7 @@ html {
     font-size: 15px;
   }
 
-  .projects__card-1 {
+  .projects__card-1, .projects__card-2 {
     width: 90vw;
   }
 
@@ -731,8 +737,13 @@ html {
   }
 
   .projects__subheader {
-    font-size: 20px;
+    font-size: 15px;
     width: 90vw;
+  }
+
+  .projects__card-2__img, .projects__card-1__img {
+    width: 200px;
+    height: 100px;
   }
 
   .contact__card__header {
@@ -756,10 +767,6 @@ html {
 @media screen and (max-width: 500px) {
   .fixed_elements__logo-img {
     visibility: hidden;
-  }
-
-  .projects__card-1__header {
-    font-size: 25px;
   }
 
   .contact__card__header {
@@ -806,4 +813,12 @@ html {
     transform: scale(2.5, 2.5) translate(100px, -100px);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
+}
+.hide_navbar {
+  display: flex;
+}
+
+.rotate_hamburger {
+  transform: rotate(-90deg);
+  color: #64FFDA;
 }
