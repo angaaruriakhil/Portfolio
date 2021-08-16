@@ -3,11 +3,12 @@
   font-family: 'Consolas';
   src: url('.assets/fonts/Consolas.woff2') format('woff2'),
       url('.assets/fonts/Consolas.woff') format('woff');
+
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
+// src:url(asset-path('fontawesome-webfont.eot?v=3.2.1', font));
 
 $primary-font: "Red Hat Display"; 
 $secondary-font: "Consolas";
