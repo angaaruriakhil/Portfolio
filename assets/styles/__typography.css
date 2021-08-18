@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Consolas";
-  src: url(".assets/fonts/Consolas.eot") format("embedded-opentype");
+  src: url("./assets/fonts/Consolas.eot") format("embedded-opentype");
   /* IE9 Compat Modes */
-  src: url(".assets/fonts/Consolas.woff2") format("woff2"), url(".assets/fonts/Consolas.woff") format("woff"), url(".assets/fonts/Consolas.ttf") format("truetype"), url(".assets/fonts/Consolas.woff") format("svg");
+  src: url("./assets/fonts/Consolas.woff2") format("woff2"), url("./assets/fonts/Consolas.woff") format("woff"), url("./assets/fonts/Consolas.ttf") format("truetype"), url("./assets/fonts/Consolas.woff") format("svg");
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal;
