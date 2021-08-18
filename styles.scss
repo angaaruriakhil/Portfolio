@@ -674,10 +674,6 @@ html {
 
 @media screen and (max-width: 500px) {
 
-  .fixed_elements__logo-img  {
-    visibility: hidden; 
-  }
-
   .contact__card__header {
     font-size: 40px;
     align-self: center;  
@@ -686,9 +682,9 @@ html {
     font-size: 30px; 
     margin-bottom: 10px; 
   }
-  .fixed_elements__socials {
-    visibility: hidden;     
-  }
+  // .fixed_elements__socials {
+  //   visibility: hidden;     
+  // }
   .contact__card__footer {
     flex-direction: column;
     text-align: center;    
