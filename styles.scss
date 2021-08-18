@@ -763,16 +763,17 @@ html {
     width: 90vw;     
   }
   .projects {
-    align-items: center; 
+    align-items: center;
   }
 
   .projects__card-1 {
-    flex-wrap: wrap-reverse;
     height: auto;  
+    flex-direction: column-reverse; 
   }
-  .projects__card-2 {
-    flex-wrap: wrap; 
+  .projects__card-2 { 
     height: auto; 
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .projects__card-1__text, .projects__card-2__text {
@@ -787,16 +788,21 @@ html {
     font-size: 15px;  
   }
 
+  .projects__card-2__img, .projects__card-1__img {
+    width: 180px; 
+    height: 100px;  
+  }
+
 
   .contact {
     justify-content: space-between;
   }
   .contact__card__header {
-    font-size: 20px;
+    font-size: 25px;
     align-self: center;  
   }
   .contact__card__message {
-    font-size: 15px; 
+    font-size: 20px; 
     margin-bottom: 10px; 
   }
   .contact__card__footer {
