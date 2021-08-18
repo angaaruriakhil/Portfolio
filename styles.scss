@@ -839,10 +839,15 @@ html {
 
 // Media Queries to disable image hover and scale at smaller sizes (Image for toolkit is unreadable at low scale) 
 
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   .projects__card-1__img:hover, .projects__card-2__img:hover {
     cursor: pointer;
-    transform: scale(2.5,2.5) translate(-120px, 50px);
+    transform: scale(1.1,1.1);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+  .projects__card-2__img:hover {
+    cursor: pointer;
+    transform: scale(1.1,1.1);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   }
   
