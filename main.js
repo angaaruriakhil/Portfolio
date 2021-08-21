@@ -142,7 +142,7 @@ function locked_link() {
   filtered_e3 = efrac_object.efrac_3_array.filter(i => {return regex_3.test(i)});
   filtered_e4 = efrac_object.efrac_4_array.filter(i => {return regex_1.test(i)});
   filtered_e5 = efrac_object.efrac_5_array.filter(i => {return regex_0.test(i)});
-  const secretKey = "secretKey"; 
+  const secretKey = "secretKey"; // Key doesn't matter since I'm using this for hiding my details until user clicks. 
   const unlocked_array = [filtered_e0.join(""), filtered_e1.join(""), filtered_e2.join(""), filtered_e3.join(""), filtered_e4.join(""), filtered_e5.join("")]; 
   const bare_message = unlocked_array[0] + unlocked_array[1] + unlocked_array[2] + unlocked_array[3] + unlocked_array[4] + unlocked_array[5]; 
   const encryptedBytes = CryptoJS.AES.encrypt(bare_message, secretKey);
