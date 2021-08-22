@@ -81,6 +81,8 @@ observer.observe(document.querySelector('#about'));
 observer.observe(document.querySelector('#projects'));
 observer.observe(document.querySelector('#contact'));
 
+// This section deals with particles.js effect on every page. 
+
 function mainContentParticles() {
   particlesJS.load('particles-js-about', 'particles.js-master/particles.json', function() {
    console.log('callback - particles.js config loaded');
@@ -95,15 +97,17 @@ function mainContentParticles() {
 
 mainContentParticles();  
 
+// Delay landingParticles deployment on the welcome page until other intro animations are performed.
+
 function landingParticles() {
   particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function() {
     console.log('callback - particles.js config loaded');
   });
 }
 
-// Delay landingParticles deployment until other intro animations are performed.
-
 setTimeout(landingParticles, 4000);
+
+// This section deals with the hamburger menu on the mobile layout. 
 
 function toggleHamburgerMenu() {
   let navBar = document.getElementById("nav__list-master");
@@ -159,4 +163,52 @@ function unlockedLink() {
 function displaceLink() {
   let contactButton = document.getElementById('button');
   contactButton.href = unlockedLink();
+}
+
+// Google drive link obfuscation and encryption (just in case)
+
+function locked_glink() {
+  const gfrac_object = {
+    gfrac_0_array: ["h", "!", "t", "%", "t", "*", "p", "s", ":", "/", "/"], 
+    gfrac_1_array: ["$", "/", "$", "%", "d", "^", "r", "*", "i", "v", "e"],
+    gfrac_2_array: [".", "!", "g", "%", "o", "o", "9", "g", "l", "6", "e"],
+    gfrac_3_array: ["%", ".", "c", "$", "@", "o", "£", "m", "*", "^", "#"],
+    gfrac_4_array: ["/", "f", "$", "o", "l", "%", "d", "e", "*", "r", "s"],
+    gfrac_5_array: ['/', '1', '6', 'b', '9', 'e', 'z', '6', '7', 'a', '7', 
+    'x', 'E', 'h', '^', '4', 'r', 's', 'm', 'v', 'u', 'x', 'N', 'F', 'n', 
+    'L', 'p', 'n', 'C', '3', 'v', 'M', 'e', 'i', 'p', '?', 'u', 's', 'p', 
+    '=', 's', 'h', 'a', 'r', 'i', 'n', 'g', "%"]
+  }
+  
+  let regex_g0 = /[a-z:/]/; 
+  let regex_g1 = /[/a-z]/;
+  let regex_g2 = /[.a-z]/;
+  let regex_g3 = /[%^]/; 
+
+  
+  filtered_g0 = gfrac_object.gfrac_0_array.filter(i => {return regex_g0.test(i)});
+  filtered_g1 = gfrac_object.gfrac_1_array.filter(i => {return regex_g1.test(i)});
+  filtered_g2 = gfrac_object.gfrac_2_array.filter(i => {return regex_g2.test(i)});
+  filtered_g3 = gfrac_object.gfrac_3_array.filter(i => {return regex_g2.test(i)});
+  filtered_g4 = gfrac_object.gfrac_4_array.filter(i => {return regex_g1.test(i)});
+  filtered_g5 = gfrac_object.gfrac_5_array.filter(i => {return !regex_g3.test(i)});
+
+  const secretKey2 = "secretKey2"; // Key doesn't matter since I'm using this for hiding my details until user clicks. 
+  const g_unlocked_array = [filtered_g0.join(""), filtered_g1.join(""), filtered_g2.join(""), filtered_g3.join(""), filtered_g1.join(""), filtered_g4.join(""), filtered_g5.join("")]; 
+  const g_bare_message = g_unlocked_array[0] + g_unlocked_array[1] + g_unlocked_array[2] + g_unlocked_array[3] + g_unlocked_array[4] + g_unlocked_array[5] + g_unlocked_array[6]; 
+  console.log(g_bare_message);
+  const g_encryptedBytes = CryptoJS.AES.encrypt(g_bare_message, secretKey2);
+  return g_encryptedBytes.toString();
+}
+
+function g_unlockedLink() {
+  const secretKey2 = "secretKey2"; 
+  const g_decryptedBytes = CryptoJS.AES.decrypt(locked_glink(), secretKey2);
+  var g_decryptedMessage = g_decryptedBytes.toString(CryptoJS.enc.Utf8);
+  return g_decryptedMessage;
+}
+
+function g_displaceLink() {
+  let cvButton = document.getElementById('cv');
+  cvButton.href = g_unlockedLink();
 }
