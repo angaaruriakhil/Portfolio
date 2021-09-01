@@ -85,13 +85,10 @@ observer.observe(document.querySelector('#contact'));
 
 function mainContentParticles() {
   particlesJS.load('particles-js-about', 'particles.js-master/particles.json', function() {
-   console.log('callback - particles.js config loaded');
  });
   particlesJS.load('particles-js-projects', 'particles.js-master/particles.json', function() {
-  console.log('callback - particles.js config loaded');
 });
   particlesJS.load('particles-js-contact', 'particles.js-master/particles.json', function() {
-  console.log('callback - particles.js config loaded');
 });
 }
 
@@ -101,7 +98,6 @@ mainContentParticles();
 
 function landingParticles() {
   particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function() {
-    console.log('callback - particles.js config loaded');
   });
 }
 
@@ -122,48 +118,6 @@ function hamburgerMenuAnimation() {
 
 document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", toggleHamburgerMenu)
 document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", hamburgerMenuAnimation)
-
-// Email encryption using obfuscation and encryption (Not sure if this will work but worth a shot and its better than just having it openly available)
-
-function locked_link() {
-  const efrac_object = {
-    efrac_0_array: ["m", "!", "a", "%", "i", "l", "t", "*", "o", "+", ":"], 
-    efrac_1_array: ["a", "!", "n", "%", "$", "g", "(", "*", "a", "r", "]"],
-    efrac_2_array: ["1", "!", "9", "%", "i", "l", "9", "*", "o", "6", "[]"],
-    efrac_3_array: ["g", "!", "m", "a", "@", "%", "£", "i", "*", "^", "#"],
-    efrac_4_array: ["g", "!", "m", "a", "%", "%", "£", "i", "*", "l", "#"],
-    efrac_5_array: [".", "£", "c", "%", "o", "^", "&", "m", "*", "+", ">"]
-  }
-  
-  let regex_0 = /[a-z:.]/; 
-  let regex_1 = /[a-z]/; 
-  let regex_2 = /[0-9]/;
-  let regex_3 = /[@]/; 
-  
-  filtered_e0 = efrac_object.efrac_0_array.filter(i => {return regex_0.test(i)});
-  filtered_e1 = efrac_object.efrac_1_array.filter(i => {return regex_1.test(i)});
-  filtered_e2 = efrac_object.efrac_2_array.filter(i => {return regex_2.test(i)});
-  filtered_e3 = efrac_object.efrac_3_array.filter(i => {return regex_3.test(i)});
-  filtered_e4 = efrac_object.efrac_4_array.filter(i => {return regex_1.test(i)});
-  filtered_e5 = efrac_object.efrac_5_array.filter(i => {return regex_0.test(i)});
-  const secretKey = "secretKey"; // Key doesn't matter since I'm using this for hiding my details until user clicks. 
-  const unlocked_array = [filtered_e0.join(""), filtered_e1.join(""), filtered_e2.join(""), filtered_e3.join(""), filtered_e4.join(""), filtered_e5.join("")]; 
-  const bare_message = unlocked_array[0] + unlocked_array[1] + unlocked_array[2] + unlocked_array[3] + unlocked_array[4] + unlocked_array[5]; 
-  const encryptedBytes = CryptoJS.AES.encrypt(bare_message, secretKey);
-  return encryptedBytes.toString();
-}
-
-function unlockedLink() {
-  const secretKey = "secretKey"; 
-  const decryptedBytes = CryptoJS.AES.decrypt(locked_link(), secretKey);
-  var decryptedMessage = decryptedBytes.toString(CryptoJS.enc.Utf8);
-  return decryptedMessage;
-}
-
-function displaceLink() {
-  let contactButton = document.getElementById('button');
-  contactButton.href = unlockedLink();
-}
 
 // Google drive link obfuscation and encryption (just in case)
 

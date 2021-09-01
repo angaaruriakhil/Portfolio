@@ -336,6 +336,7 @@ html {
 }
 
 // Projects Section 
+
 #particles-js-projects { 
   position: absolute;
   width: 100vw; 
@@ -344,7 +345,7 @@ html {
 
 .projects {
   position: relative;  
-  height: 250vh;
+  height: 230vh;
   border-bottom: 2px solid white; 
   display: flex; 
   flex-direction: column; 
@@ -441,7 +442,7 @@ html {
     height: 70vh;
     width: 70vw;   
   } 
-  &__card__message, &__card__header, &__card__button  {
+  &__card__message, &__card__header, &__card__form__button  {
     font-family: $primary-font; 
   }
   &__card__header {
@@ -454,22 +455,44 @@ html {
     font-size: 40px;
     text-align: center; 
   }
-  &__card__button {
-    font-size: 30px;  
-    height: auto; 
-    width: auto; 
-    border: 5px solid transparent; 
-    border-radius: 20px;
-    padding: 10px;  
-    font-weight: bold;
-    background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
-    overflow: hidden;
-    margin-bottom: 100px;  
-  }
-  &__card__button:hover {
-    opacity: 70%;
-    transform: scale(1.1, 1.1); 
-    cursor: pointer;
+  &__card__form {
+    z-index: 5; 
+    width: 30vw;
+    height: 30vh;  
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    margin-top: 50px; 
+    align-items: center;
+    &__inputs {
+      display: flex; 
+      flex-direction: column; 
+      width: 30vw; 
+      z-index: 5; 
+      color: black;
+      border: none;
+      justify-content: space-around;
+      height: 30vh;    
+    }
+    &__button {
+      font-size: 25px;  
+      width: auto;
+      height: auto; 
+      border: 5px solid transparent; 
+      border-radius: 20px;
+      padding: 10px; 
+      text-align: center;
+      padding-bottom: 15px;  
+      font-weight: bold;
+      background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
+      overflow: hidden;   
+      margin-top: 20px; 
+    }
+    &__button:hover {
+      opacity: 70%;
+      transform: scale(1.1, 1.1); 
+      cursor: pointer;
+    }   
   }
   &__card__footer {
     display: flex; 
@@ -491,9 +514,13 @@ html {
   &__card__footer__socials__links:hover {
     color: $secondary-color;
     transform: scale(1.5,1.5);
-
   }    
 }
+
+
+
+
+
 
 // Misc Icon Styling 
 
@@ -675,6 +702,17 @@ html {
     }
     &__card__message {
       font-size: 30px; 
+    }
+    &__card__form {
+      width: 80vw;
+      height: 40vh;   
+      &__inputs {
+        width: 80vw; 
+        height: 40vh;    
+      }
+      &__button {
+        font-size: 20px;   
+      }
     }
   }
 }
