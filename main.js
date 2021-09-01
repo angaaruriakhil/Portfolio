@@ -12,7 +12,7 @@ function spinLogoToTop() {
 }
 
 function flipInButton() {
-  document.getElementById("contact__card__button").className = "contact__card__button animate__animated animate__flipInY animate__faster";
+  document.getElementById("contact__card__form__button").className = "contact__card__form__button animate__animated animate__flipInY animate__faster";
 }
 
 function logoHoverFeedback() {
@@ -22,8 +22,7 @@ document.getElementById("fixed_elements__logo-img").addEventListener("click", sp
 
 document.getElementById("fixed_elements__logo-img").addEventListener("mouseover", logoHoverFeedback);
 
-document.getElementById("contact__card__button").addEventListener("click", flipInButton);
-
+document.getElementById("contact__card__form__button").addEventListener("click", flipInButton);
 
 /* This section uses intersection observer to produce the scroll bar. I adapted this solution on stackoverflow for my needs: https://stackoverflow.com/questions/66336096/single-intersection-observer-for-multiple-entries */
 
@@ -71,7 +70,7 @@ function pageAnimation(el) {
   if (el.id == "contact") {
     document.getElementById("contact__card__header").className += " animate__animated animate__slideInDown animate__duration-0.5s";
     document.getElementById("contact__card__message").className += " animate__animated animate__zoomInDown animate__delay-0.5s";
-    document.getElementById("button").className += " animate__animated animate__delay-1s animate__flipInX";
+    document.getElementById("contact__card__form__button").className += " animate__animated animate__delay-1s animate__flipInX";
     
   }
 }

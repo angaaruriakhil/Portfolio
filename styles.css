@@ -673,9 +673,10 @@ html {
     position: fixed;
     font-size: 50px;
     transform: rotate(0deg);
+    z-index: 50;
+    color: white;
   }
   .fixed_elements__hamburger-menu:hover {
-    transform: scale(1.1, 1.1);
     color: #64FFDA;
   }
 
@@ -690,6 +691,7 @@ html {
 
   .nav {
     justify-content: flex-start;
+    z-index: 50;
   }
   .nav__list-master {
     flex-direction: column;

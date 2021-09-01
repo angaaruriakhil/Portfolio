@@ -622,10 +622,11 @@ html {
       padding: 0;
       position: fixed;  
       font-size: 50px;
-      transform: rotate(0deg);  
+      transform: rotate(0deg); 
+      z-index: 50;
+      color: white;   
     }
     &__hamburger-menu:hover {
-      transform: scale(1.1,1.1);
       color: $secondary-color;   
     }
   }
@@ -642,6 +643,7 @@ html {
 
   .nav {
     justify-content: flex-start; 
+    z-index: 50; 
     &__list-master {
       flex-direction: column; 
       visibility: visible; 
