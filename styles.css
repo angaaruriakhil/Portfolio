@@ -404,19 +404,16 @@ html {
 #_nology:visited, #chemosphere:visited, #university-of-surrey:visited {
   color: lightskyblue;
 }
-#_nology:visited #particles-js-tech-stack, #chemosphere:visited #particles-js-tech-stack, #university-of-surrey:visited #particles-js-tech-stack {
-  position: absolute;
-}
 
 #particles-js-projects {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 250vh;
 }
 
 .projects {
   position: relative;
-  height: 100vh;
+  height: 250vh;
   border-bottom: 2px solid white;
   display: flex;
   flex-direction: column;
@@ -424,7 +421,7 @@ html {
   align-items: center;
   font-family: "Red Hat Display";
 }
-.projects__card-1__header {
+.projects__card-1__header, .projects__card-3__header {
   font-size: 45px;
   font-weight: bold;
   display: flex;
@@ -435,62 +432,57 @@ html {
 .projects__subheader {
   color: #64FFDA;
 }
-.projects__card-1 {
+.projects__card-1, .projects__card-3 {
   display: flex;
   justify-content: space-around;
   width: 70vw;
   align-items: center;
   height: 30vh;
+  z-index: 10;
 }
-.projects__card-1__text {
+.projects__card-1__text, .projects__card-3__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
   width: 40%;
 }
-.projects__card-1__text__info {
+.projects__card-1__text__info, .projects__card-3__text__info {
   border: 2px solid #64FFDA;
   border-radius: 15px;
   padding: 10px;
   margin-top: 10px;
   background-color: #0B1039;
 }
-.projects__card-1__img {
+.projects__card-1__img, .projects__card-3__img, .projects__card-2__img, .projects__card-4__img {
   overflow: hidden;
-  width: 520px;
+  width: 600px;
   height: 300px;
   border-radius: 15px;
   background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   border: 5px solid transparent;
+  z-index: 10;
 }
-.projects__card-2 {
+.projects__card-2, .projects__card-4 {
   display: flex;
   justify-content: space-around;
   height: 30vh;
   width: 70vw;
   align-items: flex-start;
+  z-index: 10;
 }
-.projects__card-2__text {
+.projects__card-2__text, .projects__card-4__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 40%;
 }
-.projects__card-2__text__info {
+.projects__card-2__text__info, .projects__card-4__text__info {
   border: 2px solid #64FFDA;
   border-radius: 15px;
   padding: 10px;
   margin-top: 10px;
   background-color: #0B1039;
-}
-.projects__card-2__img {
-  width: 520px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 15px;
-  background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
-  border: 5px solid transparent;
 }
 
 #particles-js-contact {
@@ -544,6 +536,7 @@ html {
 }
 .contact__card__button:hover {
   opacity: 70%;
+  transform: scale(1.1, 1.1);
   cursor: pointer;
 }
 .contact__card__footer {
@@ -633,14 +626,14 @@ html {
     font-size: 30px;
   }
 
-  .projects__card-1__header {
+  .projects__card-1__header, .projects__card-3__header {
     justify-content: center;
   }
-  .projects__card-2__img, .projects__card-1__img {
+  .projects__card-2__img, .projects__card-1__img, .projects__card-3__img, .projects__card-4__img {
     width: 350px;
     height: 200px;
   }
-  .projects__card-2, .projects__card-1 {
+  .projects__card-2, .projects__card-1, .projects__card-3, .projects__card-4 {
     width: 90vw;
   }
 }
@@ -713,18 +706,18 @@ html {
     margin-left: 5px;
   }
 
-  .projects__card-1, .projects__card-2 {
+  .projects__card-1, .projects__card-2, .projects__card-3, .projects__card-4 {
     width: 90vw;
   }
-  .projects__card-1__header {
+  .projects__card-1__header, .projects__card-3__header {
     font-size: 30px;
   }
   .projects__subheader {
     font-size: 15px;
   }
-  .projects__card-2__img, .projects__card-1__img {
-    width: 200px;
-    height: 100px;
+  .projects__card-2__img, .projects__card-1__img, .projects__card-3__img, .projects__card-4__img {
+    width: 300px;
+    height: 180px;
   }
 
   .contact__card__header {
@@ -816,33 +809,34 @@ html {
   .projects {
     align-items: center;
   }
-  .projects__card-1__text__info, .projects__card-2__text__info {
+  .projects__card-1__text__info, .projects__card-2__text__info, .projects__card-3__text__info, .projects__card-4__text__info {
     font-size: 10px;
     text-align: center;
     width: 90vw;
   }
-  .projects__card-1 {
+  .projects__card-1, .projects__card-3 {
     height: auto;
     flex-direction: column-reverse;
   }
-  .projects__card-2 {
+  .projects__card-2, .projects__card-4 {
     height: auto;
     flex-direction: column;
     align-items: center;
   }
-  .projects__card-1__text, .projects__card-2__text {
+  .projects__card-1__text, .projects__card-2__text, .projects__card-3__text, .projects__card-4__text {
     align-items: center;
     text-align: center;
   }
-  .projects__card-1__header {
+  .projects__card-1__header, .projects__card-3__header {
     font-size: 20px;
   }
   .projects__subheader {
     font-size: 15px;
+    width: 70vw;
   }
-  .projects__card-2__img, .projects__card-1__img {
-    width: 180px;
-    height: 100px;
+  .projects__card-2__img, .projects__card-1__img, .projects__card-3__img, .projects__card-4__img {
+    width: 80vw;
+    height: 150px;
   }
 
   .contact {
@@ -882,13 +876,7 @@ html {
   }
 }
 @media (min-width: 800px) {
-  .projects__card-1__img:hover, .projects__card-2__img:hover {
-    cursor: pointer;
-    transform: scale(1.1, 1.1);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  }
-
-  .projects__card-2__img:hover {
+  .projects__card-1__img:hover, .projects__card-2__img:hover, .projects__card-3__img:hover, .projects__card-4__img:hover {
     cursor: pointer;
     transform: scale(1.1, 1.1);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
