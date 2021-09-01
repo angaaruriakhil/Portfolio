@@ -192,9 +192,18 @@
       <p class="contact__card__message" id="contact__card__message"> I’m always looking for exciting and challenging opportunities.<br>
         If you think I can bring value to your company, please, do not hesitate to send me a message. 
       </p>
-      <a onclick = "displaceLink()" class="button" id="button" href="" rel="noreferrer">
-        <button class="contact__card__button" id="contact__card__button"> Send an e-mail </button>
-      </a>
+      <form id="contact__card__form" class = "contact__card__form" name="simple-contact-form" accept-charset="utf-8" action = "https://formspree.io/f/mpzkkdkq" method="POST">
+        <fieldset id="contact__card__form__inputs" class = "contact__card__form__inputs">
+          <label for="full-name">Full Name</label>
+          <input type="text" name="name" id="full-name" placeholder="First and Last" required="" style="color: black">
+          <label for="email-address">Email Address</label>
+          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="" style="color: black">
+          <label for="message">Message</label>
+          <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required="" style="color: black"></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit" class="contact__card__form__button">
+      </form>
   </article>
     <footer class="contact__card__footer">
       <p class="contact__card__footer__info" id="footer-info"> </p> 

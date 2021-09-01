@@ -413,7 +413,7 @@ html {
 
 .projects {
   position: relative;
-  height: 250vh;
+  height: 230vh;
   border-bottom: 2px solid white;
   display: flex;
   flex-direction: column;
@@ -509,7 +509,7 @@ html {
   height: 70vh;
   width: 70vw;
 }
-.contact__card__message, .contact__card__header, .contact__card__button {
+.contact__card__message, .contact__card__header, .contact__card__form__button {
   font-family: "Red Hat Display";
 }
 .contact__card__header {
@@ -522,19 +522,41 @@ html {
   font-size: 40px;
   text-align: center;
 }
-.contact__card__button {
-  font-size: 30px;
-  height: auto;
+.contact__card__form {
+  z-index: 5;
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+}
+.contact__card__form__inputs {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  z-index: 5;
+  color: black;
+  border: none;
+  justify-content: space-around;
+  height: 30vh;
+}
+.contact__card__form__button {
+  font-size: 25px;
   width: auto;
+  height: auto;
   border: 5px solid transparent;
   border-radius: 20px;
   padding: 10px;
+  text-align: center;
+  padding-bottom: 15px;
   font-weight: bold;
   background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-top: 20px;
 }
-.contact__card__button:hover {
+.contact__card__form__button:hover {
   opacity: 70%;
   transform: scale(1.1, 1.1);
   cursor: pointer;
@@ -726,6 +748,17 @@ html {
   }
   .contact__card__message {
     font-size: 30px;
+  }
+  .contact__card__form {
+    width: 80vw;
+    height: 40vh;
+  }
+  .contact__card__form__inputs {
+    width: 80vw;
+    height: 40vh;
+  }
+  .contact__card__form__button {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 500px) {
