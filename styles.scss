@@ -363,6 +363,12 @@ html {
   &__subheader {
     color: $secondary-color;     
   } 
+  &__subheader__icon {
+    color: $tertiary-color;     
+  } 
+  &__subheader__icon:hover {
+    transform: scale(1.5,1.5);      
+  } 
   &__card-1, &__card-3 {
     display: flex; 
     justify-content: space-around; 
