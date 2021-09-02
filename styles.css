@@ -432,6 +432,12 @@ html {
 .projects__subheader {
   color: #64FFDA;
 }
+.projects__subheader__icon {
+  color: #0B1039;
+}
+.projects__subheader__icon:hover {
+  transform: scale(1.5, 1.5);
+}
 .projects__card-1, .projects__card-3 {
   display: flex;
   justify-content: space-around;
