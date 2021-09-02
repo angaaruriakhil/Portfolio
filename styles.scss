@@ -340,7 +340,7 @@ html {
 #particles-js-projects { 
   position: absolute;
   width: 100vw; 
-  height: 250vh;   
+  height: 230vh;   
 }
 
 .projects {
@@ -352,18 +352,18 @@ html {
   justify-content: space-around; 
   align-items: center;  
   font-family: $primary-font; 
-  &__card-1__header, &__card-3__header,  {
+  &__card-1__header, &__card-3__header {
     font-size: 45px;
     font-weight: bold;
     display: flex; 
     justify-content: flex-start; 
     width: 70vw;
-    align-items: center;  
+    align-items: center;   
   }
   &__subheader {
     color: $secondary-color;     
   } 
-  &__card-1, &__card-3, {
+  &__card-1, &__card-3 {
     display: flex; 
     justify-content: space-around; 
     width: 70vw;  
