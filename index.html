@@ -22,6 +22,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Crypto JS Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="./pointer.js/pointer.css" rel="stylesheet">
 </head>
 <body>
 
@@ -107,13 +108,13 @@
         <div class ="about__tech-stack__icons" id ="about__tech-stack__icons"> 
           <p> <i class="fab fa-github"></i> Github </p>
           <p> <i class="fab fa-git"></i> Git </p>
-          <p> <i class="fab fa-bootstrap"></i> Bootstrap </p>
+          <p> <i class="devicon-jest-plain"></i> Jest </p>
           <p> <i class="fab fa-npm"></i> npm </p>
           <p> <i class="fab fa-node"></i> Node.js </p>
           <p> <i class="fab fa-react"></i> React & Redux </p>
           <p> <i class="fab fa-python"></i> Python 3 </p>
           <p> <i class="fab fa-java"></i> Java </p>
-          <p> <i class="fab <p> fa-js-square"></i> JavaScript (ES6+) </p>
+          <p> <i class="fab fa-js-square"></i> JavaScript (ES6+) </p>
           <p> <i class="fab fa-html5"></i> HTML 5 </p>
           <p> <i class="fab fa-css3"></i> CSS 3 </p>
           <p> <i class="fab fa-sass"></i> Sass </p>
@@ -148,7 +149,8 @@
         Calculator <a href = "https://github.com/angaar96/js-calculator" target = "_blank" rel="noreferrer"> <i class="fab fa-github-square projects__subheader__icon"></i> </a>
         </h2>
         <p class = "projects__card-2__text__info"> 
-          Calculator built with vanilla JavaScript, SCSS and HTML. Features support for decimal places, recurring decimals and chaining operations. Play on PC or mobile. 
+          Calculator built with JavaScript, SCSS and HTML.<br> Features support for decimal places, recurring decimals and chaining operations. <br>
+          Tested using Cypress. <br> Available on PC or mobile. 
         </p>
       </div>
     </article>
@@ -159,8 +161,9 @@
         Battleship Game <a href = "https://github.com/angaar96/Battleship" target = "_blank" rel="noreferrer"> <i class="fab fa-github-square projects__subheader__icon"></i> </a>
         </h2>
         <p class = "projects__card-3__text__info"> 
-          Battleship game built with HTML, SCSS/Sass and vanilla Javascript. Play on PC or mobile. <br> 
-          Face against the computer in a daring game of chance as you attempt to locate and sink each other's ships. 
+          Battleship game built with HTML, SCSS/Sass and Javascript. <br> 
+          Face against the computer in a daring game of chance as you attempt to locate and sink each other's ships.<br>
+          Play on PC or mobile. 
         </p>
       </div>
       <a href = "https://angaar96.github.io/Battleship/" target = "_blank" rel="noreferrer"> <img src= "./assets/images/3.png" alt = "A picture of the Battleship project." class = "projects__card-3__img"> </a>  
@@ -216,5 +219,15 @@
   </section> 
   </main>
   <script src="main.js"></script>
+  <!-- Pointer.js script import -->
+  <script src="./pointer.js/pointer.js"></script>
+  <!-- Pointer.js settings -->
+  <script>
+    init_pointer({
+      pointerColor: "#64FFDA", // Css color
+      ringSize: 15, // Pixels
+      ringClickSize: 10 // Pixels when clicking
+    })
+  </script>
   </body>
 </html>

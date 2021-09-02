@@ -54,8 +54,10 @@ function revert(el) {
 function pageAnimation(el) {
   if (el.id == "projects") {
     document.getElementById("projects__card-1__header").className += " animate__animated animate__slideInDown animate__duration-1s";
-    document.getElementById("projects__card-1").className += " animate__animated animate__lightSpeedInRight animate__delay-0.5s";
-    document.getElementById("projects__card-2").className += " animate__animated animate__lightSpeedInLeft animate__delay-0.5s";
+    document.getElementById("projects__card-1").className += " animate__animated animate__lightSpeedInRight animate__delay-1s";
+    document.getElementById("projects__card-2").className += " animate__animated animate__lightSpeedInLeft animate__delay-1s";
+    document.getElementById("projects__card-3").className += " animate__animated animate__lightSpeedInLeft animate__delay-1s";
+    document.getElementById("projects__card-4").className += " animate__animated animate__lightSpeedInLeft animate__delay-1s";
   }
 
   if (el.id == "about") {
@@ -71,7 +73,8 @@ function pageAnimation(el) {
   if (el.id == "contact") {
     document.getElementById("contact__card__header").className += " animate__animated animate__slideInDown animate__duration-0.5s";
     document.getElementById("contact__card__message").className += " animate__animated animate__zoomInDown animate__delay-0.5s";
-    document.getElementById("contact__card__form__button").className += " animate__animated animate__delay-1s animate__flipInX";
+    document.getElementById("contact__card__form").className += " animate__animated animate__delay-1s animate__bounceInDown";
+    document.getElementById("contact__card__form__button").className += " animate__animated animate__delay-2s animate__flipInX";
   }
 }
 
