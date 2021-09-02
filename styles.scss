@@ -9,7 +9,7 @@
 }
 
 a {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 // Set up scroll snapping behaviour 
@@ -351,7 +351,7 @@ html {
   flex-direction: column; 
   justify-content: space-around; 
   align-items: center;  
-  font-family: $primary-font;
+  font-family: $primary-font; 
   &__card-1__header, &__card-3__header,  {
     font-size: 45px;
     font-weight: bold;
@@ -719,7 +719,7 @@ html {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .fixed_elements__hamburger-menu {
     font-size: 30px; 
   }
