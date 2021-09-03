@@ -486,17 +486,15 @@ html {
       height: auto; 
       border: 5px solid transparent; 
       border-radius: 20px;
-      padding: 10px; 
       text-align: center;
-      padding-bottom: 15px;  
       font-weight: bold;
-      background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
-      overflow: hidden;   
+      background: linear-gradient(#0BCE83, #0BCE83) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;   
       margin-top: 20px; 
+      padding: 10px; 
     }
     &__button:hover {
       opacity: 70%;
-      transform: scale(1.1, 1.1); 
+      transform: scale(1.3, 1.3); 
       cursor: pointer;
     }   
   }
@@ -585,18 +583,38 @@ html {
     }
   }
   
+  .projects {
+    height: 100vh;
+    &__card-1, &__card-2 &__card-3 &__card-4 {
+    } 
+  }
+
+  #particles-js-projects {
+    height: 100vh;
+  }
+
+  
   .hi-icon {
     height: 30px; 
     width: 30px; 
     margin-left: 5px;    
   }
-  .contact {
+
+  .contact { 
     &__card__header {
       font-size: 40px;
       align-self: center;  
     }
     &__card__message {
       font-size: 30px; 
+    }
+    &__card__form {
+      width: 70vw; 
+      margin-top: 20px; 
+    }
+    &__card__form__inputs {
+      width: 70vw;
+      font-size: 25px;  
     }
   }
   .projects {
@@ -609,6 +627,9 @@ html {
     }
     &__card-2, &__card-1, &__card-3, &__card-4 {
       width: 90vw;  
+    }
+    &__card-1__header {
+      margin-top: 40px; 
     }
   }
   
@@ -689,6 +710,7 @@ html {
     margin-left: 5px;    
   }
   .projects {
+    height: 200vh;
     &__card-1, &__card-2, &__card-3, &__card-4 {
       width: 90vw;  
     }
@@ -702,6 +724,10 @@ html {
       width: 300px; 
       height: 180px;  
     }
+  }
+
+  #particles-js-projects {
+    height: 200vh;
   }
   .contact {
     &__card__header {
@@ -842,14 +868,24 @@ html {
   
 
   .contact {
-    justify-content: space-between;
+    justify-content: space-around;
     &__card__header {
       font-size: 25px;
-      align-self: center;  
+      align-self: center;   
     }
     &__card__message {
       font-size: 20px; 
       margin-bottom: 10px; 
+    }
+    &__card__form {
+      width: 80vw;
+      height: 30vh;
+      margin-top: 0px;    
+      &__inputs {
+        width: 80vw; 
+        height: 30vh; 
+        font-size: 15px;    
+      }
     }
     &__card__footer {
       flex-direction: column;
@@ -864,10 +900,6 @@ html {
     }
     &__card__footer__socials__links {
       font-size: 30px;     
-    }
-    &__card__button {
-      font-size: 15px;
-      margin-bottom: 50px;    
     }
     &__card__footer__socials {
       border-top: 0px;   
