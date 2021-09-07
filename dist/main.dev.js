@@ -67,8 +67,6 @@ function pageAnimation(el) {
       document.getElementById("projects__card-1__header").className += " animate__animated animate__slideInDown animate__duration-1s";
       document.getElementById("projects__card-1").className += " animate__animated animate__lightSpeedInRight animate__delay-0.5s";
       document.getElementById("projects__card-2").className += " animate__animated animate__lightSpeedInLeft animate__delay-0.5s";
-      document.getElementById("projects__card-3").className += " animate__animated animate__lightSpeedInLeft animate__delay-2s";
-      document.getElementById("projects__card-4").className += " animate__animated animate__lightSpeedInLeft animate__delay-2s";
       break;
 
     case "contact":
