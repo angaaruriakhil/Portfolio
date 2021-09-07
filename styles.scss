@@ -340,19 +340,19 @@ html {
 #particles-js-projects { 
   position: absolute;
   width: 100vw; 
-  height: 230vh;   
+  height: 330vh;   
 }
 
 .projects {
   position: relative;  
-  height: 230vh;
+  height: 330vh;
   border-bottom: 2px solid white; 
   display: flex; 
   flex-direction: column; 
   justify-content: space-around; 
   align-items: center;  
   font-family: $primary-font; 
-  &__card-1__header, &__card-3__header {
+  &__card-1__header, &__card-3__header, &__card-5__header {
     font-size: 45px;
     font-weight: bold;
     display: flex; 
@@ -369,7 +369,7 @@ html {
   &__subheader__icon:hover {
     transform: scale(1.5,1.5);      
   } 
-  &__card-1, &__card-3 {
+  &__card-1, &__card-3, &__card-5 {
     display: flex; 
     justify-content: space-around; 
     width: 70vw;  
@@ -377,21 +377,21 @@ html {
     height: 30vh;
     z-index: 10;   
   } 
-  &__card-1__text, &__card-3__text {
+  &__card-1__text, &__card-3__text, &__card-5__text {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
     justify-content: space-around; 
     width: 40%;    
   } 
-  &__card-1__text__info, &__card-3__text__info {
+  &__card-1__text__info, &__card-3__text__info, &__card-5__text__info {
     border: 2px solid $secondary-color;
     border-radius: 15px; 
     padding: 10px; 
     margin-top: 10px; 
     background-color: $tertiary-color;  
   }
-  &__card-1__img, &__card-3__img, &__card-2__img, &__card-4__img {
+  &__card-1__img, &__card-3__img, &__card-2__img, &__card-4__img, &__card-5__img, &__card-6__img {
     overflow: hidden;
     width: 600px; 
     height: 300px; 
@@ -400,7 +400,7 @@ html {
     border: 5px solid transparent;    
     z-index: 10;   
   }
-  &__card-2, &__card-4 {
+  &__card-2, &__card-4, &__card-6 {
     display: flex; 
     justify-content: space-around; 
     height: 30vh;
@@ -408,13 +408,13 @@ html {
     align-items: flex-start;
     z-index: 10;   
   } 
-  &__card-2__text, &__card-4__text {
+  &__card-2__text, &__card-4__text, &__card-6__text {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
     width: 40%;   
   } 
-  &__card-2__text__info, &__card-4__text__info{
+  &__card-2__text__info, &__card-4__text__info, &__card-6__text__info{
     border: 2px solid $secondary-color;
     border-radius: 15px; 
     padding: 10px; 
@@ -583,17 +583,8 @@ html {
     }
   }
   
-  .projects {
-    height: 100vh;
-    &__card-1, &__card-2 &__card-3 &__card-4 {
-    } 
-  }
 
-  #particles-js-projects {
-    height: 100vh;
-  }
-
-  
+ 
   .hi-icon {
     height: 30px; 
     width: 30px; 
@@ -617,15 +608,21 @@ html {
       font-size: 25px;  
     }
   }
+
+  #particles-js-projects {
+    height: 140vh;
+  }
+
   .projects {
-    &__card-1__header, &__card-3__header {
+    height: 140vh;
+    &__card-1__header, &__card-3__header, &__card-5__header {
       justify-content: center; 
     }
-    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img {
+    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
       width: 350px; 
       height: 200px;  
     }
-    &__card-2, &__card-1, &__card-3, &__card-4 {
+    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 {
       width: 90vw;  
     }
     &__card-1__header {
@@ -636,6 +633,12 @@ html {
 }
 
 @media screen and (max-width: 800px) {
+  .projects, #particles-js-projects {
+    height: 250vh;
+    font-size: 15px; 
+  }
+}
+@media screen and (max-width: 600px) {
   .fixed_elements {
     &__logo-img  {
       visibility: hidden; 
@@ -710,24 +713,24 @@ html {
     margin-left: 5px;    
   }
   .projects {
-    height: 200vh;
-    &__card-1, &__card-2, &__card-3, &__card-4 {
+    height: 330vh;
+    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 {
       width: 90vw;  
     }
-    &__card-1__header, &__card-3__header {
+    &__card-1__header, &__card-3__header, &__card-5__header {
       font-size: 30px; 
     }
     &__subheader {
       font-size: 15px; 
     }
-    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img {
+    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img,&__card-5__img, &__card-6__img {
       width: 300px; 
       height: 180px;  
     }
   }
 
   #particles-js-projects {
-    height: 200vh;
+    height: 330vh;
   }
   .contact {
     &__card__header {
@@ -834,32 +837,32 @@ html {
   }
   .projects {
     align-items: center;
-    &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-4__text__info {
+    &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-4__text__info, &__card-5__text__info, &__card-6__text__info {
       font-size: 10px;
       text-align: center; 
       width: 90vw;     
     }
-    &__card-1, &__card-3 {
+    &__card-1, &__card-3, &__card-5 {
       height: auto;  
       flex-direction: column-reverse; 
     }
-    &__card-2, &__card-4 { 
+    &__card-2, &__card-4, &__card-6 { 
       height: auto; 
       flex-direction: column; 
       align-items: center; 
     }
-    &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text {
+    &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text, &__card-5__text, &__card-6__text {
       align-items: center; 
       text-align: center; 
     }
-    &__card-1__header, &__card-3__header {
+    &__card-1__header, &__card-3__header, &__card-5__header {
       font-size: 20px;
     }
     &__subheader {
       font-size: 15px;
       width: 70vw;   
     }
-    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img {
+    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
       width: 80vw; 
       height: 150px;  
     }
@@ -914,7 +917,7 @@ html {
 
 @media (min-width: 800px) {
   .projects {
-    &__card-1__img:hover, &__card-2__img:hover, &__card-3__img:hover, &__card-4__img:hover {
+    &__card-1__img:hover, &__card-2__img:hover, &__card-3__img:hover, &__card-4__img:hover, &__card-5__img:hover, &__card-6__img:hover {
       cursor: pointer;
       transform: scale(1.1,1.1);
       box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
