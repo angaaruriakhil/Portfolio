@@ -29,10 +29,6 @@
     pointer-events: none;
 }
 
-html {
-    cursor: none !important;
-}
-
-a {
-    cursor: none !important;
+html, a {
+    cursor: none;
 }
