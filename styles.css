@@ -186,7 +186,7 @@ html {
   font-family: "Consolas";
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 50;
 }
 .nav__list-master {
   display: flex;
