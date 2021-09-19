@@ -15,9 +15,10 @@ function flipInButton() {
   document.getElementById("contact__card__form__button").className = "contact__card__form__button animate__animated animate__flipInY animate__faster";
 }
 
-function logoHoverFeedback() {
+function logoHoverFeedback() {  
   document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__pulse animate__faster";
 }
+
 document.getElementById("fixed_elements__logo-img").addEventListener("click", spinLogoToTop);
 
 document.getElementById("fixed_elements__logo-img").addEventListener("mouseover", logoHoverFeedback);

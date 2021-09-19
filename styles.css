@@ -205,7 +205,6 @@ html {
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  cursor: pointer;
   text-decoration: none;
 }
 .nav__list-items-number {
@@ -314,7 +313,6 @@ html {
 .landing__photo-credit:hover {
   color: #64FFDA;
   text-decoration: underline;
-  cursor: pointer;
   transform: scale(1.2, 1.2);
 }
 .landing__photo-credit__links {
@@ -459,6 +457,7 @@ html {
   padding: 10px;
   margin-top: 10px;
   background-color: #0B1039;
+  text-align: left;
 }
 .projects__card-1__img, .projects__card-3__img, .projects__card-2__img, .projects__card-4__img, .projects__card-5__img, .projects__card-6__img {
   overflow: hidden;
@@ -489,6 +488,7 @@ html {
   padding: 10px;
   margin-top: 10px;
   background-color: #0B1039;
+  text-align: left;
 }
 
 #particles-js-contact {
@@ -563,7 +563,6 @@ html {
 .contact__card__form__button:hover {
   opacity: 70%;
   transform: scale(1.3, 1.3);
-  cursor: pointer;
 }
 .contact__card__footer {
   display: flex;
@@ -953,7 +952,6 @@ html {
 }
 @media (min-width: 800px) {
   .projects__card-1__img:hover, .projects__card-2__img:hover, .projects__card-3__img:hover, .projects__card-4__img:hover, .projects__card-5__img:hover, .projects__card-6__img:hover {
-    cursor: pointer;
     transform: scale(1.1, 1.1);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
