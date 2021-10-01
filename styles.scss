@@ -350,7 +350,7 @@ html {
   justify-content: space-around; 
   align-items: center;  
   font-family: $primary-font; 
-  &__card-1__header, &__card-3__header, &__card-5__header {
+  &__card-1__header {
     font-size: 45px;
     font-weight: bold;
     display: flex; 
@@ -367,30 +367,7 @@ html {
   &__subheader__icon:hover {
     transform: scale(1.5,1.5);      
   } 
-  &__card-1, &__card-3, &__card-5 {
-    display: flex; 
-    justify-content: space-around; 
-    width: 70vw;  
-    align-items: center;
-    height: 30vh;
-    z-index: 10;   
-  } 
-  &__card-1__text, &__card-3__text, &__card-5__text {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-    justify-content: space-around; 
-    width: 40%;    
-  } 
-  &__card-1__text__info, &__card-3__text__info, &__card-5__text__info {
-    border: 2px solid $secondary-color;
-    border-radius: 15px; 
-    padding: 10px; 
-    margin-top: 10px; 
-    background-color: $tertiary-color;  
-    text-align: left; 
-  }
-  &__card-1__img, &__card-3__img, &__card-2__img, &__card-4__img, &__card-5__img, &__card-6__img {
+  &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
     overflow: hidden;
     width: 600px; 
     height: 300px; 
@@ -399,7 +376,7 @@ html {
     border: 5px solid transparent;    
     z-index: 10;   
   }
-  &__card-2, &__card-4, &__card-6 {
+  &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 {
     display: flex; 
     justify-content: space-around; 
     height: 30vh;
@@ -407,13 +384,13 @@ html {
     align-items: flex-start;
     z-index: 10;   
   } 
-  &__card-2__text, &__card-4__text, &__card-6__text {
+  &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text, &__card-5__text, &__card-6__text {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
     width: 40%;   
   } 
-  &__card-2__text__info, &__card-4__text__info, &__card-6__text__info{
+  &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-5__text__info, &__card-4__text__info, &__card-6__text__info {
     border: 2px solid $secondary-color;
     border-radius: 15px; 
     padding: 10px; 
@@ -614,10 +591,10 @@ html {
 
   .projects {
     height: 140vh;
-    &__card-1__header, &__card-3__header, &__card-5__header {
+    &__card-1__header {
       justify-content: center; 
     }
-    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
+    &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
       width: 350px; 
       height: 200px;  
     }
@@ -716,13 +693,13 @@ html {
     &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 {
       width: 90vw;  
     }
-    &__card-1__header, &__card-3__header, &__card-5__header {
+    &__card-1__header {
       font-size: 30px; 
     }
     &__subheader {
       font-size: 15px; 
     }
-    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img,&__card-5__img, &__card-6__img {
+    &__card-1__img, &__card-2__img,  &__card-3__img, &__card-4__img,&__card-5__img, &__card-6__img {
       width: 300px; 
       height: 180px;  
     }
@@ -836,16 +813,14 @@ html {
   }
   .projects {
     align-items: center;
+    
     &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-4__text__info, &__card-5__text__info, &__card-6__text__info {
       font-size: 10px;
       text-align: center; 
       width: 90vw;     
     }
-    &__card-1, &__card-3, &__card-5 {
-      height: auto;  
-      flex-direction: column-reverse; 
-    }
-    &__card-2, &__card-4, &__card-6 { 
+
+    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 { 
       height: auto; 
       flex-direction: column; 
       align-items: center; 
@@ -854,14 +829,14 @@ html {
       align-items: center; 
       text-align: center; 
     }
-    &__card-1__header, &__card-3__header, &__card-5__header {
+    &__card-1__header {
       font-size: 20px;
     }
     &__subheader {
       font-size: 15px;
       width: 70vw;   
     }
-    &__card-2__img, &__card-1__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
+    &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
       width: 80vw; 
       height: 150px;  
     }
