@@ -19,6 +19,5 @@ I endeavoured to get a 1:1 recreation of the wireframe during development and I 
 * CSS 3/SCSS
 * Javascript ES6
 * Particles.js 
-* Pointer.js 
 * Interaction Observer (For responsive line under scrollbar) 
 
