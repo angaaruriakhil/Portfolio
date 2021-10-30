@@ -1,6 +1,7 @@
 @import "./assets/styles/__typography"; 
 @import "./assets/styles/__animations";
 
+
 * {
   margin: 0; 
   padding: 0; 
@@ -338,12 +339,12 @@ html {
 #particles-js-projects { 
   position: absolute;
   width: 100vw; 
-  height: 330vh;   
+  height: 380vh;   
 }
 
 .projects {
   position: relative;  
-  height: 330vh;
+  height: 380vh;
   border-bottom: 2px solid white; 
   display: flex; 
   flex-direction: column; 
@@ -367,7 +368,7 @@ html {
   &__subheader__icon:hover {
     transform: scale(1.5,1.5);      
   } 
-  &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
+  &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img, &__card-7__img {
     overflow: hidden;
     width: 600px; 
     height: 300px; 
@@ -376,7 +377,7 @@ html {
     border: 5px solid transparent;    
     z-index: 10;   
   }
-  &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 {
+  &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 {
     display: flex; 
     justify-content: space-around; 
     height: 30vh;
@@ -384,13 +385,14 @@ html {
     align-items: flex-start;
     z-index: 10;   
   } 
-  &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text, &__card-5__text, &__card-6__text {
+  &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text, &__card-5__text, &__card-6__text, &__card-7__text {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
-    width: 40%;   
+    width: 40%; 
+    margin-left: 30px;   
   } 
-  &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-5__text__info, &__card-4__text__info, &__card-6__text__info {
+  &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-5__text__info, &__card-4__text__info, &__card-6__text__info, &__card-7__text__info {
     border: 2px solid $secondary-color;
     border-radius: 15px; 
     padding: 10px; 
@@ -586,23 +588,21 @@ html {
   }
 
   #particles-js-projects {
-    height: 140vh;
+    height: 250vh;
   }
 
   .projects {
-    height: 140vh;
+    height: 250vh;
     &__card-1__header {
       justify-content: center; 
+      margin-top: 40px; 
     }
-    &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
+    &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img, &__card-7__img {
       width: 350px; 
       height: 200px;  
     }
-    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 {
+    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 {
       width: 90vw;  
-    }
-    &__card-1__header {
-      margin-top: 40px; 
     }
   }
   
@@ -610,8 +610,15 @@ html {
 
 @media screen and (max-width: 800px) {
   .projects, #particles-js-projects {
-    height: 250vh;
+    height: 300vh;
     font-size: 15px; 
+  }
+  .about {
+    &__tech-stack__icons {
+      grid-template-columns: auto auto auto; 
+      grid-template-rows: auto auto auto auto;
+      font-size: 20px;  
+    }
   }
 }
 @media screen and (max-width: 600px) {
@@ -690,7 +697,7 @@ html {
   }
   .projects {
     height: 330vh;
-    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 {
+    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 {
       width: 90vw;  
     }
     &__card-1__header {
@@ -699,7 +706,7 @@ html {
     &__subheader {
       font-size: 15px; 
     }
-    &__card-1__img, &__card-2__img,  &__card-3__img, &__card-4__img,&__card-5__img, &__card-6__img {
+    &__card-1__img, &__card-2__img,  &__card-3__img, &__card-4__img,&__card-5__img, &__card-6__img, &__card-7__img {
       width: 300px; 
       height: 180px;  
     }
@@ -814,20 +821,21 @@ html {
   .projects {
     align-items: center;
     
-    &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-4__text__info, &__card-5__text__info, &__card-6__text__info {
+    &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-4__text__info, &__card-5__text__info, &__card-6__text__info, &__card-7__text__info {
       font-size: 10px;
       text-align: center; 
       width: 90vw;     
     }
 
-    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6 { 
+    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 { 
       height: auto; 
       flex-direction: column; 
       align-items: center; 
     }
-    &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text, &__card-5__text, &__card-6__text {
+    &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text, &__card-5__text, &__card-6__text, &__card-7__text {
       align-items: center; 
       text-align: center; 
+      margin-left: 0; 
     }
     &__card-1__header {
       font-size: 20px;
@@ -836,7 +844,7 @@ html {
       font-size: 15px;
       width: 70vw;   
     }
-    &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img {
+    &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img, &__card-7__img {
       width: 80vw; 
       height: 150px;  
     }
