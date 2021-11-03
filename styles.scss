@@ -375,7 +375,7 @@ html {
     border: 5px solid transparent;    
     z-index: 10;   
   }
-  &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 {
+  &__card {
     display: flex; 
     justify-content: space-around; 
     height: 30vh;
@@ -383,14 +383,14 @@ html {
     align-items: flex-start;
     z-index: 10;   
   } 
-  &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text, &__card-5__text, &__card-6__text, &__card-7__text {
+  &__card__text {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
     width: 40%; 
     margin-left: 30px;   
   } 
-  &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-5__text__info, &__card-4__text__info, &__card-6__text__info, &__card-7__text__info {
+  &__card__text__info {
     border: 2px solid $secondary-color;
     border-radius: 15px; 
     padding: 10px; 
@@ -619,7 +619,7 @@ html {
       width: 350px; 
       height: 200px;  
     }
-    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 {
+    &__card {
       width: 90vw;  
     }
   }
@@ -722,7 +722,7 @@ html {
   }
   .projects {
     height: 340vh;
-    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 {
+    &__card {
       width: 90vw;  
     }
     &__card-1__header {
@@ -845,18 +845,18 @@ html {
   .projects {
     align-items: center;
     
-    &__card-1__text__info, &__card-2__text__info, &__card-3__text__info, &__card-4__text__info, &__card-5__text__info, &__card-6__text__info, &__card-7__text__info {
+    &__card__text__info {
       font-size: 10px;
       text-align: center; 
       width: 90vw;     
     }
 
-    &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 { 
+    &__card { 
       height: auto; 
       flex-direction: column; 
       align-items: center; 
     }
-    &__card-1__text, &__card-2__text, &__card-3__text, &__card-4__text, &__card-5__text, &__card-6__text, &__card-7__text {
+    &__card__text {
       align-items: center; 
       text-align: center; 
       margin-left: 0; 
@@ -901,17 +901,11 @@ html {
       text-align: center;    
     }
     &__card__footer__socials {
-      border-top: none;
+      border-top: 0px;
       font-size: 15px;    
-    }
-    &__card__footer__info {
-      font-size: 15px;
     }
     &__card__footer__socials__links {
       font-size: 30px;     
-    }
-    &__card__footer__socials {
-      border-top: 0px;   
     }
     &__card__footer__info {
       font-size: 10px; 
