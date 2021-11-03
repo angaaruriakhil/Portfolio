@@ -245,8 +245,6 @@ html {
   }
 }
 
-
-
 // About Section 
 #particles-js-about { 
   position: absolute;
@@ -517,7 +515,17 @@ html {
 }
 
 // Media Queries for Responsiveness
-
+@media screen and (max-width: 1400px) {
+  .landing__message {
+    font-size: 40px; 
+  }
+  .about__article__header {
+    font-size: 30px; 
+  }
+  .about__article__info {
+    font-size: 20px; 
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .landing__message {
@@ -525,10 +533,11 @@ html {
   }
   .about {
     &__article__header {
-      font-size: 30px; 
+      font-size: 20px; 
     }
     &__article__info {
       font-size: 20px; 
+      // width: 80%; 
     }
     &__article {
       flex-direction: column-reverse; 
@@ -544,8 +553,8 @@ html {
     }
     &__tech-stack__header {
       font-size: 30px;
-      border-radius: 10px; 
-      margin-bottom: 20px; 
+      border-radius: 10px;
+      margin-top: 20px;  
     }
     &__tech-stack__icons {
       grid-template-columns: repeat (3, auto); 
@@ -558,6 +567,10 @@ html {
       align-items: center;
       margin-top: 30px;
       text-align: center;  
+    }
+    .hi-icon {
+      height: 20px; 
+      width: 20px; 
     }
   }
   
@@ -652,6 +665,9 @@ html {
       font-size: 20px;
       width: 80vw; 
     }
+    .about__article__info {
+      width: auto; 
+    }
   }
 
   .nav {
@@ -696,7 +712,7 @@ html {
     margin-left: 5px;    
   }
   .projects {
-    height: 330vh;
+    height: 270vh;
     &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 {
       width: 90vw;  
     }
@@ -708,12 +724,11 @@ html {
     }
     &__card-1__img, &__card-2__img,  &__card-3__img, &__card-4__img,&__card-5__img, &__card-6__img, &__card-7__img {
       width: 300px; 
-      height: 180px;  
     }
   }
 
   #particles-js-projects {
-    height: 330vh;
+    height: 270vh;
   }
   .contact {
     &__card__header {
@@ -787,26 +802,9 @@ html {
       margin-bottom: 0px; 
       width: 95vw;
     }
-    &__article__header {
-      font-size: 15px; 
-    }
-    &__article__info {
-      font-size: 10px; 
-      height: auto; 
-    }
-    &__tech-stack__header {
-      font-size: 15px;
-      border-radius: 0px; 
-      margin-top: 15px; 
-    }
-    &__article__profile-pic {
-      height: 150px; 
-      width: 150px;
-      margin-top: 0px;  
-    }
     &__tech-stack__icons {
       padding-top: 0px;
-      font-size: 10px;
+      font-size: 15px;
       width: 90vw;  
     } 
     &__article__container {
@@ -846,7 +844,7 @@ html {
     }
     &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img, &__card-7__img {
       width: 80vw; 
-      height: 150px;  
+      height: 200px;  
     }
   }
 
