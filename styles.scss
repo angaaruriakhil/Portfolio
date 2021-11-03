@@ -366,7 +366,7 @@ html {
   &__subheader__icon:hover {
     transform: scale(1.5,1.5);      
   } 
-  &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img, &__card-7__img {
+  &__card__img {
     overflow: hidden;
     width: 600px; 
     height: 300px; 
@@ -525,6 +525,11 @@ html {
   .about__article__info {
     font-size: 20px; 
   }
+  .hi-icon {
+    height: 30px; 
+    width: 30px; 
+    margin-left: 5px;    
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -610,7 +615,7 @@ html {
       justify-content: center; 
       margin-top: 40px; 
     }
-    &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img, &__card-7__img {
+    &__card__img {
       width: 350px; 
       height: 200px;  
     }
@@ -632,6 +637,10 @@ html {
       grid-template-rows: auto auto auto auto;
       font-size: 20px;  
     }
+  }
+  .nav__list-items {
+    margin-right: 5px; 
+    font-size: 25px;  
   }
 }
 @media screen and (max-width: 600px) {
@@ -712,7 +721,7 @@ html {
     margin-left: 5px;    
   }
   .projects {
-    height: 270vh;
+    height: 340vh;
     &__card-1, &__card-2, &__card-3, &__card-4, &__card-5, &__card-6, &__card-7 {
       width: 90vw;  
     }
@@ -722,13 +731,13 @@ html {
     &__subheader {
       font-size: 15px; 
     }
-    &__card-1__img, &__card-2__img,  &__card-3__img, &__card-4__img,&__card-5__img, &__card-6__img, &__card-7__img {
+    &__card__img {
       width: 300px; 
     }
   }
 
   #particles-js-projects {
-    height: 270vh;
+    height: 340vh;
   }
   .contact {
     &__card__header {
@@ -802,6 +811,23 @@ html {
       margin-bottom: 0px; 
       width: 95vw;
     }
+    &__article__header {
+      font-size: 15px; 
+    }
+    &__article__info {
+      font-size: 10px; 
+      height: auto; 
+    }
+    &__tech-stack__header {
+      font-size: 15px;
+      border-radius: 0px; 
+      margin-top: 15px; 
+    }
+    &__article__profile-pic {
+      height: 150px; 
+      width: 150px;
+      margin-top: 0px;  
+    }
     &__tech-stack__icons {
       padding-top: 0px;
       font-size: 15px;
@@ -842,9 +868,9 @@ html {
       font-size: 15px;
       width: 70vw;   
     }
-    &__card-1__img, &__card-2__img, &__card-3__img, &__card-4__img, &__card-5__img, &__card-6__img, &__card-7__img {
+    &__card__img {
       width: 80vw; 
-      height: 200px;  
+      height: 150px;  
     }
   }
 
@@ -897,7 +923,7 @@ html {
 
 @media (min-width: 800px) {
   .projects {
-    &__card-1__img:hover, &__card-2__img:hover, &__card-3__img:hover, &__card-4__img:hover, &__card-5__img:hover, &__card-6__img:hover {
+    &__card__img:hover {
       transform: scale(1.1,1.1);
       box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     }
