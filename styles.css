@@ -436,7 +436,7 @@ html {
 .projects__subheader__icon:hover {
   transform: scale(1.5, 1.5);
 }
-.projects__card-1__img, .projects__card-2__img, .projects__card-3__img, .projects__card-4__img, .projects__card-5__img, .projects__card-6__img, .projects__card-7__img {
+.projects__card__img {
   overflow: hidden;
   width: 600px;
   height: 300px;
@@ -586,6 +586,12 @@ html {
   .about__article__info {
     font-size: 20px;
   }
+
+  .hi-icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .landing__message {
@@ -665,7 +671,7 @@ html {
     justify-content: center;
     margin-top: 40px;
   }
-  .projects__card-1__img, .projects__card-2__img, .projects__card-3__img, .projects__card-4__img, .projects__card-5__img, .projects__card-6__img, .projects__card-7__img {
+  .projects__card__img {
     width: 350px;
     height: 200px;
   }
@@ -683,6 +689,11 @@ html {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
     font-size: 20px;
+  }
+
+  .nav__list-items {
+    margin-right: 5px;
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -760,7 +771,7 @@ html {
   }
 
   .projects {
-    height: 270vh;
+    height: 340vh;
   }
   .projects__card-1, .projects__card-2, .projects__card-3, .projects__card-4, .projects__card-5, .projects__card-6, .projects__card-7 {
     width: 90vw;
@@ -771,12 +782,12 @@ html {
   .projects__subheader {
     font-size: 15px;
   }
-  .projects__card-1__img, .projects__card-2__img, .projects__card-3__img, .projects__card-4__img, .projects__card-5__img, .projects__card-6__img, .projects__card-7__img {
+  .projects__card__img {
     width: 300px;
   }
 
   #particles-js-projects {
-    height: 270vh;
+    height: 340vh;
   }
 
   .contact__card__header {
@@ -845,6 +856,23 @@ html {
     margin-bottom: 0px;
     width: 95vw;
   }
+  .about__article__header {
+    font-size: 15px;
+  }
+  .about__article__info {
+    font-size: 10px;
+    height: auto;
+  }
+  .about__tech-stack__header {
+    font-size: 15px;
+    border-radius: 0px;
+    margin-top: 15px;
+  }
+  .about__article__profile-pic {
+    height: 150px;
+    width: 150px;
+    margin-top: 0px;
+  }
   .about__tech-stack__icons {
     padding-top: 0px;
     font-size: 15px;
@@ -884,9 +912,9 @@ html {
     font-size: 15px;
     width: 70vw;
   }
-  .projects__card-1__img, .projects__card-2__img, .projects__card-3__img, .projects__card-4__img, .projects__card-5__img, .projects__card-6__img, .projects__card-7__img {
+  .projects__card__img {
     width: 80vw;
-    height: 200px;
+    height: 150px;
   }
 
   .contact {
@@ -932,7 +960,7 @@ html {
   }
 }
 @media (min-width: 800px) {
-  .projects__card-1__img:hover, .projects__card-2__img:hover, .projects__card-3__img:hover, .projects__card-4__img:hover, .projects__card-5__img:hover, .projects__card-6__img:hover {
+  .projects__card__img:hover {
     transform: scale(1.1, 1.1);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
