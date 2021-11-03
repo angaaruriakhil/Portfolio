@@ -445,7 +445,7 @@ html {
   border: 5px solid transparent;
   z-index: 10;
 }
-.projects__card-1, .projects__card-2, .projects__card-3, .projects__card-4, .projects__card-5, .projects__card-6, .projects__card-7 {
+.projects__card {
   display: flex;
   justify-content: space-around;
   height: 30vh;
@@ -453,14 +453,14 @@ html {
   align-items: flex-start;
   z-index: 10;
 }
-.projects__card-1__text, .projects__card-2__text, .projects__card-3__text, .projects__card-4__text, .projects__card-5__text, .projects__card-6__text, .projects__card-7__text {
+.projects__card__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 40%;
   margin-left: 30px;
 }
-.projects__card-1__text__info, .projects__card-2__text__info, .projects__card-3__text__info, .projects__card-5__text__info, .projects__card-4__text__info, .projects__card-6__text__info, .projects__card-7__text__info {
+.projects__card__text__info {
   border: 2px solid #64FFDA;
   border-radius: 15px;
   padding: 10px;
@@ -675,7 +675,7 @@ html {
     width: 350px;
     height: 200px;
   }
-  .projects__card-1, .projects__card-2, .projects__card-3, .projects__card-4, .projects__card-5, .projects__card-6, .projects__card-7 {
+  .projects__card {
     width: 90vw;
   }
 }
@@ -773,7 +773,7 @@ html {
   .projects {
     height: 340vh;
   }
-  .projects__card-1, .projects__card-2, .projects__card-3, .projects__card-4, .projects__card-5, .projects__card-6, .projects__card-7 {
+  .projects__card {
     width: 90vw;
   }
   .projects__card-1__header {
@@ -890,17 +890,17 @@ html {
   .projects {
     align-items: center;
   }
-  .projects__card-1__text__info, .projects__card-2__text__info, .projects__card-3__text__info, .projects__card-4__text__info, .projects__card-5__text__info, .projects__card-6__text__info, .projects__card-7__text__info {
+  .projects__card__text__info {
     font-size: 10px;
     text-align: center;
     width: 90vw;
   }
-  .projects__card-1, .projects__card-2, .projects__card-3, .projects__card-4, .projects__card-5, .projects__card-6, .projects__card-7 {
+  .projects__card {
     height: auto;
     flex-direction: column;
     align-items: center;
   }
-  .projects__card-1__text, .projects__card-2__text, .projects__card-3__text, .projects__card-4__text, .projects__card-5__text, .projects__card-6__text, .projects__card-7__text {
+  .projects__card__text {
     align-items: center;
     text-align: center;
     margin-left: 0;
@@ -943,17 +943,11 @@ html {
     text-align: center;
   }
   .contact__card__footer__socials {
-    border-top: none;
-    font-size: 15px;
-  }
-  .contact__card__footer__info {
+    border-top: 0px;
     font-size: 15px;
   }
   .contact__card__footer__socials__links {
     font-size: 30px;
-  }
-  .contact__card__footer__socials {
-    border-top: 0px;
   }
   .contact__card__footer__info {
     font-size: 10px;
