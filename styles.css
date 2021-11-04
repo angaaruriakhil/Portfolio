@@ -420,7 +420,6 @@ html {
   justify-content: space-around;
   align-items: center;
   font-family: "Red Hat Display";
-  max-width: 100vw;
 }
 .projects__card-1__header {
   font-size: 45px;
