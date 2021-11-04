@@ -109,7 +109,6 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
-  max-width: 100%;
 }
 
 a {
@@ -219,6 +218,7 @@ html {
 }
 
 .landing {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -327,6 +327,7 @@ html {
 }
 
 .about {
+  max-width: 100%;
   height: 100vh;
   border-bottom: 2px solid white;
   display: flex;
@@ -419,6 +420,7 @@ html {
   justify-content: space-around;
   align-items: center;
   font-family: "Red Hat Display";
+  max-width: 100vw;
 }
 .projects__card-1__header {
   font-size: 45px;
@@ -477,6 +479,7 @@ html {
 }
 
 .contact {
+  max-width: 100%;
   height: 100vh;
   position: relative;
   display: flex;
@@ -575,7 +578,7 @@ html {
   margin-left: 5px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   .landing__message {
     font-size: 30px;
   }
@@ -649,6 +652,7 @@ html {
 
   .contact__card__header {
     font-size: 40px;
+    margin-bottom: 20px;
   }
   .contact__card {
     width: 60vw;
