@@ -6,7 +6,8 @@
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
-  color: $primary-color;  
+  color: $primary-color; 
+  max-width: 100%;  
 }
 
 a {
@@ -57,7 +58,7 @@ html {
     margin-top: 10px;  
   }
   &__links:hover {
-    transform: scale(1.5,1.5);
+    transform: scale(1.2,1.2);
     color: #64FFDA; 
   }    
 }
@@ -303,7 +304,7 @@ html {
   }
   &__tech-stack__icons {
     display: grid; 
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4,auto);
     grid-template-rows: repeat(3, auto);  
     height: 20vh; 
     width: 65vw;
@@ -517,18 +518,102 @@ html {
 // Media Queries for Responsiveness
 @media screen and (max-width: 1400px) {
   .landing__message {
-    font-size: 40px; 
-  }
-  .about__article__header {
     font-size: 30px; 
-  }
-  .about__article__info {
-    font-size: 20px; 
   }
   .hi-icon {
     height: 30px; 
     width: 30px; 
     margin-left: 5px;    
+  }
+  .fixed_elements__socials {
+    &__line {
+      height: 100px; 
+    }
+    &__links {
+      font-size: 30px; 
+    }
+  }
+  .fixed_elements__logo-img {
+    margin-left: 30px; 
+    margin-top: 20px; 
+  }
+  .landing {
+    &__chevron {
+      font-size: 80px;
+    }
+  }
+  .about {
+    &__article__profile-pic { 
+      overflow: visible; 
+      width: 200px; 
+      height: 200px;
+      margin-top: 20px;   
+    }
+    &__article__header {
+      font-size: 30px; 
+    }
+    &__article {
+      margin-bottom: 30px;  
+      width: 60vw; 
+    }
+    &__article__info {
+      margin-left: 5px; 
+      font-size: 15px; 
+    }
+    &__tech-stack__header {
+      margin-bottom: 10px; 
+      font-size: 25px; 
+    }
+    &__tech-stack__icons {
+      padding-top: 10px;
+      font-size: 20px;  
+    }
+  }
+  #particles-js-projects {
+    height: 380vh;
+  }
+
+  .projects {
+    height: 380vh;
+    &__card-1__header {
+      justify-content: center; 
+      margin-top: 40px; 
+    }
+    &__card__img {
+      width: 350px; 
+      height: 200px;  
+    }
+    &__card {
+      width: 90vw;  
+    }
+  }
+  .contact { 
+    &__card__header {
+      font-size: 40px;
+      // align-self: center;  
+    }
+    &__card {
+      width: 60vw; 
+    }
+    &__card__message {
+      font-size: 20px; 
+    }
+    &__card__form {
+      margin-top: 20px;
+      width: 60vw;  
+    }
+    &__card__form__inputs {
+      font-size: 25px; 
+      width: 60vw;  
+    }
+    &__card__form__labels {
+      font-size: 20px; 
+    }
+    &__card__form__button {
+      font-size: 20px; 
+      padding: 5px; 
+      margin-top: 40px; 
+    }
   }
 }
 
@@ -573,14 +658,8 @@ html {
       margin-top: 30px;
       text-align: center;  
     }
-    .hi-icon {
-      height: 20px; 
-      width: 20px; 
-    }
   }
   
-
- 
   .hi-icon {
     height: 30px; 
     width: 30px; 
