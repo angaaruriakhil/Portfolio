@@ -109,6 +109,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  max-width: 100%;
 }
 
 a {
@@ -151,7 +152,7 @@ html {
   margin-top: 10px;
 }
 .fixed_elements__socials__links:hover {
-  transform: scale(1.5, 1.5);
+  transform: scale(1.2, 1.2);
   color: #64FFDA;
 }
 
@@ -377,7 +378,7 @@ html {
 }
 .about__tech-stack__icons {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(3, auto);
   height: 20vh;
   width: 65vw;
@@ -576,21 +577,100 @@ html {
 
 @media screen and (max-width: 1400px) {
   .landing__message {
-    font-size: 40px;
-  }
-
-  .about__article__header {
     font-size: 30px;
-  }
-
-  .about__article__info {
-    font-size: 20px;
   }
 
   .hi-icon {
     height: 30px;
     width: 30px;
     margin-left: 5px;
+  }
+
+  .fixed_elements__socials__line {
+    height: 100px;
+  }
+  .fixed_elements__socials__links {
+    font-size: 30px;
+  }
+
+  .fixed_elements__logo-img {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+
+  .landing__chevron {
+    font-size: 80px;
+  }
+
+  .about__article__profile-pic {
+    overflow: visible;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .about__article__header {
+    font-size: 30px;
+  }
+  .about__article {
+    margin-bottom: 30px;
+    width: 60vw;
+  }
+  .about__article__info {
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  .about__tech-stack__header {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+  .about__tech-stack__icons {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  #particles-js-projects {
+    height: 380vh;
+  }
+
+  .projects {
+    height: 380vh;
+  }
+  .projects__card-1__header {
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .projects__card__img {
+    width: 350px;
+    height: 200px;
+  }
+  .projects__card {
+    width: 90vw;
+  }
+
+  .contact__card__header {
+    font-size: 40px;
+  }
+  .contact__card {
+    width: 60vw;
+  }
+  .contact__card__message {
+    font-size: 20px;
+  }
+  .contact__card__form {
+    margin-top: 20px;
+    width: 60vw;
+  }
+  .contact__card__form__inputs {
+    font-size: 25px;
+    width: 60vw;
+  }
+  .contact__card__form__labels {
+    font-size: 20px;
+  }
+  .contact__card__form__button {
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 40px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -632,10 +712,6 @@ html {
     align-items: center;
     margin-top: 30px;
     text-align: center;
-  }
-  .about .hi-icon {
-    height: 20px;
-    width: 20px;
   }
 
   .hi-icon {
