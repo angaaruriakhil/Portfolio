@@ -120,13 +120,13 @@ html {
   overflow-y: scroll;
 }
 
-.landing, .about, .projects, .contact {
+.landing, .rest-of-page {
   scroll-snap-align: start;
 }
 
 .rest-of-page {
   background: linear-gradient(#647AAF, #092659);
-  width: 100vw;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -142,7 +142,7 @@ html {
 }
 .fixed_elements__socials__line {
   width: 5px;
-  height: 150px;
+  height: 20vh;
   background: white;
   margin-top: 10px;
 }
@@ -213,22 +213,21 @@ html {
 
 #particles-js-landing {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
 .landing {
   max-width: 100%;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
   background-image: url(./assets/images/background-space-pic.jfif);
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 2px solid white;
 }
 .landing__message {
   z-index: 2;
@@ -237,7 +236,7 @@ html {
   width: 70vw;
   border: 1px solid rgba(103, 128, 159, 0.15);
   font-size: 50px;
-  margin-top: 200px;
+  margin-top: 150px;
   border-radius: 25px;
   font-family: "Consolas";
   display: grid;
@@ -301,38 +300,19 @@ html {
   animation-fill-mode: forwards;
   animation-duration: 2s;
 }
-.landing__photo-credit {
-  font-family: "Red Hat Display";
-  align-self: flex-end;
-  margin-right: 50px;
-  padding: 10px;
-  font-weight: bold;
-  background: linear-gradient(rgba(5, 60, 127, 0.15), rgba(8, 34, 83, 0.15));
-  border-radius: 10px;
-  z-index: 2;
-}
-.landing__photo-credit:hover {
-  color: #64FFDA;
-  text-decoration: underline;
-  transform: scale(1.2, 1.2);
-}
-.landing__photo-credit__links {
-  color: #64FFDA;
-}
 
 #particles-js-about {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
 .about {
+  min-height: 100vh;
   max-width: 100%;
-  height: 100vh;
-  border-bottom: 2px solid white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   font-family: "Red Hat Display";
 }
@@ -342,7 +322,6 @@ html {
   width: 70vw;
   height: 40vh;
   align-items: center;
-  margin-bottom: 100px;
 }
 .about__article__header {
   font-size: 50px;
@@ -375,7 +354,6 @@ html {
   font-size: 40px;
   border-bottom: 2px solid white;
   border-radius: 10px;
-  margin-bottom: 40px;
 }
 .about__tech-stack__icons {
   display: grid;
@@ -386,8 +364,7 @@ html {
   font-size: 25px;
   border-radius: 15px;
   max-height: 100%;
-  padding-top: 30px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
 }
 
@@ -407,27 +384,26 @@ html {
 
 #particles-js-projects {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 380vh;
 }
 
 .projects {
   position: relative;
-  height: 380vh;
-  border-bottom: 2px solid white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   font-family: "Red Hat Display";
 }
-.projects__card-1__header {
+.projects__header {
   font-size: 45px;
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
   width: 70vw;
   align-items: center;
+  margin-bottom: 50px;
 }
 .projects__subheader {
   color: #64FFDA;
@@ -438,48 +414,58 @@ html {
 .projects__subheader__icon:hover {
   transform: scale(1.5, 1.5);
 }
+.projects__card {
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  max-height: 260px;
+  z-index: 10;
+  margin-bottom: 50px;
+  object-fit: contain;
+}
+.projects__card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 55%;
+  max-height: 100%;
+}
 .projects__card__img {
-  overflow: hidden;
-  width: 600px;
-  height: 300px;
+  width: 40%;
   border-radius: 15px;
   background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box;
   border: 5px solid transparent;
   z-index: 10;
 }
-.projects__card {
+.projects__card__links {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  height: 30vh;
-  width: 70vw;
-  align-items: flex-start;
-  z-index: 10;
+  justify-content: flex-start;
 }
-.projects__card__text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 40%;
-  margin-left: 30px;
-}
-.projects__card__text__info {
-  border: 2px solid #64FFDA;
-  border-radius: 15px;
-  padding: 10px;
-  margin-top: 10px;
+.projects__card__links-btn {
+  color: #64FFDA;
   background-color: #0B1039;
-  text-align: left;
+  font-family: "Red Hat Display";
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 15px;
+  margin-right: 20px;
+  border: 2px solid #64FFDA;
+}
+.projects__card__links-btn:hover {
+  transform: scale(1.2, 1.2);
 }
 
 #particles-js-contact {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
 .contact {
+  min-height: 100vh;
   max-width: 100%;
-  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -577,6 +563,26 @@ html {
   margin-left: 5px;
 }
 
+.hide_navbar {
+  display: flex;
+}
+
+.rotate_hamburger {
+  transform: rotate(-90deg);
+  color: #64FFDA;
+}
+
+@media (min-width: 800px) {
+  .projects__card__img:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .about__tech-stack__icons:hover {
+    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0, 0, 0, 0);
+    transform: scale(1.2, 1.2);
+  }
+}
 @media screen and (max-width: 1500px) {
   .landing__message {
     font-size: 30px;
@@ -634,21 +640,6 @@ html {
     height: 380vh;
   }
 
-  .projects {
-    height: 380vh;
-  }
-  .projects__card-1__header {
-    justify-content: center;
-    margin-top: 40px;
-  }
-  .projects__card__img {
-    width: 350px;
-    height: 200px;
-  }
-  .projects__card {
-    width: 90vw;
-  }
-
   .contact__card__header {
     font-size: 40px;
     margin-bottom: 20px;
@@ -677,112 +668,6 @@ html {
   }
 }
 @media screen and (max-width: 1200px) {
-  .landing__message {
-    font-size: 30px;
-  }
-
-  .about__article__header {
-    font-size: 20px;
-  }
-  .about__article__info {
-    font-size: 20px;
-  }
-  .about__article {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-    width: 90vw;
-  }
-  .about__article__profile-pic {
-    overflow: visible;
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
-  }
-  .about__tech-stack__header {
-    font-size: 30px;
-    border-radius: 10px;
-    margin-top: 50px;
-  }
-  .about__tech-stack__icons {
-    grid-template-columns: repeat 3, auto;
-    grid-template-rows: repeat 4, auto;
-  }
-  .about__article__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    text-align: center;
-  }
-
-  .hi-icon {
-    height: 30px;
-    width: 30px;
-    margin-left: 5px;
-  }
-
-  .contact__card__header {
-    font-size: 40px;
-    align-self: center;
-  }
-  .contact__card__message {
-    font-size: 30px;
-  }
-  .contact__card__form {
-    width: 70vw;
-    margin-top: 20px;
-  }
-  .contact__card__form__inputs {
-    width: 70vw;
-    font-size: 25px;
-  }
-
-  #particles-js-projects {
-    height: 250vh;
-  }
-
-  .projects {
-    height: 250vh;
-  }
-  .projects__card-1__header {
-    justify-content: center;
-    margin-top: 40px;
-  }
-  .projects__card__img {
-    width: 350px;
-    height: 200px;
-  }
-  .projects__card {
-    width: 90vw;
-  }
-}
-@media screen and (max-width: 800px) {
-  .projects, #particles-js-projects {
-    height: 300vh;
-    font-size: 15px;
-  }
-
-  .about__tech-stack__icons {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto;
-    font-size: 20px;
-  }
-
-  .nav__list-items {
-    margin-right: 5px;
-    font-size: 25px;
-  }
-
-  .fixed_elements__logo-img {
-    visibility: hidden;
-  }
-  .fixed_elements__socials {
-    display: none;
-  }
-}
-@media screen and (max-width: 600px) {
   .fixed_elements__logo-img {
     visibility: hidden;
   }
@@ -803,16 +688,9 @@ html {
     color: #64FFDA;
   }
 
-  .landing__photo-credit {
-    align-self: center;
-    margin-right: 0px;
-  }
   .landing__message {
     font-size: 20px;
     width: 80vw;
-  }
-  .landing .about__article__info {
-    width: auto;
   }
 
   .nav {
@@ -838,16 +716,35 @@ html {
     margin-left: 5px;
   }
 
+  .about__tech-stack__icons {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    font-size: 20px;
+  }
+  .about__article {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+  }
   .about__article__header {
     font-size: 25px;
   }
   .about__article__info {
     font-size: 15px;
+    width: 70vw;
   }
   .about__tech-stack__icons {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto;
-    font-size: 15px;
+    grid-template-columns: repeat 3, auto;
+    grid-template-rows: repeat 4, auto;
+  }
+  .about__article__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
   }
 
   .hi-icon {
@@ -856,57 +753,25 @@ html {
     margin-left: 5px;
   }
 
-  .projects {
-    height: 340vh;
-  }
-  .projects__card {
-    width: 90vw;
-  }
-  .projects__card-1__header {
-    font-size: 30px;
-  }
-  .projects__subheader {
-    font-size: 15px;
-  }
-  .projects__card__img {
-    width: 300px;
-  }
-
-  #particles-js-projects {
-    height: 340vh;
-  }
-
-  .contact__card__header {
-    font-size: 40px;
-    align-self: center;
-  }
-  .contact__card__message {
-    font-size: 30px;
-  }
   .contact__card__form {
-    width: 80vw;
-    height: 40vh;
+    width: 70vw;
+    margin-top: 20px;
   }
   .contact__card__form__inputs {
-    width: 80vw;
-    height: 40vh;
+    width: 70vw;
+    font-size: 25px;
   }
-  .contact__card__form__button {
-    font-size: 20px;
+  .contact__card__header {
+    align-self: center;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .fixed_elements__hamburger-menu {
     font-size: 30px;
   }
 
   .landing__chevron {
     font-size: 60px;
-  }
-  .landing__photo-credit {
-    font-family: "Red Hat Display";
-    align-self: center;
-    font-size: 10px;
   }
   .landing__message {
     font-size: 15px;
@@ -991,7 +856,7 @@ html {
     text-align: center;
     margin-left: 0;
   }
-  .projects__card-1__header {
+  .projects__header {
     font-size: 20px;
   }
   .projects__subheader {
@@ -1000,7 +865,7 @@ html {
   }
   .projects__card__img {
     width: 80vw;
-    height: 150px;
+    height: 40vw;
   }
 
   .contact {
@@ -1040,23 +905,4 @@ html {
   .contact__card__footer__info {
     font-size: 10px;
   }
-}
-@media (min-width: 800px) {
-  .projects__card__img:hover {
-    transform: scale(1.1, 1.1);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  }
-
-  .about__tech-stack__icons:hover {
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0, 0, 0, 0);
-    transform: scale(1.2, 1.2);
-  }
-}
-.hide_navbar {
-  display: flex;
-}
-
-.rotate_hamburger {
-  transform: rotate(-90deg);
-  color: #64FFDA;
 }
