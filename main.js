@@ -55,12 +55,11 @@ function pageAnimation(el) {
   switch (el.id) {
     case "about" :
       document.getElementById("about__article").className += " animate__animated animate__bounceInRight";
-      document.getElementById("about__tech-stack").className += " animate__animated animate__bounceInLeft";
+      // document.getElementById("about__tech-stack").className += " animate__animated animate__bounceInLeft";
       document.getElementById("hi-icon").className += " animate__animated animate__slower animate__swing animate__delay-1s";
       document.getElementById("fa-handshake").className += " animate__animated animate__headShake animate__slower animate__delay-3s";
       document.getElementById("fa-layer-group-1").className += " animate__animated animate__heartBeat animate__delay-4s";
       document.getElementById("fa-layer-group-2").className += " animate__animated animate__heartBeat animate__delay-4s animate__duration-3s";
-      document.getElementById("about__tech-stack__icons").style.animation = "rainbowBorder 2s 4s linear";
       break; 
     case "projects":
       document.getElementById("projects__card-1__header").className += " animate__animated animate__slideInDown animate__duration-1s";
@@ -83,25 +82,25 @@ observer.observe(document.querySelector('#contact'));
 
 // This section deals with particles.js effect on every page. 
 
-function mainContentParticles() {
-  particlesJS.load('particles-js-about', 'particles.js-master/particles.json', function() {
- });
-  particlesJS.load('particles-js-projects', 'particles.js-master/particles.json', function() {
-});
-  particlesJS.load('particles-js-contact', 'particles.js-master/particles.json', function() {
-});
-}
+// function mainContentParticles() {
+//   particlesJS.load('particles-js-about', 'particles.js-master/particles.json', function() {
+//  });
+//   particlesJS.load('particles-js-projects', 'particles.js-master/particles.json', function() {
+// });
+//   particlesJS.load('particles-js-contact', 'particles.js-master/particles.json', function() {
+// });
+// }
 
-mainContentParticles();  
+// mainContentParticles();  
 
-// Delay landingParticles deployment on the welcome page until other intro animations are performed.
+// // Delay landingParticles deployment on the welcome page until other intro animations are performed.
 
-function landingParticles() {
-  particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function() {
-  });
-}
+// function landingParticles() {
+//   particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function() {
+//   });
+// }
 
-setTimeout(landingParticles, 4000);
+// setTimeout(landingParticles, 4000);
 
 // This section deals with the hamburger menu on the mobile layout. 
 

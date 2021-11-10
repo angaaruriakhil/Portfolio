@@ -9,6 +9,7 @@
   color: $primary-color; 
 }
 
+
 a {
   text-decoration: none;
 }
@@ -21,7 +22,11 @@ html {
 }
 
 
-.landing, .about, .projects, .contact {
+// .landing, .about, .projects, .contact {
+//   scroll-snap-align: start; 
+// }
+
+.landing, .rest-of-page {
   scroll-snap-align: start; 
 }
 
@@ -30,7 +35,7 @@ html {
 
 .rest-of-page {
   background: linear-gradient(#647AAF, #092659);
-  width: 100vw;
+  width: 100%;
   background-repeat: no-repeat; 
   background-size: cover; 
 }
@@ -48,7 +53,7 @@ html {
   z-index: 2;  
   &__line {
     width: 5px; 
-    height: 150px;
+    height: 20vh;
     background: white;
     margin-top: 10px; 
   } 
@@ -72,7 +77,7 @@ html {
   margin-left: 10px;
   margin-top: 10px;   
   border-radius: 50%;
-  overflow: hidden; 
+  overflow: hidden;
   position: fixed;
   z-index: 20;    
 }
@@ -130,21 +135,20 @@ html {
 
 #particles-js-landing {
   position: absolute; 
-  width: 100vw;
+  width: 100%; 
   height: 100vh; 
 }
 .landing {
-  max-width: 100%;  
+  max-width: 100%; 
+  width:100%; 
+  height: 100vh;  
   display: flex; 
   flex-direction: column; 
   justify-content: space-around; 
   align-items: center; 
-  height: 100vh;
-  width: 100vw; 
   background-image: url(./assets/images/background-space-pic.jfif);
   background-repeat: no-repeat; 
-  background-size: cover; 
-  border-bottom: 2px solid white;  
+  background-size: cover;  
   &__message {
     z-index: 2; 
     background: linear-gradient(rgba(120, 149, 198, 0.15), rgba(14, 21, 48, 0.15));  
@@ -152,7 +156,7 @@ html {
     width: 70vw;   
     border: 1px solid rgba(103, 128, 159, 0.15);
     font-size: 50px;
-    margin-top: 200px; 
+    margin-top: 150px; 
     border-radius: 25px; 
     font-family: $secondary-font;
     display: grid; 
@@ -217,7 +221,7 @@ html {
     font-size: 120px; 
     justify-self: flex-end;
     align-self: center; 
-    z-index: 2;  
+    z-index: 2; 
 
   }
   &__chevron:hover {
@@ -226,40 +230,21 @@ html {
     animation-fill-mode: forwards; 
     animation-duration: 2s; 
     }
-  &__photo-credit {
-    font-family: $primary-font; 
-    align-self: flex-end;
-    margin-right: 50px; 
-    padding: 10px;
-    font-weight: bold;
-    background: linear-gradient(rgba(5, 60, 127, 0.15), rgba(8, 34, 83, 0.15));
-    border-radius: 10px; 
-    z-index: 2;   
-  }
-  &__photo-credit:hover {
-    color: $secondary-color;
-    text-decoration: underline;
-    transform: scale(1.2,1.2);   
-  }
-  &__photo-credit__links {
-    color: $secondary-color; 
-  }
 }
 
 // About Section 
 #particles-js-about { 
   position: absolute;
-  width: 100vw; 
+  width: 100%; 
   height: 100vh;   
 }
 
 .about { 
+  min-height: 100vh; 
   max-width: 100%;  
-  height: 100vh; 
-  border-bottom: 2px solid white; 
   display: flex; 
   flex-direction: column; 
-  justify-content: center; 
+  justify-content: space-evenly; 
   align-items: center;  
   font-family: $primary-font;   
   &__article {
@@ -267,8 +252,7 @@ html {
     justify-content: center; 
     width: 70vw;
     height: 40vh; 
-    align-items: center;
-    margin-bottom: 100px;   
+    align-items: center;  
   }
   &__article__header { 
     font-size: 50px;  
@@ -301,7 +285,6 @@ html {
     font-size: 40px;
     border-bottom: 2px solid white; 
     border-radius: 10px; 
-    margin-bottom: 40px; 
   }
   &__tech-stack__icons {
     display: grid; 
@@ -312,9 +295,8 @@ html {
     font-size: 25px;  
     border-radius: 15px; 
     max-height: 100%; 
-    padding-top: 30px;
-    justify-content: space-around;
-    text-align: center; 
+    justify-content: space-evenly;  
+    text-align: center;   
   }
 }
 
@@ -338,26 +320,25 @@ html {
 
 #particles-js-projects { 
   position: absolute;
-  width: 100vw; 
+  width: 100%; 
   height: 380vh;   
 }
 
 .projects {
   position: relative;  
-  height: 380vh;
-  border-bottom: 2px solid white; 
   display: flex; 
   flex-direction: column; 
   justify-content: space-around; 
   align-items: center;  
   font-family: $primary-font;
-  &__card-1__header {
+  &__header {
     font-size: 45px;
     font-weight: bold;
     display: flex; 
     justify-content: flex-start; 
     width: 70vw;
-    align-items: center;   
+    align-items: center; 
+    margin-bottom: 50px;   
   }
   &__subheader {
     color: $secondary-color;     
@@ -368,37 +349,48 @@ html {
   &__subheader__icon:hover {
     transform: scale(1.5,1.5);      
   } 
-  &__card__img {
-    overflow: hidden;
-    width: 600px; 
-    height: 300px; 
-    border-radius: 15px;
-    background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
-    border: 5px solid transparent;    
-    z-index: 10;   
-  }
   &__card {
     display: flex; 
-    justify-content: space-around; 
-    height: 30vh;
-    width: 70vw;  
-    align-items: flex-start;
-    z-index: 10;   
+    justify-content: space-between; 
+    width: 70vw;
+    max-height: 260px;   
+    // align-items: flex-start;
+    z-index: 10; 
+    margin-bottom: 50px; 
+    object-fit: contain;    
   } 
   &__card__text {
     display: flex;
     flex-direction: column; 
+    justify-content: space-evenly;
     align-items: flex-start;
-    width: 40%; 
-    margin-left: 30px;   
+    width: 55%; 
+    max-height: 100%; 
   } 
-  &__card__text__info {
-    border: 2px solid $secondary-color;
-    border-radius: 15px; 
-    padding: 10px; 
-    margin-top: 10px; 
-    background-color: $tertiary-color;  
-    text-align: left; 
+  &__card__img { 
+    width: 40%;  
+    border-radius: 15px;
+    background: linear-gradient(#0B4284, #0B4284) padding-box, linear-gradient(#1178c3, #afb2b5) border-box; 
+    border: 5px solid transparent;    
+    z-index: 10; 
+  }
+  &__card__links {
+    width: 100%; 
+    display: flex; 
+    justify-content: flex-start;  
+    &-btn {
+      color: #64FFDA; 
+      background-color: $tertiary-color; 
+      font-family: $primary-font; 
+      font-weight: bold; 
+      border-radius: 15px; 
+      padding: 15px;
+      margin-right: 20px;  
+      border: 2px solid $secondary-color;
+    }
+    &-btn:hover {
+      transform: scale(1.2,1.2); 
+    }
   }
 }
 
@@ -406,13 +398,13 @@ html {
 
 #particles-js-contact { 
   position: absolute;
-  width: 100vw; 
+  width: 100%; 
   height: 100vh; 
 }
 
 .contact {
+  min-height: 100vh; 
   max-width: 100%;  
-  height: 100vh;
   position: relative;
   display: flex; 
   flex-direction: column; 
@@ -512,6 +504,31 @@ html {
   margin-left: 5px;    
 }
 
+// Classes for use with JS toggles 
+
+.hide_navbar {
+  display: flex;
+}
+.rotate_hamburger {
+  transform: rotate(-90deg);
+  color: $secondary-color;
+}
+
+// Media Queries for image hover and scale (No hover on mobile)
+
+@media (min-width: 800px) {
+  .projects {
+    &__card__img:hover {
+      transform: scale(1.1,1.1);
+      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+  }
+  .about__tech-stack__icons:hover {
+    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0,0,0,0);
+    transform: scale(1.2, 1.2);
+  }
+}
+
 // Media Queries for Responsiveness
 @media screen and (max-width: 1500px) {
   .landing__message {
@@ -570,20 +587,6 @@ html {
     height: 380vh;
   }
 
-  .projects {
-    height: 380vh;
-    &__card-1__header {
-      justify-content: center; 
-      margin-top: 40px; 
-    }
-    &__card__img {
-      width: 350px; 
-      height: 200px;  
-    }
-    &__card {
-      width: 90vw;  
-    }
-  }
   .contact { 
     &__card__header {
       font-size: 40px;
@@ -615,120 +618,8 @@ html {
   }
 }
 
+// smaller older screens and tablets. 
 @media screen and (max-width: 1200px) {
-  .landing__message {
-    font-size: 30px; 
-  }
-  .about {
-    &__article__header {
-      font-size: 20px; 
-    }
-    &__article__info {
-      font-size: 20px; 
-      // width: 80%; 
-    }
-    &__article {
-      flex-direction: column-reverse; 
-      justify-content: space-around; 
-      align-items: center;
-      width: 90vw;    
-    }
-    &__article__profile-pic { 
-      overflow: visible; 
-      width: 200px; 
-      height: 200px;
-      margin-top: 20px;   
-    }
-    &__tech-stack__header {
-      font-size: 30px;
-      border-radius: 10px;
-      margin-top: 50px;  
-    }
-    &__tech-stack__icons {
-      grid-template-columns: repeat (3, auto); 
-      grid-template-rows: repeat (4, auto); 
-      }
-    &__article__container {
-      display: flex; 
-      flex-direction: column;
-      justify-content: center; 
-      align-items: center;
-      margin-top: 30px;
-      text-align: center;  
-    }
-  }
-  
-  .hi-icon {
-    height: 30px; 
-    width: 30px; 
-    margin-left: 5px;    
-  }
-
-  .contact { 
-    &__card__header {
-      font-size: 40px;
-      align-self: center;  
-    }
-    &__card__message {
-      font-size: 30px; 
-    }
-    &__card__form {
-      width: 70vw; 
-      margin-top: 20px; 
-    }
-    &__card__form__inputs {
-      width: 70vw;
-      font-size: 25px;  
-    }
-  }
-
-  #particles-js-projects {
-    height: 250vh;
-  }
-
-  .projects {
-    height: 250vh;
-    &__card-1__header {
-      justify-content: center; 
-      margin-top: 40px; 
-    }
-    &__card__img {
-      width: 350px; 
-      height: 200px;  
-    }
-    &__card {
-      width: 90vw;  
-    }
-  }
-  
-}
-
-@media screen and (max-width: 800px) {
-  .projects, #particles-js-projects {
-    height: 300vh;
-    font-size: 15px; 
-  }
-  .about {
-    &__tech-stack__icons {
-      grid-template-columns: auto auto auto; 
-      grid-template-rows: auto auto auto auto;
-      font-size: 20px;  
-    }
-  }
-  .nav__list-items {
-    margin-right: 5px; 
-    font-size: 25px;  
-  }
-  .fixed_elements {
-    &__logo-img  {
-      visibility: hidden; 
-    }
-    &__socials {
-      display: none;    
-    }
-  }
-}
-@media screen and (max-width: 600px) {
   .fixed_elements {
     &__logo-img  {
       visibility: hidden; 
@@ -751,16 +642,9 @@ html {
     }
   }
   .landing {
-    &__photo-credit {
-      align-self: center;
-      margin-right: 0px;     
-    }
     &__message {
       font-size: 20px;
       width: 80vw; 
-    }
-    .about__article__info {
-      width: auto; 
     }
   }
 
@@ -783,20 +667,40 @@ html {
     &__list-items {
       font-size: 20px;
       margin-bottom: 50px;
-      margin-left: 5px;    
+      margin-left: 5px;     
     }
   }
+
   .about {
+    &__tech-stack__icons {
+      grid-template-columns: auto auto auto; 
+      grid-template-rows: auto auto auto auto;
+      font-size: 20px;  
+    }
+    &__article {
+      flex-direction: column-reverse; 
+      justify-content: space-around; 
+      align-items: center;
+      width: 90vw;    
+    }
     &__article__header {
       font-size: 25px; 
     }
     &__article__info {
       font-size: 15px; 
+      width: 70vw; 
     }
     &__tech-stack__icons {
-      grid-template-columns: auto auto auto; 
-      grid-template-rows: auto auto auto auto;
-      font-size: 15px;  
+      grid-template-columns: repeat (3, auto); 
+      grid-template-rows: repeat (4, auto); 
+    }
+    &__article__container {
+      display: flex; 
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+      margin-top: 30px;
+      text-align: center;  
     }
   }
 
@@ -805,48 +709,23 @@ html {
     width: 20px; 
     margin-left: 5px;    
   }
-  .projects {
-    height: 340vh;
-    &__card {
-      width: 90vw;  
-    }
-    &__card-1__header {
-      font-size: 30px; 
-    }
-    &__subheader {
-      font-size: 15px; 
-    }
-    &__card__img {
-      width: 300px; 
-    }
-  }
 
-  #particles-js-projects {
-    height: 340vh;
-  }
-  .contact {
-    &__card__header {
-      font-size: 40px; 
-      align-self: center; 
-    }
-    &__card__message {
-      font-size: 30px; 
-    }
+  .contact { 
     &__card__form {
-      width: 80vw;
-      height: 40vh;   
-      &__inputs {
-        width: 80vw; 
-        height: 40vh;    
-      }
-      &__button {
-        font-size: 20px;   
-      }
+      width: 70vw; 
+      margin-top: 20px; 
+    }
+    &__card__form__inputs {
+      width: 70vw;
+      font-size: 25px;  
+    }
+    &__card__header {
+      align-self: center; 
     }
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .fixed_elements__hamburger-menu {
     font-size: 30px; 
   }
@@ -854,11 +733,6 @@ html {
   .landing {
     &__chevron {
       font-size: 60px;   
-    }
-    &__photo-credit {
-      font-family: $primary-font; 
-      align-self: center; 
-      font-size: 10px;  
     }
     &__message {
       font-size: 15px; 
@@ -946,7 +820,7 @@ html {
       text-align: center; 
       margin-left: 0; 
     }
-    &__card-1__header {
+    &__header {
       font-size: 20px;
     }
     &__subheader {
@@ -955,7 +829,7 @@ html {
     }
     &__card__img {
       width: 80vw; 
-      height: 150px;  
+      height: 40vw;  
     }
   }
 
@@ -998,27 +872,3 @@ html {
   }
 }
 
-// Media Queries for image hover and scale 
-
-@media (min-width: 800px) {
-  .projects {
-    &__card__img:hover {
-      transform: scale(1.1,1.1);
-      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    }
-  }
-  .about__tech-stack__icons:hover {
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0,0,0,0);
-    transform: scale(1.2, 1.2);
-  }
-}
-
-// Classes for use with JS toggles 
-
-.hide_navbar {
-  display: flex;
-}
-.rotate_hamburger {
-  transform: rotate(-90deg);
-  color: $secondary-color;
-}
