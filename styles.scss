@@ -14,20 +14,18 @@ a {
   text-decoration: none;
 }
 
-// Set up scroll snapping behaviour 
+// Set up scroll snapping behaviour - we want to snap to about page, and no more snapping after that. 
 
 html {
-  scroll-snap-type: y mandatory; 
   overflow-y: scroll; 
+  scroll-behavior: smooth;
 }
 
-
-// .landing, .about, .projects, .contact {
-//   scroll-snap-align: start; 
-// }
-
-.landing, .rest-of-page {
-  scroll-snap-align: start; 
+main {
+  // AOS library adds whitespace for some reason on mobile. 
+  // This line fixes it.
+  // If it breaks again add this to body. It will break scroll snap - its a bug. You have to sacrifice one or the other.  
+  overflow-x: hidden;
 }
 
 
@@ -35,7 +33,7 @@ html {
 
 .rest-of-page {
   background: linear-gradient(#647AAF, #092659);
-  width: 100%;
+  max-width: 100%;
   background-repeat: no-repeat; 
   background-size: cover; 
 }
@@ -92,7 +90,7 @@ html {
   font-size: 50px; 
   left: 10px;
   top: 10px; 
-  z-index: 10;   
+  z-index: 50;   
 }
 
 // Fixed Element - Navbar
@@ -139,7 +137,7 @@ html {
   height: 100vh; 
 }
 .landing {
-  max-width: 100%; 
+  max-width: 100%;
   width:100%; 
   height: 100vh;  
   display: flex; 
@@ -148,7 +146,8 @@ html {
   align-items: center; 
   background-image: url(./assets/images/background-space-pic.jfif);
   background-repeat: no-repeat; 
-  background-size: cover;  
+  background-size: cover; 
+  border-bottom: 10px solid #7375AB;
   &__message {
     z-index: 2; 
     background: linear-gradient(rgba(120, 149, 198, 0.15), rgba(14, 21, 48, 0.15));  
@@ -235,13 +234,13 @@ html {
 // About Section 
 #particles-js-about { 
   position: absolute;
-  width: 100%; 
-  height: 100vh;   
+  width: 100%;    
 }
 
 .about { 
   min-height: 100vh; 
-  max-width: 100%;  
+  max-width: 100%;
+  position: relative;   
   display: flex; 
   flex-direction: column; 
   justify-content: space-evenly; 
@@ -249,10 +248,17 @@ html {
   font-family: $primary-font;   
   &__article {
     display: flex; 
-    justify-content: center; 
+    justify-content: space-between; 
+    align-items: flex-start;
     width: 70vw;
-    height: 40vh; 
-    align-items: center;  
+    height: 40vh;  
+  }
+  &__article__text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    height: 100%;
+    width: 70%;   
   }
   &__article__header { 
     font-size: 50px;  
@@ -263,23 +269,37 @@ html {
     border: 5px solid transparent;      
     border-radius: 15px;
     overflow: hidden; 
+    height:100%;  
   } 
   &__article__profile-pic:hover {
     transform: scale(1.2,1.2);
   }
   &__article__info {
     font-size: 24px;
-    height: 100%; 
+    height: 100%;
+    // list-style-position: inside;
   &__highlight {
     color: #64ffda;
     font-weight: bold;  
   } 
   }
+  .fa-li {
+    left: -2em;
+    position: absolute;
+    text-align: center;
+    width: 2em;
+    line-height: inherit;
+    margin-left: -1em; 
+}
+
   &__tech-stack {
     display: flex; 
     flex-direction: column; 
-    align-items: center; 
-    padding-bottom: 5px;   
+    justify-content: space-evenly;
+    align-items: center;  
+    height: 50%;   
+    border-left: 5px skyblue solid;
+    border-right: 5px skyblue solid;
   }
   &__tech-stack__header {
     font-size: 40px;
@@ -289,12 +309,11 @@ html {
   &__tech-stack__icons {
     display: grid; 
     grid-template-columns: repeat(4,auto);
-    grid-template-rows: repeat(3, auto);  
-    height: 20vh; 
-    width: 65vw;
+    grid-template-rows: repeat(3, auto); 
+    width: 70vw; 
     font-size: 25px;  
-    border-radius: 15px; 
     max-height: 100%; 
+    gap: 10px; 
     justify-content: space-evenly;  
     text-align: center;   
   }
@@ -302,12 +321,12 @@ html {
 
 // Miscellaneous styling for section
 
-#_nology, #chemosphere, #university-of-surrey {
+#_nology, #university-of-surrey {
   text-decoration: blink;
   color: #FF6489;   
 }
 
-#_nology:hover, #chemosphere:hover, #university-of-surrey:hover {
+#_nology:hover, #university-of-surrey:hover {
   opacity: 50%;
   text-decoration: underline; 
 }
@@ -321,11 +340,12 @@ html {
 #particles-js-projects { 
   position: absolute;
   width: 100%; 
-  height: 380vh;   
+  height: 100%;   
 }
 
 .projects {
-  position: relative;  
+  position: relative;
+  max-width: 100%;   
   display: flex; 
   flex-direction: column; 
   justify-content: space-around; 
@@ -352,8 +372,7 @@ html {
   &__card {
     display: flex; 
     justify-content: space-between; 
-    width: 70vw;
-    max-height: 260px;   
+    width: 70vw;  
     // align-items: flex-start;
     z-index: 10; 
     margin-bottom: 50px; 
@@ -399,12 +418,12 @@ html {
 #particles-js-contact { 
   position: absolute;
   width: 100%; 
-  height: 100vh; 
+  height: 100%; 
 }
 
 .contact {
-  min-height: 100vh; 
   max-width: 100%;  
+  min-height: 100vh;
   position: relative;
   display: flex; 
   flex-direction: column; 
@@ -504,28 +523,14 @@ html {
   margin-left: 5px;    
 }
 
-// Classes for use with JS toggles 
-
-.hide_navbar {
-  display: flex;
-}
-.rotate_hamburger {
-  transform: rotate(-90deg);
-  color: $secondary-color;
-}
-
 // Media Queries for image hover and scale (No hover on mobile)
 
 @media (min-width: 800px) {
   .projects {
     &__card__img:hover {
-      transform: scale(1.1,1.1);
+      transform: scale(1.3,1.3);
       box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     }
-  }
-  .about__tech-stack__icons:hover {
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0,0,0,0);
-    transform: scale(1.2, 1.2);
   }
 }
 
@@ -557,34 +562,21 @@ html {
     }
   }
   .about {
-    &__article__profile-pic { 
-      overflow: visible; 
-      width: 200px; 
-      height: 200px;
-      margin-top: 20px;   
-    }
     &__article__header {
-      font-size: 30px; 
-    }
-    &__article {
-      margin-bottom: 30px;  
-      width: 60vw; 
+      font-size: 35px; 
+      margin-bottom: 10px; 
     }
     &__article__info {
-      margin-left: 5px; 
-      font-size: 15px; 
-    }
-    &__tech-stack__header {
-      margin-bottom: 10px; 
-      font-size: 25px; 
+      font-size: 20px; 
     }
     &__tech-stack__icons {
-      padding-top: 10px;
       font-size: 20px;  
     }
   }
-  #particles-js-projects {
-    height: 380vh;
+  .projects {
+    &__header {
+      font-size: 35px; 
+    }
   }
 
   .contact { 
@@ -593,15 +585,15 @@ html {
       // align-self: center;
       margin-bottom: 20px;   
     }
-    &__card {
-      width: 60vw; 
-    }
+    // &__card {
+    //   width: 60vw; 
+    // }
     &__card__message {
       font-size: 20px; 
     }
     &__card__form {
       margin-top: 20px;
-      width: 60vw;  
+      // width: 60vw;  
     }
     &__card__form__inputs {
       font-size: 25px; 
@@ -618,7 +610,7 @@ html {
   }
 }
 
-// smaller older screens and tablets. 
+// smaller screens 
 @media screen and (max-width: 1200px) {
   .fixed_elements {
     &__logo-img  {
@@ -628,22 +620,16 @@ html {
       display: none;    
     }
     &__hamburger-menu {
-      visibility: visible;  
-      margin: 0; 
-      padding: 0;
-      position: fixed;  
-      font-size: 50px;
-      transform: rotate(0deg); 
-      z-index: 50;
-      color: white;   
-    }
+      visibility: visible; 
+      transform: rotate(0deg);  
+      }
     &__hamburger-menu:hover {
       color: $secondary-color;   
     }
   }
   .landing {
     &__message {
-      font-size: 20px;
+      font-size: 3vw;
       width: 80vw; 
     }
   }
@@ -652,9 +638,9 @@ html {
     justify-content: flex-start; 
     z-index: 50; 
     &__list-master {
-      flex-direction: column; 
-      visibility: visible; 
+      flex-direction: column;  
       align-items: flex-start; 
+      visibility: visible;
       justify-content: flex-start;  
       display: none; 
       margin-top: 70px;
@@ -671,45 +657,6 @@ html {
     }
   }
 
-  .about {
-    &__tech-stack__icons {
-      grid-template-columns: auto auto auto; 
-      grid-template-rows: auto auto auto auto;
-      font-size: 20px;  
-    }
-    &__article {
-      flex-direction: column-reverse; 
-      justify-content: space-around; 
-      align-items: center;
-      width: 90vw;    
-    }
-    &__article__header {
-      font-size: 25px; 
-    }
-    &__article__info {
-      font-size: 15px; 
-      width: 70vw; 
-    }
-    &__tech-stack__icons {
-      grid-template-columns: repeat (3, auto); 
-      grid-template-rows: repeat (4, auto); 
-    }
-    &__article__container {
-      display: flex; 
-      flex-direction: column;
-      justify-content: center; 
-      align-items: center;
-      margin-top: 30px;
-      text-align: center;  
-    }
-  }
-
-  .hi-icon {
-    height: 20px; 
-    width: 20px; 
-    margin-left: 5px;    
-  }
-
   .contact { 
     &__card__form {
       width: 70vw; 
@@ -723,91 +670,67 @@ html {
       align-self: center; 
     }
   }
-}
-
-@media screen and (max-width: 700px) {
-  .fixed_elements__hamburger-menu {
-    font-size: 30px; 
-  }
-  
-  .landing {
-    &__chevron {
-      font-size: 60px;   
-    }
-    &__message {
-      font-size: 15px; 
-      border-radius: 10px;
-      padding-top: 5px;
-      &__line-2 {
-        grid-column-start: 1;
-        grid-row-start: 3;
-        color: #29b6f6;   
-      }
-      &__line-3 {
-        grid-column-start: 1;
-        grid-row-start: 4;
-        color: #9CCC65;   
-      }
-      &__line-4 {
-        grid-column-start: 1;
-        grid-row-start: 5;
-        color: #EF5350;   
-      }
-      &__line-5 {
-        grid-column-start: 1;
-        grid-row-start: 6;  
-      }
-      &__line-6 {
-        grid-column-start: 1; 
-        grid-row-start: 7; 
-      }
-    }
-  }
 
   .about {
+    &__tech-stack {
+      margin-top: 20px; 
+    }
+    &__tech-stack__icons {
+      grid-template-columns: repeat(3, auto); 
+      grid-template-rows: repeat(4, auto); 
+      font-size: 3vw;  
+      padding-top: 0px;
+      width: 90vw; 
+    }
     &__article {
       height: auto; 
       margin-bottom: 0px; 
-      width: 95vw;
+      flex-direction: column-reverse; 
+      justify-content: space-around; 
+      align-items: center;
+      width: 90vw;  
+    }
+    &__article__container {
+      display: flex; 
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+      margin-top: 30px;
+      text-align: center;  
     }
     &__article__header {
-      font-size: 15px; 
+      font-size: 5vw; 
+      text-align: center;
+      margin-bottom: 30px; 
     }
     &__article__info {
-      font-size: 10px; 
+      font-size: 3vw; 
       height: auto; 
     }
-    &__tech-stack__header {
-      font-size: 15px;
-      border-radius: 0px; 
-      margin-top: 15px; 
+    &__article__text { 
+      align-items: center;
+      margin-top: 20px;
+      width: 90vw;   
     }
+    .fa-li {
+      margin-left: 0px; 
+    }
+  
     &__article__profile-pic {
-      height: 150px; 
-      width: 150px;
+      width: 30vw; 
       margin-top: 0px;  
     }
-    &__tech-stack__icons {
-      padding-top: 0px;
-      font-size: 15px;
-      width: 90vw;  
-    } 
     &__article__container {
       margin-top: 10px;  
     }
   }
   
-  #hi-icon {
-    height: 15px; 
-    width: 15px; 
-  }
   .projects {
-    align-items: center;
     
     &__card__text__info {
-      font-size: 10px;
+      font-size: 15px;
       text-align: center; 
-      width: 90vw;     
+      width: 70vw;     
     }
 
     &__card { 
@@ -821,22 +744,40 @@ html {
       margin-left: 0; 
     }
     &__header {
-      font-size: 20px;
+      margin-top: 30px; 
+      width: 100vw; 
+      font-size: 6vw; 
+      justify-content: center; 
     }
     &__subheader {
       font-size: 15px;
-      width: 70vw;   
+      width: 70vw; 
+      margin-top: 10px;   
+    }
+    &__title {
+      font-size: 20px; 
     }
     &__card__img {
-      width: 80vw; 
-      height: 40vw;  
+      width: 70vw;  
+    }
+    &__card__text {
+      width: 70vw;
+    }
+    &__card__links {
+      justify-content: space-between;
+      margin-top: 10px; 
+      &-btn {
+        font-size: 10px; 
+        margin-right: 0px; 
+        padding: 10px; 
+      }
     }
   }
 
   .contact {
     justify-content: space-around;
     &__card__header {
-      font-size: 25px;
+      font-size: 30px;
       align-self: center;
       margin-bottom: 10px;    
     }
@@ -872,3 +813,24 @@ html {
   }
 }
 
+@media screen and (max-width: 820px) {
+  .fixed_elements__hamburger-menu {
+    font-size: 30px; 
+  }
+  .landing {
+    &__message {
+      border-radius: 10px;
+      padding-top: 5px;
+    }
+  }
+}
+
+// Classes for use with JS toggles 
+
+.display_navbar {
+  display: flex;
+}
+.rotate_hamburger {
+  transform: rotate(-90deg);
+  color: $secondary-color;
+}
