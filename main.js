@@ -7,6 +7,7 @@ function dateInFooter() {
 
 dateInFooter();
 
+
 function spinLogoToTop() {
   document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__rotateIn";
 }
