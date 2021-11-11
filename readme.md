@@ -11,7 +11,7 @@ Responsive on PC or Mobile.
 
 The wireframe for the project was designed on [Figma](https://www.figma.com/file/UQ7NcCBE9NScccttfMR9e2/Portfolio---Week-1?node-id=0%3A1). 
 
-I endeavoured to get a 1:1 recreation of the wireframe during development and I think I got it pretty close.
+I endeavoured to get a 1:1 recreation of the wireframe during development and I think I got it pretty close. As time went on, I adapted the design to accomodate for responsiveness and to better present the information. 
 
 ### Languages/Frameworks Used
 
