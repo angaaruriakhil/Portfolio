@@ -40,7 +40,7 @@ main {
 
 // Fixed Element - Socials 
 
- .fixed_elements__socials {
+.fixed_elements__socials {
   position: fixed;
   bottom: 0;
   left: 50px; 
@@ -57,11 +57,7 @@ main {
   &__links {
     font-size: 50px;
     margin-top: 10px;  
-  }
-  &__links:hover {
-    transform: scale(1.2,1.2);
-    color: #64FFDA; 
-  }    
+  }  
 }
 
 // Fixed Element - Logo 
@@ -115,14 +111,6 @@ main {
     margin-right: 20px; 
     font-weight: normal;    
   }
-  &__list-items:hover { 
-    animation-name: slightly-raise;
-    animation-duration: 0.5s; 
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    text-decoration: none;
-  }
-
   &__list-items-number {
     color: #64FFDA; 
   }
@@ -146,7 +134,7 @@ main {
   background-image: url(./assets/images/background-space-pic.jfif);
   background-repeat: no-repeat; 
   background-size: cover; 
-  border-bottom: 10px solid #7375AB;
+  // border-bottom: 10px solid #6177AC;
   &__message {
     z-index: 2; 
     background: linear-gradient(rgba(120, 149, 198, 0.15), rgba(14, 21, 48, 0.15));  
@@ -220,14 +208,7 @@ main {
     justify-self: flex-end;
     align-self: center; 
     z-index: 2; 
-
   }
-  &__chevron:hover {
-    animation-name: heartBeat;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards; 
-    animation-duration: 2s; 
-    }
 }
 
 // About Section 
@@ -270,9 +251,6 @@ main {
     overflow: hidden; 
     height:100%;  
   } 
-  &__article__profile-pic:hover {
-    transform: scale(1.2,1.2);
-  }
   &__article__info {
     font-size: 24px;
     height: 100%;
@@ -294,14 +272,13 @@ main {
   &__tech-stack {
     display: flex; 
     flex-direction: column; 
-    justify-content: space-evenly;
-    align-items: center;  
-    height: 50%;   
-    border-left: 5px skyblue solid;
-    border-right: 5px skyblue solid;
+    justify-content: space-between;
+    align-items: center;     
+
   }
   &__tech-stack__header {
     font-size: 40px;
+    margin-bottom: 40px; 
     border-bottom: 2px solid white; 
     border-radius: 10px; 
   }
@@ -314,7 +291,9 @@ main {
     max-height: 100%; 
     gap: 10px; 
     justify-content: space-evenly;  
-    text-align: center;   
+    text-align: center; 
+    border-left: 5px white solid;
+    border-right: 5px white solid;  
   }
 }
 
@@ -323,11 +302,6 @@ main {
 #_nology, #university-of-surrey {
   text-decoration: blink;
   color: #FF6489;   
-}
-
-#_nology:hover, #university-of-surrey:hover {
-  opacity: 50%;
-  text-decoration: underline; 
 }
 
 #_nology:visited, #chemosphere:visited, #university-of-surrey:visited {
@@ -361,12 +335,6 @@ main {
   }
   &__subheader {
     color: $secondary-color;     
-  } 
-  &__subheader__icon {
-    color: $tertiary-color;     
-  } 
-  &__subheader__icon:hover {
-    transform: scale(1.5,1.5);      
   } 
   &__card {
     display: flex; 
@@ -482,10 +450,6 @@ main {
       margin-top: 20px; 
       padding: 10px; 
     }
-    &__button:hover {
-      opacity: 70%;
-      transform: scale(1.3, 1.3); 
-    }   
   }
   &__card__footer {
     display: flex; 
@@ -504,10 +468,6 @@ main {
     color: $primary-color;
     border-top: 2px solid white;  
   }
-  &__card__footer__socials__links:hover {
-    color: $secondary-color;
-    transform: scale(1.5,1.5);
-  }    
 }
 
 // Misc Icon Styling 
@@ -516,13 +476,7 @@ main {
   color: black; 
 }
 
-.hi-icon {
-  height: 40px; 
-  width: 40px; 
-  margin-left: 5px;    
-}
-
-// Media Queries for image hover and scale (No hover on mobile)
+// Media Queries for hover effects (No hover on mobile)
 
 @media (min-width: 800px) {
   .projects {
@@ -531,9 +485,43 @@ main {
       box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     }
   }
+  .fixed_elements__socials__links:hover {
+    transform: scale(1.2,1.2);
+    color: #64FFDA; 
+  }
+  .nav__list-items:hover {
+    animation-name: slightly-raise;
+    animation-duration: 0.5s; 
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    text-decoration: none;
+  }
+  .landing__chevron:hover {
+    animation-name: heartBeat;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; 
+    animation-duration: 2s;
+  }
+  #_nology:hover, #university-of-surrey:hover {
+    opacity: 50%;
+    text-decoration: underline; 
+  }
+  .projects__card__links-btn:hover {
+    transform: scale(1.2,1.2); 
+  }
+  .contact__card__form__button:hover {
+    opacity: 70%; 
+    transform: scale(1.3,1.3); 
+  }
+  .contact__card__footer__socials__links:hover {
+    color: $secondary-color; 
+    transform: scale(1.5, 1.5); 
+  }
 }
 
 // Media Queries for Responsiveness
+// Laptops and smaller widescreen displays
+
 @media screen and (max-width: 1500px) {
   .landing__message {
     font-size: 30px; 
@@ -570,6 +558,9 @@ main {
     }
     &__tech-stack__icons {
       font-size: 20px;  
+    }
+    &__tech-stack__header {
+      font-size: 30px;
     }
   }
   .projects {
@@ -609,7 +600,7 @@ main {
   }
 }
 
-// smaller screens 
+// Smaller screens (tablets, phones, older displays)
 @media screen and (max-width: 1200px) {
   .fixed_elements {
     &__logo-img  {
@@ -674,6 +665,9 @@ main {
     &__tech-stack {
       margin-top: 20px; 
     }
+    &__tech-stack__header {
+      font-size: 5vw; 
+    }
     &__tech-stack__icons {
       grid-template-columns: repeat(3, auto); 
       grid-template-rows: repeat(4, auto); 
@@ -700,7 +694,7 @@ main {
     &__article__header {
       font-size: 5vw; 
       text-align: center;
-      margin-bottom: 30px; 
+      margin-bottom: 20px; 
     }
     &__article__info {
       font-size: 3vw; 
