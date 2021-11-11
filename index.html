@@ -25,7 +25,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-
   <!-- Fixed Elements Section -->
   
   <section class="fixed_elements">
@@ -67,7 +66,7 @@
   <!-- Landing Section -->
 
   <section class="landing" id="landing">
-    <!-- <div id="particles-js-landing"> </div> -->
+    <div id="particles-js-landing"> </div>
     <div class="landing__message" data-aos="flip-left" data-aos-duration: 3s> 
       <p id = "landing__message__line-1" class = "landing__message__line-1"> let <span id = "landing__message__line__span1" class = "animate__animated animate__zoomInUp landing__message__line__span1"> welcome </span> = { </p>
       <p id = "landing__message__line-2" class = "landing__message__line-2 animate__animated animate__backInDown animate__delay-1s" > Name: "Angaar Uriakhil", </p>
@@ -79,41 +78,37 @@
     <a href="#about" class = "landing__chevron"> <i class="fas fa-chevron-down"></i> </a> 
     <!-- <div class="landing__photo-credit"> Photo by <a href="https://unsplash.com/@actionvance?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="landing__photo-credit__links" rel="noreferrer" target= "_blank">ActionVance</a> on <a href="https://unsplash.com/s/photos/space?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="noreferrer" class="landing__photo-credit__links" target= "_blank">Unsplash</a> </div> -->
   </section> 
-
   <main class = "rest-of-page"> 
-
     <!-- About Section -->
     <section class="about" id="about">
-      <!-- <div id="particles-js-about"> </div> -->
+      <div id="particles-js-about"> </div>
       <div class="about__article" id="about__article">
-        <div class="about__article__container">
-          <h1 class="about__article__header"> Hi, my name is Angaar !
-            <img src="./assets/images/hello.svg" class="hi-icon" alt="hello icon" id="hi-icon">
-            <br> I am:
+        <div class ="about__article__text">
+          <h1 class="about__article__header aos-init aos-animate" data-aos="zoom-in"> Hi! I'm Angaar. <i class="fas fa-hand-sparkles" style="color:black"></i>
+            <br> Let's work together. <i class="fas fa-handshake"></i>
           </h1>
-          <div class="about__article__info">
-            <ul>
-              <li> A full-stack developer based in <span class="about__article__info__highlight"> London </span>.</li>
-              <li> Passionate about solving difficult problems. </li>
-              <li> A graduate of the <a class="about__article__info__highlight" id="_nology"
-                  href=https://nology.io/technology-consultant-programme/ target="_blank" rel="noreferrer">_nology</a> coding
-                bootcamp. </li>
-              <li> An alumni of the <a class="about__article__info__highlight" id=university-of-surrey href="https://www.surrey.ac.uk/undergraduate/chemical-engineering" target="_blank" rel="noreferrer">University of Surrey.</a> (ChemEng MEng) </li>
-              <li>A published <a class="about__article__info__highlight"
-                  href="https://www.sciencedirect.com/science/article/abs/pii/S0045653521014971?via%3Dihub" target="_blank"
-                  id=chemosphere rel="noreferrer"> researcher. </a> </li>
-            </ul>
+          <div data-aos ="fade-left" class="about__list__container aos-init aos-animate">
+          <ul class="about__article__info fa-ul">
+            <li><span class="fa-li"><i class="fab fa-dev"></i></span> I'm a full-stack developer based in <span class="about__article__info__highlight"> London, England.</li>
+            <li><span class="fa-li"><i class="fas fa-user-graduate"></i></span> I'm a ChemEng alumni of the <a class="about__article__info__highlight" id=university-of-surrey href="https://www.surrey.ac.uk/undergraduate/chemical-engineering" target="_blank" rel="noreferrer">University of Surrey.</a> </li>
+            <li><span class="fa-li"><i class="fas fa-laptop"></i></span> I'm a graduate of the <a class="about__article__info__highlight" id="_nology"
+                href=https://nology.io/technology-consultant-programme/ target="_blank" rel="noreferrer">_nology</a> coding
+              bootcamp. </li>
+            <li> <span class="fa-li"><i class="fas fa-tasks"></i></span> I have a very high standard of work. </li>
+            <li><span class="fa-li"><i class="fas fa-book"></i></span> I'm a published <a class="about__article__info__highlight"
+                href="https://www.sciencedirect.com/science/article/abs/pii/S0045653521014971?via%3Dihub" target="_blank"
+                id=chemosphere rel="noreferrer"> researcher. </a> </li>
+          </ul>
           </div>
-
         </div>
-        <img src="./assets/images/profile-pic.jfif" alt="A picture of me" class="about__article__profile-pic"
-        id="about__article__profile-pic">        
+        <img src="./assets/images/profile-pic.jfif" alt="A picture of me" class="about__article__profile-pic aos-init aos-animate" 
+        id="about__article__profile-pic" data-aos="flip-right">        
       </div>
 
       <div class="about__tech-stack" id="about__tech-stack"> 
-        <h1 class="about__tech-stack__header"> <i class="fas fa-layer-group" id="fa-layer-group-1"></i>
+        <!-- <h1 class="about__tech-stack__header"> <i class="fas fa-layer-group" id="fa-layer-group-1"></i>
           Tech Stack <i class="fas fa-layer-group" id = "fa-layer-group-2"></i> 
-        </h1>
+        </h1> -->
         <div class ="about__tech-stack__icons" id ="about__tech-stack__icons"> 
           <p class="aos-init aos-animate" data-aos="flip-left"> <i class="devicon-git-plain colored"></i> Git </p>
           <p class="aos-init aos-animate" data-aos="flip-left"> <i class="devicon-jest-plain colored"></i> Jest </p>
@@ -136,10 +131,10 @@
     <!-- Projects  Section -->
 
   <section class="projects" id="projects"> 
-    <!-- <div id="particles-js-projects"> </div> -->
-    <h1 class="projects__header" id="projects__header"> Some things I've worked on.&nbsp<i class="fas fa-tools"></i> 
+    <div id="particles-js-projects"> </div>
+    <h1 class="projects__header aos-animate aos-init" id="projects__header" data-aos="zoom-in" data-aos-duration="500"> Projects I've worked on.&nbsp<i class="fas fa-tools"></i> 
     </h1>
-    <div class="projects__card" id="projects__card-1">
+    <div class="projects__card aos-init aos-animate" id="projects__card-1" data-aos="fade-left" data-aos-duration="1500">
       <!-- <a href = "https://angaar96.github.io/Battleship/" target = "_blank" rel="noreferrer" class="a-img"> <img src= "./assets/images/1.png" alt = "A picture of the Battleship project." class="projects__card__img"> </a>  -->
       <img src= "./assets/images/1.png" alt = "A picture of the Battleship project." class="projects__card__img">
       <div class="projects__card__text">
@@ -147,7 +142,7 @@
           <h3 class = "projects__subheader" style="color: #64ffda; font-weight: bold">
             Featured Project  <i class="devicon-javascript-plain colored"></i>  <i class="devicon-html5-plain colored"></i> <i class="devicon-sass-original colored"></i>
             </h3>
-            <h2 style="color: white"> Battleship </h2>
+            <h2 style="color: white" class="projects__title"> Battleship </h2>
         </div>
         <p class="projects__card__text__info">  
           Face against the computer in a daring game of chance as you attempt to locate and sink each other's ships.<br>
@@ -160,7 +155,7 @@
       </div>
     </div>
     
-    <div class="projects__card" id="projects__card-2">
+    <div class="projects__card aos-init aos-animate" id="projects__card-2" data-aos="fade-right" data-aos-duration="1000">
       <!-- <a href = "https://angaar96.github.io/Battleship/" target = "_blank" rel="noreferrer" class="a-img"> <img src= "./assets/images/1.png" alt = "A picture of the Battleship project." class="projects__card__img"> </a>  -->
       <img src= "./assets/images/2.jfif" alt = "A picture of the client project." class="projects__card__img">
       <div class="projects__card__text">
@@ -169,10 +164,10 @@
             Featured Project  <i class="devicon-java-plain colored"></i> <i class="devicon-react-original colored"></i> 
             <i class="devicon-spring-plain colored"></i> 
             <i class="devicon-sass-original colored"></i>
-             <i class="devicon-mysql-plain colored"></i> 
+            <i class="devicon-mysql-plain colored"></i> 
             <i class="devicon-bootstrap-plain colored"></i>
             </h3>
-            <h2 style="color: white"> _nology Student Management Platform </h2>
+            <h2 style="color: white" class="projects__title"> _nology Student Management Platform </h2>
         </div>
         <p class="projects__card__text__info"> 
           Student management platform built for _nology. 
@@ -186,7 +181,7 @@
       </div>
     </div>
 
-    <div class="projects__card" id="projects__card-3">
+    <div class="projects__card aos-init aos-animate" id="projects__card-3" data-aos="fade-left" data-aos-duration="1000">
       <!-- <a href = "https://angaar96.github.io/Battleship/" target = "_blank" rel="noreferrer" class="a-img"> <img src= "./assets/images/1.png" alt = "A picture of the Battleship project." class="projects__card__img"> </a>  -->
       <img src= "./assets/images/3.png" alt = "A picture of the Calculator project." class="projects__card__img">
       <div class="projects__card__text">
@@ -194,7 +189,7 @@
           <h3 class = "projects__subheader" style="color: #64ffda; font-weight: bold">
             Featured Project  <i class="devicon-javascript-plain colored"></i> <i class="devicon-html5-plain colored"></i> <i class="devicon-sass-original colored"></i>
             </h3>
-            <h2 style="color: white"> Calculator </h2>
+            <h2 style="color: white" class="projects__title"> Calculator </h2>
         </div>
         <p class="projects__card__text__info">  
           Calculator with support for basic operations, decimal inputs, recurring decimals, negative number inputs and chaining operations. <br>
@@ -207,7 +202,7 @@
       </div>
     </div>
 
-    <div class="projects__card" id="projects__card-4">
+    <div class="projects__card aos-init aos-animate" id="projects__card-4" data-aos="fade-right" data-aos-duration="1000">
       <!-- <a href = "https://angaar96.github.io/Battleship/" target = "_blank" rel="noreferrer" class="a-img"> <img src= "./assets/images/1.png" alt = "A picture of the Battleship project." class="projects__card__img"> </a>  -->
       <img src= "./assets/images/4.png" alt = "A picture of the Malignant Kingdom game." class="projects__card__img">
       <div class="projects__card__text">
@@ -215,7 +210,7 @@
           <h3 class = "projects__subheader" style="color: #64ffda; font-weight: bold">
             Featured Project <i class="devicon-java-plain colored"></i>
             </h3>
-            <h2 style="color: white"> Malignant Kingdom </h2>
+            <h2 style="color: white" class="projects__title"> Malignant Kingdom </h2>
         </div>
         <p class="projects__card__text__info"> 
           A Java adventure game playable via the console. <br> 
@@ -229,7 +224,7 @@
       </div>
     </div>
 
-    <div class="projects__card" id="projects__card-5">
+    <div class="projects__card aos-init aos-animate" id="projects__card-5" data-aos="fade-left" data-aos-duration="1000">
       <!-- <a href = "https://angaar96.github.io/Battleship/" target = "_blank" rel="noreferrer" class="a-img"> <img src= "./assets/images/1.png" alt = "A picture of the Battleship project." class="projects__card__img"> </a>  -->
       <img src= "./assets/images/5.png" alt = "A picture of the Punk API project." class="projects__card__img">
       <div class="projects__card__text">
@@ -237,7 +232,7 @@
           <h3 class = "projects__subheader" style="color: #64ffda; font-weight: bold">
             Featured Project <i class="devicon-react-original colored"></i> <i class="devicon-javascript-plain colored"></i> <i class="devicon-html5-plain colored"></i> <i class="devicon-sass-original colored"></i>
             </h3>
-            <h2 style="color: white"> Brewdog API Beer Selector </h2>
+            <h2 style="color: white" class="projects__title"> Brewdog API Beer Selector </h2>
         </div>
         <p class="projects__card__text__info">  
           An application which pulls information about beers from the Brewdog Punk API and filters the data based on user mandated search input and checkbox selection. <br>
@@ -250,7 +245,7 @@
       </div>
     </div>
 
-    <div class="projects__card" id="projects__card-6">
+    <div class="projects__card aos-init aos-animate" id="projects__card-6" data-aos="fade-right" data-aos-duration="1000">
       <!-- <a href = "https://angaar96.github.io/Battleship/" target = "_blank" rel="noreferrer" class="a-img"> <img src= "./assets/images/1.png" alt = "A picture of the Battleship project." class="projects__card__img"> </a>  -->
       <img src= "./assets/images/6.png" alt = "A picture of the Morse Code Translator project." class="projects__card__img">
       <div class="projects__card__text">
@@ -258,7 +253,7 @@
           <h3 class = "projects__subheader" style="color: #64ffda; font-weight: bold">
             Featured Project <i class="devicon-javascript-plain colored"></i> <i class="devicon-html5-plain colored"></i> <i class="devicon-sass-original colored"></i>
             </h3>
-            <h2 style="color: white"> Morse Code Translator </h2>
+            <h2 style="color: white" class="projects__title"> Morse Code Translator </h2>
         </div>
         <p class="projects__card__text__info"> 
           Morse code translator, capable of converting English to Morse code and vice versa.<br>
@@ -272,7 +267,7 @@
       </div>
     </div>
 
-    <div class="projects__card" id="projects__card-7">
+    <div class="projects__card aos-init aos-animate" id="projects__card-7" data-aos="fade-left" data-aos-duration="1000">
       <!-- <a href = "https://angaar96.github.io/Battleship/" target = "_blank" rel="noreferrer" class="a-img"> <img src= "./assets/images/1.png" alt = "A picture of the Battleship project." class="projects__card__img"> </a>  -->
       <img src= "./assets/images/7.png" alt = "A picture of the Simple Chemistry App project." class="projects__card__img">
       <div class="projects__card__text">
@@ -280,7 +275,7 @@
           <h3 class = "projects__subheader" style="color: #64ffda; font-weight: bold">
             Featured Project <i class="devicon-javascript-plain colored"></i> <i class="devicon-html5-plain colored"></i> <i class="devicon-sass-original colored"></i>
             </h3>
-            <h2 style="color: white"> Simple Chemistry App </h2>
+            <h2 style="color: white" class="projects__title"> Simple Chemistry App </h2>
         </div>
         <p class="projects__card__text__info"> 
           A Windows application, written in Python, that pulls information about the chemical elements from a database.<br> 
@@ -295,17 +290,16 @@
   </section>
 
   <!-- Contact  Section -->
-
   <section class="contact" id = "contact">
-    <!-- <div id="particles-js-contact"> </div>  -->
+    <div id="particles-js-contact"> </div> 
     <article class="contact__card"> 
       <h1 class="contact__card__header" id="contact__card__header"> Get in touch. 
         <i class="fas fa-envelope"></i> 
       </h1>
-      <p class="contact__card__message" id="contact__card__message"> I’m always looking for exciting and challenging opportunities.<br>
-        If you think I can bring value to your company, please, do not hesitate to send me a message. 
-      </p>
-      <form id="contact__card__form" class = "contact__card__form" name="simple-contact-form" accept-charset="utf-8" action = "https://formspree.io/f/mpzkkdkq" method="POST">
+      <p class="contact__card__message aos-init aos-animate" id="contact__card__message" data-aos="zoom-in" data-aos-duration="1000"> I’m always looking for exciting and challenging opportunities.<br>
+        Let's talk !  
+        </p>
+      <form id="contact__card__form" class = "contact__card__form aos-init aos-animate" name="simple-contact-form" accept-charset="utf-8" action = "https://formspree.io/f/mpzkkdkq" method="POST" data-aos="fade-down" data-aos-duration="2000">
         <fieldset id="contact__card__form__inputs" class = "contact__card__form__inputs">
           <label for="full-name" class="contact__card__form__labels">Full Name</label>
           <input type="text" name="name" id="full-name" placeholder="First and Last" required="" style="color: black">
@@ -315,7 +309,7 @@
           <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required="" style="color: black"></textarea>
           <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
         </fieldset>
-        <input type="submit" value="Submit" class="contact__card__form__button" id = "contact__card__form__button">
+        <input type="submit" value="Submit" class="contact__card__form__button aos-init aos-animate" id = "contact__card__form__button" data-aos="flip-up"  data-aos-duration="2000">
       </form>
   </article>
     <footer class="contact__card__footer">

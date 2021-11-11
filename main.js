@@ -31,7 +31,6 @@ let observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       modify(entry.target);
-      pageAnimation(entry.target);
     } else {
       revert(entry.target);
     }
@@ -51,30 +50,6 @@ function revert(el) {
   document.querySelector(`#${el.id}-link`).style.textDecorationColor = 'none';
 }
 
-function pageAnimation(el) {
-  switch (el.id) {
-    case "about" :
-      document.getElementById("about__article").className += " animate__animated animate__bounceInRight";
-      // document.getElementById("about__tech-stack").className += " animate__animated animate__bounceInLeft";
-      document.getElementById("hi-icon").className += " animate__animated animate__slower animate__swing animate__delay-1s";
-      document.getElementById("fa-handshake").className += " animate__animated animate__headShake animate__slower animate__delay-3s";
-      document.getElementById("fa-layer-group-1").className += " animate__animated animate__heartBeat animate__delay-4s";
-      document.getElementById("fa-layer-group-2").className += " animate__animated animate__heartBeat animate__delay-4s animate__duration-3s";
-      break; 
-    case "projects":
-      document.getElementById("projects__card-1__header").className += " animate__animated animate__slideInDown animate__duration-1s";
-      document.getElementById("projects__card-1").className += " animate__animated animate__lightSpeedInRight animate__delay-0.5s";
-      document.getElementById("projects__card-2").className += " animate__animated animate__lightSpeedInLeft animate__delay-0.5s";
-      break;
-    case "contact":
-      document.getElementById("contact__card__header").className += " animate__animated animate__slideInDown animate__duration-0.5s";
-      document.getElementById("contact__card__message").className += " animate__animated animate__zoomInDown animate__delay-0.5s";
-      document.getElementById("contact__card__form").className += " animate__animated animate__delay-1s animate__bounceInDown";
-      document.getElementById("contact__card__form__button").className += " animate__animated animate__delay-2s animate__flipInX";
-      break;
-  }
-}
-
 observer.observe(document.querySelector('#landing'));
 observer.observe(document.querySelector('#about'));
 observer.observe(document.querySelector('#projects'));
@@ -82,41 +57,36 @@ observer.observe(document.querySelector('#contact'));
 
 // This section deals with particles.js effect on every page. 
 
-// function mainContentParticles() {
-//   particlesJS.load('particles-js-about', 'particles.js-master/particles.json', function() {
-//  });
-//   particlesJS.load('particles-js-projects', 'particles.js-master/particles.json', function() {
-// });
-//   particlesJS.load('particles-js-contact', 'particles.js-master/particles.json', function() {
-// });
-// }
+function mainContentParticles() {
+  particlesJS.load('particles-js-about', 'particles.js-master/particles.json', function() {
+ });
+  particlesJS.load('particles-js-projects', 'particles.js-master/particles.json', function() {
+});
+  particlesJS.load('particles-js-contact', 'particles.js-master/particles.json', function() {
+});
+}
 
-// mainContentParticles();  
+mainContentParticles();  
 
-// // Delay landingParticles deployment on the welcome page until other intro animations are performed.
+// Delay landingParticles deployment on the welcome page until other intro animations are performed.
 
-// function landingParticles() {
-//   particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function() {
-//   });
-// }
+function landingParticles() {
+  particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function() {
+  });
+}
 
-// setTimeout(landingParticles, 4000);
+setTimeout(landingParticles, 4000);
 
 // This section deals with the hamburger menu on the mobile layout. 
 
 function toggleHamburgerMenu() {
   let navBar = document.getElementById("nav__list-master");
-  navBar.classList.toggle("hide_navbar");
+  navBar.classList.toggle("display_navbar");
+  hamburgerMenu = document.getElementById("fixed_elements__hamburger-menu");
+   hamburgerMenu.classList.toggle("rotate_hamburger");
 }
 
-function hamburgerMenuAnimation() {
-  hamburgerMenu = document.getElementById("fixed_elements__hamburger-menu");
- hamburgerMenu.classList.toggle("rotate_hamburger");
-  }
-
-
 document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", toggleHamburgerMenu)
-document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", hamburgerMenuAnimation)
 
 // Google drive link obfuscation and encryption (just in case)
 
