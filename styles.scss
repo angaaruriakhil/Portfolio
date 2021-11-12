@@ -260,20 +260,24 @@ main {
     font-weight: bold;  
   } 
   }
-  .fa-li {
-    left: -2em;
-    position: absolute;
-    text-align: center;
-    width: 2em;
-    line-height: inherit;
-    margin-left: -1em; 
+//   .fa-li {
+//     left: -2em;
+//     position: absolute;
+//     text-align: center;
+//     width: 2em;
+//     line-height: inherit;
+//     // margin-left: -1em; 
+// }
+&__list__container {
+  margin-left: -1.4em;
 }
 
   &__tech-stack {
     display: flex; 
     flex-direction: column; 
     justify-content: space-between;
-    align-items: center;     
+    align-items: center;
+    width: 70vw;      
 
   }
   &__tech-stack__header {
@@ -315,7 +319,10 @@ main {
   width: 100%; 
   height: 100%;   
 }
-
+.colored {
+  margin-left: 5px; 
+  padding: 0; 
+}
 .projects {
   position: relative;
   max-width: 100%;   
@@ -334,7 +341,10 @@ main {
     margin-bottom: 50px;   
   }
   &__subheader {
-    color: $secondary-color;     
+    color: $secondary-color; 
+    display: flex; 
+    align-items: center; 
+    line-height: 100%; 
   } 
   &__card {
     display: flex; 
@@ -664,6 +674,7 @@ main {
   .about {
     &__tech-stack {
       margin-top: 20px; 
+      width: 95vw; 
     }
     &__tech-stack__header {
       font-size: 5vw; 
@@ -673,7 +684,7 @@ main {
       grid-template-rows: repeat(4, auto); 
       font-size: 3vw;  
       padding-top: 0px;
-      width: 90vw; 
+      width: 95vw; 
     }
     &__article {
       height: auto; 
@@ -697,24 +708,28 @@ main {
       margin-bottom: 20px; 
     }
     &__article__info {
-      font-size: 3vw; 
+      font-size: 3.8vw; 
       height: auto; 
     }
     &__article__text { 
       align-items: center;
       margin-top: 20px;
-      width: 90vw;   
-    }
-    .fa-li {
-      margin-left: 0px; 
+      width: 100vw;   
     }
   
     &__article__profile-pic {
-      width: 30vw; 
+      width: 50vw; 
       margin-top: 0px;  
     }
     &__article__container {
       margin-top: 10px;  
+    }
+    // &__list__container {
+    //   width: 95vw; 
+    // }
+
+    &__list__container {
+      margin-left: 0;
     }
   }
   
@@ -723,7 +738,7 @@ main {
     &__card__text__info {
       font-size: 15px;
       text-align: center; 
-      width: 70vw;     
+      width: 95vw;     
     }
 
     &__card { 
@@ -744,17 +759,18 @@ main {
     }
     &__subheader {
       font-size: 15px;
-      width: 70vw; 
-      margin-top: 10px;   
+      width: 95vw; 
+      margin-top: 10px; 
+      justify-content: center;     
     }
     &__title {
       font-size: 20px; 
     }
     &__card__img {
-      width: 70vw;  
+      width: 95vw;  
     }
     &__card__text {
-      width: 70vw;
+      width: 95vw;
     }
     &__card__links {
       justify-content: space-between;
