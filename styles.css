@@ -308,9 +308,8 @@ main {
 .about__article__text {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
-  width: 70%;
 }
 .about__article__header {
   font-size: 50px;
@@ -326,13 +325,13 @@ main {
 .about__article__info {
   font-size: 24px;
   height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
 }
 .about__article__info__highlight {
   color: #64ffda;
   font-weight: bold;
-}
-.about__list__container {
-  margin-left: -1.4em;
 }
 .about__tech-stack {
   display: flex;
@@ -340,30 +339,38 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 70vw;
+  padding: 10px;
 }
 .about__tech-stack__header {
   font-size: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border-bottom: 2px solid white;
   border-radius: 10px;
 }
 .about__tech-stack__icons {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, auto);
   width: 70vw;
-  font-size: 25px;
-  max-height: 100%;
-  gap: 10px;
-  justify-content: space-evenly;
-  text-align: center;
-  border-left: 5px white solid;
-  border-right: 5px white solid;
+  font-size: 70px;
+  gap: 30px;
+  padding: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
 #_nology, #university-of-surrey {
   text-decoration: blink;
   color: #FF6489;
+}
+
+.frosted-glass {
+  background: rgba(89, 111, 164, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 #_nology:visited, #chemosphere:visited, #university-of-surrey:visited {
@@ -412,6 +419,7 @@ main {
   z-index: 10;
   margin-bottom: 50px;
   object-fit: contain;
+  padding: 5px;
 }
 .projects__card__text {
   display: flex;
@@ -420,6 +428,8 @@ main {
   align-items: flex-start;
   width: 55%;
   max-height: 100%;
+  padding: 10px;
+  padding-left: 20px;
 }
 .projects__card__img {
   width: 40%;
@@ -539,7 +549,7 @@ main {
   color: black;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   .projects__card__img:hover {
     transform: scale(1.3, 1.3);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -611,6 +621,9 @@ main {
     font-size: 80px;
   }
 
+  .about__article {
+    margin-top: 50px;
+  }
   .about__article__header {
     font-size: 35px;
     margin-bottom: 10px;
@@ -619,7 +632,7 @@ main {
     font-size: 20px;
   }
   .about__tech-stack__icons {
-    font-size: 20px;
+    font-size: 50px;
   }
   .about__tech-stack__header {
     font-size: 30px;
@@ -662,9 +675,6 @@ main {
   .fixed_elements__hamburger-menu {
     visibility: visible;
     transform: rotate(0deg);
-  }
-  .fixed_elements__hamburger-menu:hover {
-    color: #64FFDA;
   }
 
   .landing__message {
@@ -713,12 +723,12 @@ main {
   }
   .about__tech-stack__header {
     font-size: 5vw;
+    margin-bottom: 20px;
   }
   .about__tech-stack__icons {
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(4, auto);
-    font-size: 3vw;
-    padding-top: 0px;
+    font-size: 10vw;
     width: 95vw;
   }
   .about__article {
@@ -743,13 +753,13 @@ main {
     margin-bottom: 20px;
   }
   .about__article__info {
-    font-size: 3.8vw;
+    font-size: 3.7vw;
     height: auto;
   }
   .about__article__text {
     align-items: center;
     margin-top: 20px;
-    width: 100vw;
+    width: 95vw;
   }
   .about__article__profile-pic {
     width: 50vw;
@@ -776,6 +786,8 @@ main {
     align-items: center;
     text-align: center;
     margin-left: 0;
+    margin-top: 10px;
+    padding-left: 10px;
   }
   .projects__header {
     margin-top: 30px;
