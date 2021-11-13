@@ -9,7 +9,6 @@
   color: $primary-color; 
 }
 
-
 a {
   text-decoration: none;
 }
@@ -209,6 +208,8 @@ main {
     justify-self: flex-end;
     align-self: center; 
     z-index: 2; 
+    animation: bounce 3s infinite;
+    animation-delay: 5s; 
   }
 }
 
@@ -489,7 +490,7 @@ main {
   }
 }
 
-// Misc Icon Styling 
+// Misc Styling 
 
 .fa-envelope, .fa-handshake, .fa-tools, .hi-icon  {
   color: black; 
@@ -514,12 +515,6 @@ main {
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     text-decoration: none;
-  }
-  .landing__chevron:hover {
-    animation-name: heartBeat;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards; 
-    animation-duration: 2s;
   }
   #_nology:hover, #university-of-surrey:hover {
     opacity: 50%;
