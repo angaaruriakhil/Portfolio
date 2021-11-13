@@ -15,6 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+  <link href="dist/hamburgers.css" rel="stylesheet">
+
   <title>Angaar's Portfolio</title>
   <script src="https://kit.fontawesome.com/c1c2da4e28.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -54,7 +56,11 @@
       </ul>
     </nav>
     <a href ="#landing"> <img class = "fixed_elements__logo-img animate__animated animate__rollIn animate__delay-4s" src = "./assets/images/personal-logo.png" id="fixed_elements__logo-img" alt = "It's a picture of a personal logo with the initials, A.U, stylised like a signature within a blue circle"> </a>
-    <i class="fas fa-bars fixed_elements__hamburger-menu" id="fixed_elements__hamburger-menu"></i>  
+    <button class="hamburger hamburger--elastic fixed_elements__hamburger-menu"  id="fixed_elements__hamburger-menu" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>   
   <div class="fixed_elements__socials animate__animated animate__slideInUp animate__delay-4s"> 
     <a onclick = "g_displaceLink()" href = "" target="_blank" class = "fixed_elements__socials__links" id = "cv"> <i class="ri-profile-line fixed_elements__socials__links"></i> </a>
     <a href = https://uk.linkedin.com/in/angaar-uriakhil-1723a71b4 target="_blank" class = fixed_elements__socials__links rel="noreferrer"> <i class="fab fa-linkedin fixed_elements__socials__links"></i> </a>
@@ -296,7 +302,7 @@
       <p class="contact__card__message aos-init aos-animate" id="contact__card__message" data-aos="zoom-in" data-aos-delay="50"> I’m always looking for exciting and challenging opportunities.<br>
         Let's talk !
         </p>
-      <form id="contact__card__form" class = "contact__card__form aos-init aos-animate" name="simple-contact-form" accept-charset="utf-8" action = "https://formspree.io/f/mpzkkdkq" method="POST" data-aos="fade-down" data-aos-delay="500">
+      <form id="contact__card__form" class = "contact__card__form aos-init aos-animate" name="simple-contact-form" accept-charset="utf-8" action = "https://formspree.io/f/mpzkkdkq" method="POST" data-aos="fade-down" data-aos-delay="150">
         <fieldset id="contact__card__form__inputs" class = "contact__card__form__inputs">
           <label for="full-name" class="contact__card__form__labels">Full Name</label>
           <input type="text" name="name" id="full-name" placeholder="First and Last" required="" style="color: black">
@@ -306,7 +312,7 @@
           <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required="" style="color: black"></textarea>
           <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
         </fieldset> 
-        <input type="submit" value="Submit" class="contact__card__form__button aos-init aos-animate" id = "contact__card__form__button" data-aos="flip-up"  data-aos-delay="1000">
+        <input type="submit" value="Submit" class="contact__card__form__button aos-init aos-animate" id = "contact__card__form__button" data-aos="flip-up"  data-aos-delay="250">
       </form>
   </article>
     <footer class="contact__card__footer">

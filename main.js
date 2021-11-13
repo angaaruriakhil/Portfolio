@@ -84,7 +84,7 @@ function toggleHamburgerMenu() {
   let navBar = document.getElementById("nav__list-master");
   navBar.classList.toggle("display_navbar");
   hamburgerMenu = document.getElementById("fixed_elements__hamburger-menu");
-   hamburgerMenu.classList.toggle("rotate_hamburger");
+  hamburgerMenu.classList.toggle("is-active");
 }
 
 document.getElementById("fixed_elements__hamburger-menu").addEventListener("click", toggleHamburgerMenu)
