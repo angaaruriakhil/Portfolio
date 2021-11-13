@@ -300,6 +300,7 @@ main {
   font-family: "Red Hat Display";
 }
 .about__article {
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: space-between;
@@ -618,9 +619,6 @@ main {
     font-size: 80px;
   }
 
-  .about__article {
-    margin-top: 50px;
-  }
   .about__article__header {
     font-size: 35px;
     margin-bottom: 10px;
