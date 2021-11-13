@@ -6,7 +6,6 @@ Personal Portfolio website initially built during week 2 of my software developm
 
 Responsive on PC or Mobile. 
 
-
 ## Design 
 
 The wireframe for the project was designed on [Figma](https://www.figma.com/file/UQ7NcCBE9NScccttfMR9e2/Portfolio---Week-1?node-id=0%3A1). 
@@ -20,4 +19,5 @@ I endeavoured to get a 1:1 recreation of the wireframe during development and I 
 * Javascript ES6
 * Particles.js 
 * Interaction Observer (For responsive line under scrollbar) 
+* Hamburgers by [jonsuh](jonsuh.com/hamburgers) for hamburger menu and associated animation. 
 
