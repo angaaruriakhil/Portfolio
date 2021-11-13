@@ -228,6 +228,7 @@ main {
   align-items: center;  
   font-family: $primary-font;   
   &__article {
+    margin-top: 50px; 
     display: flex; 
     justify-content: space-between; 
     align-items: space-between;
@@ -567,9 +568,6 @@ main {
     }
   }
   .about {
-    &__article {
-      margin-top: 50px; 
-    }
     &__article__header {
       font-size: 35px; 
       margin-bottom: 10px; 
@@ -583,10 +581,6 @@ main {
     &__tech-stack__header {
       font-size: 30px;
     }
-    // &__article__profile-pic {
-    //   width: auto; 
-    //   height: 70vh; 
-    // }
   }
   .projects {
     &__header {
