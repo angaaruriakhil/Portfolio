@@ -751,8 +751,9 @@ main {
   .projects {
     &__card__text__info {
       font-size: 15px;
-      text-align: center; 
-      width: 95vw;     
+      width: 95vw;  
+      text-align: justify;   
+      padding: 10px;   
     }
 
     &__card { 
@@ -762,7 +763,6 @@ main {
     }
     &__card__text {
       align-items: center; 
-      text-align: center; 
       margin-left: 0; 
       margin-top: 10px; 
       padding-left: 10px;
@@ -780,7 +780,8 @@ main {
       justify-content: center;     
     }
     &__title {
-      font-size: 20px; 
+      font-size: 20px;
+      text-align: center;   
     }
     &__card__img {
       width: 95vw;  
