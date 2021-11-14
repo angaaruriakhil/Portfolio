@@ -19,5 +19,5 @@ I endeavoured to get a 1:1 recreation of the wireframe during development and I 
 * Javascript ES6
 * Particles.js 
 * Interaction Observer (For responsive line under scrollbar) 
-* Hamburgers by [jonsuh](jonsuh.com/hamburgers) for hamburger menu and associated animation. 
+* Hamburgers by [jonsuh](https://www.jonsuh.com/hamburgers) for hamburger menu and associated animation. 
 
