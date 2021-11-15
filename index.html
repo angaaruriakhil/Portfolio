@@ -16,13 +16,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
   <link href="dist/hamburgers.css" rel="stylesheet">
-
   <title>Angaar's Portfolio</title>
   <script src="https://kit.fontawesome.com/c1c2da4e28.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="particles.js-master/particles.js"> </script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/typeit@8.0.7/dist/index.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
   <!-- Crypto JS Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
@@ -55,13 +55,13 @@
         </a> 
       </ul>
     </nav>
-    <a href ="#landing"> <img class = "fixed_elements__logo-img animate__animated animate__rollIn animate__delay-4s" src = "./assets/images/personal-logo.png" id="fixed_elements__logo-img" alt = "It's a picture of a personal logo with the initials, A.U, stylised like a signature within a blue circle"> </a>
+    <a href ="#landing"> <img class = "fixed_elements__logo-img animate__animated animate__rollIn" src = "./assets/images/personal-logo.png" id="fixed_elements__logo-img" alt = "It's a picture of a personal logo with the initials, A.U, stylised like a signature within a blue circle"> </a>
     <button class="hamburger hamburger--elastic fixed_elements__hamburger-menu"  id="fixed_elements__hamburger-menu" type="button">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>   
-  <div class="fixed_elements__socials animate__animated animate__slideInUp animate__delay-4s"> 
+  <div class="fixed_elements__socials animate__animated animate__slideInUp"> 
     <a onclick = "g_displaceLink()" href = "" target="_blank" class = "fixed_elements__socials__links" id = "cv"> <i class="ri-profile-line fixed_elements__socials__links"></i> </a>
     <a href = https://uk.linkedin.com/in/angaar-uriakhil-1723a71b4 target="_blank" class = fixed_elements__socials__links rel="noreferrer"> <i class="fab fa-linkedin fixed_elements__socials__links"></i> </a>
     <a href = https://www.researchgate.net/profile/Mohammad_Uriakhil target="_blank" class = fixed_elements__socials__links rel="noreferrer"> <i class="fab fa-researchgate fixed_elements__socials__links"> </i> </a>
@@ -74,15 +74,22 @@
 
   <section class="landing" id="landing">
     <div id="particles-js-landing"> </div>
-    <div class="landing__message" data-aos="flip-left" data-aos-duration: 3s> 
-      <p id = "landing__message__line-1" class = "landing__message__line-1"> let <span id = "landing__message__line__span1" class = "animate__animated animate__zoomInUp landing__message__line__span1"> welcome </span> = { </p>
-      <p id = "landing__message__line-2" class = "landing__message__line-2 animate__animated animate__backInDown animate__delay-1s" > Name: "Angaar Uriakhil", </p>
-      <p id = "landing__message__line-3" class = "landing__message__line-3 animate__animated animate__backInDown animate__delay-2s"> Occupation: "Web Developer", </p>
-      <p id = "landing__message__line-4" class = "landing__message__line-4 animate__animated animate__zoomInDown animate__delay-3s"> Datatype: "Portfolio"</p>
-      <p id="landing__message__line-5" class="landing__message__line-5"> } </p>
-      <p id="landing__message__line-6" class="landing__message__line-6">><span id=landing__message__line__span2 class=landing__message__line__span2>_</span> </p>
+    <div class="landing__terminal">
+      <section class="landing__terminal__bar">          
+        <div class="landing__terminal__bar-buttons">            
+          <button class="landing__terminal__bar-button" id="bar__button--exit">&#10005;</button>            
+          <button class="landing__terminal__bar-button" id="bar__button--minimise">&#9472;</button>                
+          <button class="landing__terminal__bar-button" id="bar__button--maximise">&#9723;</button>          
+        </div>          
+        <p id="bar__user">angaar@desktop: ~</p>        
+      </section>
+    <div contenteditable="true" class="landing__message" spellcheck="false">  
+      <p class = "landing__message__line-1"> angaar@desktop:~$ <span class = "landing__message__line-1__span-1"></span> </p>
+      <div class="landing__message__bulk"></div> 
     </div>
-    <a href="#about" class = "landing__chevron"> <i class="fas fa-chevron-down"></i> </a> 
+  </div> 
+    <a href="#about" class = "landing__chevron"> <i class="fas fa-chevron-down"></i> </a>
+    <button class= "landing__minimised-terminal"> Terminal </button> 
   </section> 
   <main class = "rest-of-page"> 
     <!-- About Section -->
@@ -118,16 +125,22 @@
         <div class ="about__tech-stack__icons  frosted-glass aos-init aos-animate" id ="about__tech-stack__icons" data-aos="flip-left" data-aos-duration="100"> 
           <i class="devicon-git-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
           <i class="devicon-jest-plain colored aos-init aos-animate" data-aos="flip-left"></i>
-          <i class="devicon-npm-original-wordmark colored  aos-init aos-animate" data-aos="flip-left"></i> 
           <i class="devicon-react-original-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
-          <i class="devicon-python-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
+          <i class="devicon-npm-original-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
+          <i class="devicon-mysql-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
           <i class="devicon-java-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
+          <i class="devicon-spring-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
           <i class="devicon-javascript-plain colored aos-init aos-animate" data-aos="flip-left"></i> 
           <i class="devicon-typescript-plain colored  aos-init aos-animate" data-aos="flip-left"></i> 
           <i class="devicon-html5-plain colored aos-init aos-animate" data-aos="flip-left"></i>
+          <i class="devicon-css3-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i>
           <i class="devicon-sass-original colored aos-init aos-animate" data-aos="flip-left"></i> 
-          <i class="devicon-spring-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
-          <i class="devicon-mysql-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
+          <i class="devicon-bootstrap-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i>
+          <i class="devicon-python-plain-wordmark colored aos-init aos-animate" data-aos="flip-left"></i> 
+          <i class="devicon-pandas-original-wordmark colored aos-init aos-animate" data-aos="flip-left"></i>
+
+
+
         </div>
       </div>
     </section>

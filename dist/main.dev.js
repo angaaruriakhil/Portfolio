@@ -67,7 +67,7 @@ function landingParticles() {
   particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function () {});
 }
 
-setTimeout(landingParticles, 4000); // This section deals with the hamburger menu on the mobile layout. 
+setTimeout(landingParticles, 8000); // This section deals with the hamburger menu on the mobile layout. 
 
 function toggleHamburgerMenu() {
   var navBar = document.getElementById("nav__list-master");
@@ -128,4 +128,72 @@ function g_unlockedLink() {
 function g_displaceLink() {
   var cvButton = document.getElementById('cv');
   cvButton.href = g_unlockedLink();
-}
+} // TypeIt animations for landing page 
+
+
+var instance = new TypeIt(".landing__message__line-1__span-1", {
+  strings: 'node welcome.js',
+  speed: 40,
+  afterString: function afterString(step, instance) {
+    instance.destroy();
+  }
+}).go();
+var instance2 = new TypeIt(".landing__message__bulk", {
+  strings: ['<p style="color:#29b6f6; display: inline-block">{ Name: "Angaar Uriakhil",</p>', '<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>', '<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>', '}', 'angaar@desktop:~$ (Play with the terminal!)'],
+  speed: 40,
+  startDelay: 2000,
+  html: true
+}).go(); // Terminal draggable functionality with interact.js
+
+var position = {
+  x: 0,
+  y: 0
+};
+interact('.landing__terminal').draggable({
+  listeners: {
+    start: function start(event) {
+      console.log(event.type, event.target);
+    },
+    move: function move(event) {
+      position.x += event.dx;
+      position.y += event.dy;
+      event.target.style.transform = "translate(".concat(position.x, "px, ").concat(position.y, "px)");
+    }
+  }
+});
+var landingTerminal = document.querySelector(".landing__terminal");
+var minimisedTerminal = document.querySelector(".landing__minimised-terminal");
+
+var hideTerminal = function hideTerminal() {
+  landingTerminal.classList.toggle("hide_element");
+};
+
+var maximiseTerminal = function maximiseTerminal() {
+  landingTerminal.classList.toggle("maximise_terminal");
+  var landingMessage = document.querySelector(".landing__message");
+  landingMessage.classList.toggle("stretch_landing");
+};
+
+var minimiseTerminal = function minimiseTerminal() {
+  landingTerminal.classList.add('animate__animated', 'animate__backOutDown'); // Use setTimeout to allow backout animation to happen then do display: none and succeeding actions.  
+
+  setTimeout(function () {
+    landingTerminal.classList.toggle("hide_element");
+    minimisedTerminal.classList.toggle("show_element");
+    landingTerminal.classList.remove('animate__backOutDown');
+  }, 900);
+};
+
+var bringBackTerminal = function bringBackTerminal() {
+  landingTerminal.classList.toggle("hide_element");
+  minimisedTerminal.classList.toggle("show_element");
+  landingTerminal.classList.add('animate__backInUp');
+};
+
+var closeButton = document.querySelector("#bar__button--exit");
+closeButton.addEventListener("click", hideTerminal);
+var maximiseButton = document.querySelector("#bar__button--maximise");
+var minimiseButton = document.querySelector("#bar__button--minimise");
+maximiseButton.addEventListener("click", maximiseTerminal);
+minimisedTerminal.addEventListener("click", bringBackTerminal);
+minimiseButton.addEventListener("click", minimiseTerminal);
