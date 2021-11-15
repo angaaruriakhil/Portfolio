@@ -7,7 +7,6 @@ function dateInFooter() {
 
 dateInFooter();
 
-
 function spinLogoToTop() {
   document.getElementById("fixed_elements__logo-img").className = "fixed_elements__logo-img animate__animated animate__rotateIn";
 }
@@ -76,7 +75,7 @@ function landingParticles() {
   });
 }
 
-setTimeout(landingParticles, 4000);
+setTimeout(landingParticles, 8000);
 
 // This section deals with the hamburger menu on the mobile layout. 
 
@@ -136,3 +135,78 @@ function g_displaceLink() {
   let cvButton = document.getElementById('cv');
   cvButton.href = g_unlockedLink();
 }
+
+// TypeIt animations for landing page 
+
+const instance = new TypeIt(".landing__message__line-1__span-1", {
+  strings: 'node welcome.js',
+  speed: 40,
+  afterString: function(step, instance) {
+    instance.destroy();
+  },
+}).go(); 
+
+const instance2 = new TypeIt(".landing__message__bulk", {
+  strings: [
+    '<p style="color:#29b6f6; display: inline-block">{ Name: "Angaar Uriakhil",</p>',
+    '<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>',
+    '<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>','}',
+    'angaar@desktop:~$ (Play with the terminal!)'],
+  speed: 40,
+  startDelay: 2000,
+  html: true,
+}).go(); 
+
+// Terminal draggable functionality with interact.js
+
+const position = { x: 0, y: 0 }
+
+interact('.landing__terminal').draggable({
+  listeners: {
+    start (event) {
+      console.log(event.type, event.target)
+    },
+    move (event) {
+      position.x += event.dx
+      position.y += event.dy
+
+      event.target.style.transform =
+        `translate(${position.x}px, ${position.y}px)`
+    },
+  }
+})
+
+let landingTerminal = document.querySelector(".landing__terminal");
+let minimisedTerminal = document.querySelector(".landing__minimised-terminal"); 
+
+const hideTerminal = () => {
+  landingTerminal.classList.toggle("hide_element"); 
+}
+
+const maximiseTerminal = () => {
+  landingTerminal.classList.toggle("maximise_terminal");
+  let landingMessage = document.querySelector(".landing__message"); 
+  landingMessage.classList.toggle("stretch_landing");
+}
+
+const minimiseTerminal = () => {
+  landingTerminal.classList.add('animate__animated', 'animate__backOutDown');
+  // Use setTimeout to allow backout animation to happen then do display: none and succeeding actions.  
+  setTimeout(() => {
+    landingTerminal.classList.toggle("hide_element");minimisedTerminal.classList.toggle("show_element"); landingTerminal.classList.remove('animate__backOutDown');}, 900);
+}
+
+const bringBackTerminal = () => {
+  landingTerminal.classList.toggle("hide_element"); 
+  minimisedTerminal.classList.toggle("show_element");
+  landingTerminal.classList.add('animate__backInUp'); 
+}
+
+let closeButton = document.querySelector("#bar__button--exit"); 
+closeButton.addEventListener("click", hideTerminal); 
+let maximiseButton = document.querySelector("#bar__button--maximise");
+let minimiseButton = document.querySelector("#bar__button--minimise");
+
+maximiseButton.addEventListener("click", maximiseTerminal); 
+minimisedTerminal.addEventListener("click", bringBackTerminal); 
+minimiseButton.addEventListener("click", minimiseTerminal); 

@@ -1,24 +1,7 @@
-@keyframes fade-out {
-  0% {opacity: 1;}
-  50% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@keyframes down-from-above {
-  0% {transform: translate(0px, 0px);}
-  50% {transform: translate(0px, 25px);}
-  100% {transform: translate(0px, 50px);}
-}
-
 @keyframes slightly-raise {
   0% {transform: translate(0px, 0px);}
   100% {transform: translate(0px, -5px);
         color: #64FFDA;}
-}
-
-@keyframes slightly-enlarge {
-  0% {transform: scale(1,1);}
-  100% {transform: scale(1.1,1.1);}
 }
 
 @keyframes bounce {
@@ -67,12 +50,6 @@
   }
 }
 
-@keyframes rainbowBorder {
-  0% {}
-  50% {box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 1px 0px 0px rgba(0,0,0,0);}
-  100% {box-shadow: none;}
-}
-
 @keyframes spinningDisc {
   0% {}
   25% {transform: rotate(90deg);}
@@ -82,19 +59,22 @@
   
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
+// For gradient border on terminal
 
-
-
-
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
