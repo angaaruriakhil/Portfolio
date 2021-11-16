@@ -272,10 +272,10 @@ main {
   background: rgba(16, 25, 33, 0.3);
   backdrop-filter: blur(4px);
   display: none;
-  width: 100px;
-  height: 50px;
+  padding: 10px;
   border-radius: 10px;
   font-family: "Consolas";
+  font-size: 1.2em;
 }
 
 @property --angle {
@@ -583,6 +583,12 @@ main {
   .contact__card__footer__socials__links:hover {
     color: #64FFDA;
     transform: scale(1.5, 1.5);
+  }
+
+  .landing__minimised-terminal:hover {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+    backdrop-filter: blur(0px);
   }
 }
 @media screen and (max-width: 1500px) {
