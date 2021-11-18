@@ -139,7 +139,7 @@ var instance = new TypeIt(".landing__message__line-1__span-1", {
   }
 }).go();
 var instance2 = new TypeIt(".landing__message__bulk", {
-  strings: ['<p style="color:#29b6f6; display: inline-block">{ Name: "Angaar Uriakhil",</p>', '<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>', '<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>', '}', 'angaar@desktop:~$ (Play with the terminal!)'],
+  strings: ['<p style="color:#29b6f6; display: inline-block"><span style="color: white">{</span> Name: "Angaar Uriakhil",</p>', '<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>', '<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>', '}', 'angaar@desktop:~$ (Play with the terminal!)'],
   speed: 40,
   startDelay: 2000,
   html: true
