@@ -147,15 +147,23 @@ const instance = new TypeIt(".landing__message__line-1__span-1", {
 }).go(); 
 
 const instance2 = new TypeIt(".landing__message__bulk", {
-  strings: [
-    '<p style="color:#29b6f6; display: inline-block"><span style="color: white">{</span> Name: "Angaar Uriakhil",</p>',
-    '<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>',
-    '<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>','}',
-    'angaar@desktop:~$ (Play with the terminal!)'],
-  speed: 40,
+  speed: 45,
   startDelay: 2000,
   html: true,
-}).go(); 
+})
+.type('<p style="color:#29b6f6; display: inline-block"><span style="color: white">{</span> Name: "Angaar Uriakhil",</p>')
+.break()
+.type('<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>')
+.break()
+.type('<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>')
+.break()
+.type('}')
+.break()
+.type('angaar@desktop:~$ (Play with the terminal!)')
+// .options({speed: 10})
+.pause(700)
+.delete(25)
+.go(); 
 
 // Terminal draggable functionality with interact.js
 
