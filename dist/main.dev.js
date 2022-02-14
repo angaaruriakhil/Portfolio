@@ -7,7 +7,6 @@ function dateInFooter() {
   footerInfo.innerHTML = "Developed and maintained by Angaar Uriakhil, ".concat(new Date().getFullYear(), ". ");
 }
 
-;
 dateInFooter();
 
 function spinLogoToTop() {
@@ -40,34 +39,34 @@ var observer = new IntersectionObserver(function (entries) {
 });
 
 function modify(el) {
-  document.querySelector("#".concat(el.id, "-link")).style.textDecoration = 'underline';
-  document.querySelector("#".concat(el.id, "-link")).style.textDecorationColor = '#64FFDA';
+  document.querySelector("#".concat(el.id, "-link")).style.textDecoration = "underline";
+  document.querySelector("#".concat(el.id, "-link")).style.textDecorationColor = "#64FFDA";
   document.querySelector("#".concat(el.id, "-link")).style.textUnderlineOffset = "10px";
 }
 
 function revert(el) {
-  document.querySelector("#".concat(el.id, "-link")).style.textDecoration = 'none';
-  document.querySelector("#".concat(el.id, "-link")).style.textDecorationColor = 'none';
+  document.querySelector("#".concat(el.id, "-link")).style.textDecoration = "none";
+  document.querySelector("#".concat(el.id, "-link")).style.textDecorationColor = "none";
 }
 
-observer.observe(document.querySelector('#landing'));
-observer.observe(document.querySelector('#about'));
-observer.observe(document.querySelector('#projects'));
-observer.observe(document.querySelector('#contact')); // This section deals with particles.js effect on every page. 
+observer.observe(document.querySelector("#landing"));
+observer.observe(document.querySelector("#about"));
+observer.observe(document.querySelector("#projects"));
+observer.observe(document.querySelector("#contact")); // This section deals with particles.js effect on every page.
 
 function mainContentParticles() {
-  particlesJS.load('particles-js-about', 'particles.js-master/particles.json', function () {});
-  particlesJS.load('particles-js-projects', 'particles.js-master/particles.json', function () {});
-  particlesJS.load('particles-js-contact', 'particles.js-master/particles.json', function () {});
+  particlesJS.load("particles-js-about", "particles.js-master/particles.json", function () {});
+  particlesJS.load("particles-js-projects", "particles.js-master/particles.json", function () {});
+  particlesJS.load("particles-js-contact", "particles.js-master/particles.json", function () {});
 }
 
 mainContentParticles(); // Delay landingParticles deployment on the welcome page until other intro animations are performed.
 
 function landingParticles() {
-  particlesJS.load('particles-js-landing', 'particles.js-master/particles.json', function () {});
+  particlesJS.load("particles-js-landing", "particles.js-master/particles.json", function () {});
 }
 
-setTimeout(landingParticles, 8000); // This section deals with the hamburger menu on the mobile layout. 
+setTimeout(landingParticles, 8000); // This section deals with the hamburger menu on the mobile layout.
 
 function toggleHamburgerMenu() {
   var navBar = document.getElementById("nav__list-master");
@@ -85,7 +84,7 @@ function locked_glink() {
     gfrac_2_array: [".", "!", "g", "%", "o", "o", "9", "g", "l", "6", "e"],
     gfrac_3_array: ["%", ".", "c", "$", "@", "o", "£", "m", "*", "^", "#"],
     gfrac_4_array: ["/", "f", "$", "o", "l", "%", "d", "e", "*", "r", "s"],
-    gfrac_5_array: ['/', '1', '6', 'b', '9', 'e', 'z', '6', '7', 'a', '7', 'x', 'E', 'h', '^', '4', 'r', 's', 'm', 'v', 'u', 'x', 'N', 'F', 'n', 'L', 'p', 'n', 'C', '3', 'v', 'M', 'e', 'i', 'p', '?', 'u', 's', 'p', '=', 's', 'h', 'a', 'r', 'i', 'n', 'g', "%"]
+    gfrac_5_array: ["/", "1", "6", "b", "9", "e", "z", "6", "7", "a", "7", "x", "E", "h", "^", "4", "r", "s", "m", "v", "u", "x", "N", "F", "n", "L", "p", "n", "C", "3", "v", "M", "e", "i", "p", "?", "u", "s", "p", "=", "s", "h", "a", "r", "i", "n", "g", "%"]
   };
   var regex_g0 = /[a-z:/]/;
   var regex_g1 = /[/a-z]/;
@@ -109,7 +108,7 @@ function locked_glink() {
   filtered_g5 = gfrac_object.gfrac_5_array.filter(function (i) {
     return !regex_g3.test(i);
   });
-  var secretKey2 = "secretKey2"; // Key doesn't matter since I'm using this for hiding my details until user clicks. 
+  var secretKey2 = "secretKey2"; // Key doesn't matter since I'm using this for hiding my details until user clicks.
 
   var g_unlocked_array = [filtered_g0.join(""), filtered_g1.join(""), filtered_g2.join(""), filtered_g3.join(""), filtered_g1.join(""), filtered_g4.join(""), filtered_g5.join("")];
   var g_bare_message = g_unlocked_array[0] + g_unlocked_array[1] + g_unlocked_array[2] + g_unlocked_array[3] + g_unlocked_array[4] + g_unlocked_array[5] + g_unlocked_array[6];
@@ -126,13 +125,16 @@ function g_unlockedLink() {
 }
 
 function g_displaceLink() {
-  var cvButton = document.getElementById('cv');
-  cvButton.href = g_unlockedLink();
-} // TypeIt animations for landing page 
+  var cvButton = document.getElementById("cv");
+  var cvButton2 = document.getElementById("cv2");
+  var newHref = g_unlockedLink();
+  cvButton.href = newHref;
+  cvButton2.href = newHref;
+} // TypeIt animations for landing page
 
 
 var instance = new TypeIt(".landing__message__line-1__span-1", {
-  strings: 'node welcome.js',
+  strings: "node welcome.js",
   speed: 40,
   afterString: function afterString(step, instance) {
     instance.destroy();
@@ -142,14 +144,14 @@ var instance2 = new TypeIt(".landing__message__bulk", {
   speed: 45,
   startDelay: 2000,
   html: true
-}).type('<p style="color:#29b6f6; display: inline-block"><span style="color: white">{</span> Name: "Angaar Uriakhil",</p>')["break"]().type('<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>')["break"]().type('<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>')["break"]().type('}')["break"]().type('angaar@desktop:~$ (Play with the terminal!)') // .options({speed: 10})
+}).type('<p style="color:#29b6f6; display: inline-block"><span style="color: white">{</span> Name: "Angaar Uriakhil",</p>')["break"]().type('<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>')["break"]().type('<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>')["break"]().type("}")["break"]().type("angaar@desktop:~$ (Play with the terminal!)") // .options({speed: 10})
 .pause(700)["delete"](25).go(); // Terminal draggable functionality with interact.js
 
 var position = {
   x: 0,
   y: 0
 };
-interact('.landing__terminal').draggable({
+interact(".landing__terminal").draggable({
   listeners: {
     start: function start(event) {
       console.log(event.type, event.target);
@@ -175,19 +177,19 @@ var maximiseTerminal = function maximiseTerminal() {
 };
 
 var minimiseTerminal = function minimiseTerminal() {
-  landingTerminal.classList.add('animate__animated', 'animate__backOutDown'); // Use setTimeout to allow backout animation to happen then do display: none and succeeding actions.  
+  landingTerminal.classList.add("animate__animated", "animate__backOutDown"); // Use setTimeout to allow backout animation to happen then do display: none and succeeding actions.
 
   setTimeout(function () {
     landingTerminal.classList.toggle("hide_element");
     minimisedTerminal.classList.toggle("show_element");
-    landingTerminal.classList.remove('animate__backOutDown');
+    landingTerminal.classList.remove("animate__backOutDown");
   }, 900);
 };
 
 var bringBackTerminal = function bringBackTerminal() {
   landingTerminal.classList.toggle("hide_element");
   minimisedTerminal.classList.toggle("show_element");
-  landingTerminal.classList.add('animate__backInUp');
+  landingTerminal.classList.add("animate__backInUp");
 };
 
 var closeButton = document.querySelector("#bar__button--exit");
