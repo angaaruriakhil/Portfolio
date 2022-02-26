@@ -301,8 +301,8 @@ main {
 .about__article {
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: space-between;
   width: 70vw;
 }
 .about__article__text {
@@ -312,6 +312,7 @@ main {
 }
 .about__article__header {
   font-size: 50px;
+  margin-bottom: 20px;
 }
 .about__article__profile-pic {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -321,7 +322,7 @@ main {
   width: 22vw;
 }
 .about__article__info {
-  font-size: 24px;
+  font-size: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 20px;
@@ -738,7 +739,6 @@ main {
   .about__article {
     height: auto;
     margin-bottom: 0px;
-    flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center;
     width: 90vw;
@@ -752,7 +752,7 @@ main {
     text-align: center;
   }
   .about__article__header {
-    font-size: 5vw;
+    font-size: 6vw;
     text-align: center;
     margin-bottom: 20px;
   }
