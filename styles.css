@@ -107,6 +107,7 @@ main {
   max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .fixed_elements__socials {
