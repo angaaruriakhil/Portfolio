@@ -79,7 +79,7 @@ function landingParticles() {
   particlesJS.load("particles-js-landing", "particles.js-master/particles.json", function () {});
 }
 
-setTimeout(landingParticles, 8000);
+setTimeout(landingParticles, 6600);
 
 // This section deals with the hamburger menu on the mobile layout.
 
@@ -237,17 +237,13 @@ const instance2 = new TypeIt(".landing__message__bulk", {
   )
   .break()
   .type(
-    '<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Full Stack Developer",</p>'
+    '<p style="color:#9CCC65; display: inline-block">&nbsp;&nbsp;Occupation: "Platform Engineer",</p>'
   )
   .break()
   .type('<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>')
   .break()
   .type("}")
   .break()
-  .type("angaar@desktop:~$ (Play with the terminal!)")
-  // .options({speed: 10})
-  .pause(700)
-  .delete(25)
   .go();
 
 // Terminal draggable functionality with interact.js
