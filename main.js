@@ -220,7 +220,7 @@ function g_displaceLink() {
 // TypeIt animations for landing page
 
 const instance = new TypeIt(".landing__message__line-1__span-1", {
-  strings: "node welcome.js",
+  strings: "echo $profiledata",
   speed: 40,
   afterString: function (step, instance) {
     instance.destroy();
@@ -243,7 +243,6 @@ const instance2 = new TypeIt(".landing__message__bulk", {
   .type('<p style="color:#EF5350; display: inline-block">&nbsp;&nbsp;Datatype: "Portfolio"</p>')
   .break()
   .type("}")
-  .break()
   .go();
 
 // Terminal draggable functionality with interact.js

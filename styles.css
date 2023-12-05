@@ -1,21 +1,10 @@
 @font-face {
   font-family: "Consolas";
-  src: url("./assets/fonts/Consolas.eot") format("embedded-opentype");
-  /* IE9 Compat Modes */
-  src: url("./assets/fonts/Consolas.woff2") format("woff2"), url("./assets/fonts/Consolas.woff") format("woff"), url("./assets/fonts/Consolas.ttf") format("truetype"), url("./assets/fonts/Consolas.woff") format("svg");
-  /* Legacy iOS */
+  src: url("./assets/fonts/Consolas.eot") format("embedded-opentype"); /* IE9 Compat Modes */
+  src: url("./assets/fonts/Consolas.woff2") format("woff2"), url("./assets/fonts/Consolas.woff") format("woff"), url("./assets/fonts/Consolas.ttf") format("truetype"), url("./assets/fonts/Consolas.woff") format("svg"); /* Legacy iOS */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-@-webkit-keyframes slightly-raise {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  100% {
-    transform: translate(0px, -5px);
-    color: #64FFDA;
-  }
 }
 @keyframes slightly-raise {
   0% {
@@ -26,52 +15,9 @@
     color: #64FFDA;
   }
 }
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 1;
-    transform: translateY(-45px);
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateY(-24px);
-  }
-  65% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateY(-12px);
-  }
-  82% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateY(-6px);
-  }
-  93% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateY(-4px);
-  }
-  25%, 55%, 75%, 87% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    transform: translateY(0px);
-  }
-  100% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 @keyframes bounce {
   0% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 1;
     transform: translateY(-45px);
   }
@@ -79,49 +25,29 @@
     opacity: 1;
   }
   40% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     transform: translateY(-24px);
   }
   65% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     transform: translateY(-12px);
   }
   82% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     transform: translateY(-6px);
   }
   93% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     transform: translateY(-4px);
   }
   25%, 55%, 75%, 87% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     transform: translateY(0px);
   }
   100% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     opacity: 1;
     transform: translateY(0px);
-  }
-}
-@-webkit-keyframes spinningDisc {
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 @keyframes spinningDisc {
@@ -138,17 +64,6 @@
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes animatedgradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 @keyframes animatedgradient {
   0% {
     background-position: 0% 50%;
@@ -158,11 +73,6 @@
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-@-webkit-keyframes rotate {
-  to {
-    --angle: 360deg;
   }
 }
 @keyframes rotate {
@@ -350,10 +260,8 @@ main {
   justify-self: flex-end;
   align-self: center;
   z-index: 2;
-  -webkit-animation: bounce 3s infinite;
-          animation: bounce 3s infinite;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  animation: bounce 3s infinite;
+  animation-delay: 5s;
   position: absolute;
   bottom: 20px;
 }
@@ -653,44 +561,33 @@ main {
     transform: scale(1.3, 1.3);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
-
   .fixed_elements__socials__links:hover {
     transform: scale(1.2, 1.2);
     color: #64ffda;
   }
-
   .nav__list-items:hover {
-    -webkit-animation-name: slightly-raise;
-            animation-name: slightly-raise;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-name: slightly-raise;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
     text-decoration: none;
   }
-
   #_nology:hover,
-#university-of-surrey:hover {
+  #university-of-surrey:hover {
     opacity: 50%;
     text-decoration: underline;
   }
-
   .projects__card__links-btn:hover {
     transform: scale(1.2, 1.2);
   }
-
   .contact__card__form__button:hover {
     opacity: 70%;
     transform: scale(1.2, 1.2) !important;
   }
-
   .contact__card__footer__socials__links:hover {
     color: #64FFDA;
     transform: scale(1.5, 1.5);
   }
-
   .landing__minimised-terminal:hover {
     transform: scale(1.2, 1.2);
     cursor: pointer;
@@ -702,29 +599,24 @@ main {
   .landing__message {
     font-size: 30px;
   }
-
   .hi-icon {
     height: 30px;
     width: 30px;
     margin-left: 5px;
   }
-
   .fixed_elements__socials__line {
     height: 100px;
   }
   .fixed_elements__socials__links {
     font-size: 30px;
   }
-
   .fixed_elements__logo-img {
     margin-left: 30px;
     margin-top: 20px;
   }
-
   .landing__chevron {
     font-size: 80px;
   }
-
   .about__article__header {
     font-size: 35px;
     margin-bottom: 10px;
@@ -738,11 +630,9 @@ main {
   .about__tech-stack__header {
     font-size: 30px;
   }
-
   .projects__header {
     font-size: 35px;
   }
-
   .contact__card__header {
     font-size: 40px;
     margin-bottom: 20px;
@@ -776,14 +666,12 @@ main {
   .fixed_elements__hamburger-menu {
     visibility: visible;
   }
-
   .landing__message {
     font-size: 4vw;
   }
   .landing__terminal {
     width: 90vw;
   }
-
   .nav {
     justify-content: flex-start;
     z-index: 50;
@@ -809,7 +697,6 @@ main {
     margin-left: 5px;
     z-index: 20;
   }
-
   .contact__card__form {
     width: 70vw;
     margin-top: 20px;
@@ -821,7 +708,6 @@ main {
   .contact__card__header {
     align-self: center;
   }
-
   .about__tech-stack {
     margin-top: 20px;
     width: 95vw;
@@ -831,7 +717,7 @@ main {
     margin-bottom: 20px;
   }
   .about__tech-stack__icons {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     font-size: 10vw;
     width: 95vw;
   }
@@ -874,7 +760,6 @@ main {
   .about__list__container {
     margin-left: 0;
   }
-
   .projects__card__text__info {
     font-size: 15px;
     width: 95vw;
@@ -923,7 +808,6 @@ main {
     margin-right: 0px;
     padding: 10px;
   }
-
   .contact {
     justify-content: space-around;
   }
