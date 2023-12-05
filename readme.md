@@ -1,4 +1,4 @@
-![alt text](./assets/images/readme\_head.png)
+![alt text](./assets/images/readme_head.png)
 
 # Portfolio 
 
